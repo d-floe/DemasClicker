@@ -1901,163 +1901,163 @@ Achievements
 	// COINS
 
 *coinAch1
-	name:My First Coin!
-	desc:Get <b>1</b> coin.
+	name:It all starts with a single click
+	desc:Get <b>1</b> coin. </><i>This is a good start!</i>
 	req:1 coin:earned
 	Icon:icons[1,18]
 	on earn:yield 1 achievementNum
 
 *coinAch2
-	name:one thousand
-	desc:Earn <b>1,000</b> total coins.
+	name:Money money money
+	desc:Earn <b>1,000</b> total coins. 
 	req:1000 coin:earned
 	Icon:icons[1,0]
 	on earn:yield 1 achievementNum
 
 *coinAch3
-	name:one hundred thousand
+	name:Bringing home the bacon
 	desc:Earn <b>100,000</b> total coins.
 	req:1e5 coin:earned
 	Icon:icons[1,1]
 	on earn:yield 1 achievementNum
 
 *coinAch4
-	name:one million
+	name:Millionare
 	desc:Earn <b>1,000,000</b> total coins.
 	req:1e6 coin:earned
 	Icon:icons[1,2]
 	on earn:yield 1 achievementNum
 
 *coinAch5
-	name:one hundred million
+	name:Winner Winner Chicken Dinner
 	desc:Earn <b>100,000,000</b> total coins.
 	req:1e8 coin:earned
 	Icon:icons[1,3]
 	on earn:yield 1 achievementNum
 
 *coinAch6
-	name:one billion
+	name:Billionaire
 	desc:Earn <b>1,000,000,000</b>  total coins.
 	req:1e9 coin:earned
 	Icon:icons[1,4]
 	on earn:yield 1 achievementNum
 
 *coinAch7
-	name:one hundred billion
+	name:Entrepreneur
 	desc:Earn <b>100,000,000,000</b> total coins.
 	req:1e11 coin:earned
 	Icon:icons[1,5]
 	on earn:yield 1 achievementNum
 	
 *coinAch8
-	name:500 billion
+	name:CEO of Demas Inc.
 	desc:Earn <b>500,000,000,000</b> total coins.
 	req:5e11 coin:earned
 	Icon:icons[1,6]
 	on earn:yield 1 achievementNum
 
 *coinAch9
-	name:One trillion
+	name:Trillionaire
 	desc:Earn <b>1,000,000,000,000</b> total coins.
 	req:1e12 coin:earned
 	Icon:icons[1,7]
 	on earn:yield 1 achievementNum
 
 *coinAch10
-	name:500 trillion
+	name:Sigma Goat Grindset
 	desc:Earn <b>500,000,000,000,000</b> total coins.
 	req:5e14 coin:earned
 	Icon:icons[1,8]
 	on earn:yield 1 achievementNum
 
 *coinAch11
-	name:One quadrillion
+	name:Quadrillionaire
 	desc:Earn <b>1,000,000,000,000,000</b> total coins.
 	req:1e15 coin:earned
 	Icon:icons[1,9]
 	on earn:yield 1 achievementNum
 
 *coinAch12
-	name:500 quadrillion
+	name:Spend Coins to Make Coins
 	desc:Earn <b>500,000,000,000,000,000</b> total coins.
 	req:5e15 coin:earned
 	Icon:icons[1,10]
 	on earn:yield 1 achievementNum
 
 *coinAch13
-	name:One quintillion
+	name:Quintillionaire
 	desc:Earn <b>1,000,000,000,000,000,000</b> total coins.
 	req:1e18 coin:earned
 	Icon:icons[1,11]
 	on earn:yield 1 achievementNum
 
 *coinAch14
-	name:500 quintillion
+	name:A Real Goat-Getter
 	desc:Earn <b>500,000,000,000,000,000,000</b> total coins.
 	req:5e20 coin:earned
 	Icon:icons[1,12]
 	on earn:yield 1 achievementNum
 	
 *coinAch15
-	Name:One sextillion
+	Name:Sextillionaire
 	desc:Earn <b>1,000,000,000,000,000,000,000</b> total coins.
 	req:1e21 coin:earned
 	Icon:icons[1,13]
 	on earn:yield 1 achievementNum
 	
 *coinAch16
-	Name:500 sextillion
+	Name:Clickle Down Economics
 	desc:Earn <b>500,000,000,000,000,000,000,000</b> total coins.
 	req:5e23 coin:earned
 	Icon:icons[1,14]
 	on earn:yield 1 achievementNum
 	
 *coinAch17
-	name:One septillion
-	desc:Earn <b>1,000,000,000,000,000,000,000,000</b> total coins.
+	name:Demas's Number #1 Fan
+	desc:Earn <b>1,000,000,000,000,000,000,000,000</b> total coins.</><i>”I think Demas might like you!”</i>
 	req:1e24 coin:earned
 	Icon:icons[1,15]
 	on earn:yield 1 achievementNum
 
 // CPS
 *coinPsAch1
-		name:CPS Achievement
+		name:Makin' gains
 		desc:Produce <b>1</b> coin per second.
 		req:1 coins per second
 		icon:icons[3,18]
 		on earn:yield 1 achievementNum
 		
 *coinPsAch2
-		name:CPS Achievement 2
+		name:Coins for days
 		desc:Produce <b>10</b> coins per second.
 		req:10 coins per second
 		icon:icons[4,18]
 		on earn:yield 1 achievementNum
 		
 *coinPsAch3
-		name:CPS Achievement 3
+		name:Look ma, no hands!
 		desc:Produce <b>100</b> coins per second.
 		req:100 coins per second
 		icon:icons[5,18]
 		on earn:yield 1 achievementNum
 		
 *coinPsAch4
-		name:CPS Achievement 4
+		name:Money printer
 		desc:Produce <b>1,000</b> coins per second.
 		req:1000 coins per second
 		icon:icons[6,18]
 		on earn:yield 1 achievementNum
 		
 *coinPsAch5
-		name:CPS Achievement 5
-		desc:Produce <b>10,000</b> coins per second.
+		name:Fiona Coin
+		desc:Produce <b>10,000</b> coins per second.</><i>”Oh darling, wont you believe me”</i>
 		req:1e4 coins per second
 		icon:icons[7,18]
 		on earn:yield 1 achievementNum
 
 *coinPsAch6
-		name:CPS Achievement 6
-		desc:Produce <b>1,000,000</b> coins per second.
+		name:Blood Money
+		desc:Produce <b>1,000,000</b> coins per second.</><i>”But at what cost?”</i>
 		req:1e6 coins per second
 		icon:icons[8,18]
 		on earn:yield 1 achievementNum
@@ -2070,21 +2070,21 @@ Achievements
 		on earn:yield 1 achievementNum
 
 *coinPsAch8
-		name:CPS Achievement 8
+		name:Big Business
 		desc:Produce <b>1,000,000,000</b> coins per second.
 		req:1e9 coins per second
 		icon:icons[10,18]
 		on earn:yield 1 achievementNum
 
 *coinPsAch9
-		name:CPS Achievement 9
+		name:COINS BABY
 		desc:Produce <b>500,000,000,000</b> coins per second.
 		req:5e11 coins per second
 		icon:icons[11,18]
 		on earn:yield 1 achievementNum
 		
 *coinPsAch10
-		name:CPS Achievement 10
+		name:.bf allin h
 		desc:Produce <b>1,000,000,000,000</b> coins per second.
 		req:1e12 coins per second
 		icon:icons[12,18]
