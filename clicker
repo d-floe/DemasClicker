@@ -272,7 +272,7 @@ Shinies
 			yield 13 timeNick
 			show timeNick
 			yield 7776 nickMultiplier
-			toast You found Nick!</>Click Power multiplied by <b>7777x</b> for <b>13 seconds</b>.	
+			toast You found Nick!<//>Click Power multiplied by <b>7777x</b> for <b>13 seconds</b>.	
 			end
 
 Buildings
@@ -281,7 +281,7 @@ Buildings
 		
 	*couchCushions
 		name:Couch Cushions
-		desc:Couch cushions that hide precious coins.<//><b>Effect:</b><.>Produces 1 coin every 10 seconds.
+		desc:Couch cushions that hide precious coins.<//><b>Effect:</b><.>Produces 1 coin every 10 seconds.<q>A little effort to shake out the couch cushions is a surefire way to get more coins!</q>
 		icon:icons[3,0]
 		cost:15 coins
 		on tick:yield (0.1*((thousandFing*0.01)+1)) coin
@@ -289,7 +289,7 @@ Buildings
 	
 	*tipJar|tipJars
 		name:Tip Jar|Tip Jars
-		desc:Jars that accumulate coins over time.<//><b>Effect:</b><.>Produces 1 coin every second.
+		desc:Jars that accumulate coins over time.<//><b>Effect:</b><.>Produces 1 coin every second.<q>Leaving out a Tip Jar for people who like Demas will easily bring in the coins!</q>
 		icon:icons[3,1]
 		cost:100 coins
 		on tick:yield 1 coins
@@ -297,7 +297,7 @@ Buildings
 	
 	*piggyBank|piggyBanks
 		name:Piggy Bank|Piggy Banks
-		desc:A small ceramic pig with coins inside. Oink! <//><b>Effect:</b><.>Produces 8 coins per second.
+		desc:A small ceramic pig with coins inside.<//><b>Effect:</b><.>Produces 8 coins per second.<q>Oink!</q>
 		icon:icons[3,2]
 		cost:1100 coins
 		on tick:yield 8 coins
@@ -305,7 +305,7 @@ Buildings
 	
 	*safe|safes
 		name:Safe|Safes
-		desc:Gotta keep your coins somewhere, but where are they coming from?<//><b>Effect:</b><.>Produces 47 coins per second.
+		desc:Gotta keep your coins somewhere, but where are they coming from?<//><b>Effect:</b><.>Produces 47 coins per second.<q>Contrary to popular belief: around Demas your coins are anything but "Safe".</q>
 		icon:icons[3,3]
 		cost:12000 coins
 		on tick:yield 47 coins
@@ -313,7 +313,7 @@ Buildings
 	
 	*coinPusher|coinPushers
 		name:Coin Pusher|Coin Pushers
-		desc:This bad boy can push so many coins...<//><b>Effect:</b><.>Produces 260 coins per second.
+		desc:These rigged machines glue down the coins so they never pay out!.<//><b>Effect:</b><.>Produces 260 coins per second.
 		icon:icons[3,4]
 		cost:1.3e5 coins
 		on tick:yield 260 coins
@@ -346,7 +346,7 @@ Buildings
 
 	*worldCoingress
 		name:World Coingress
-		desc:Need Description<//><b>Effect:</b><.>Each member of the World Coingress produces 260,000 coins per second.
+		desc:One world government; use the power of bureaucracy to generate more coins!<//><b>Effect:</b><.>Each member of the World Coingress produces 260,000 coins per second.
 		icon:icons[3,8]
 		cost:5.1e9 coins
 		on tick:yield 2.6e5 coins
@@ -354,7 +354,7 @@ Buildings
 
 	*lunarMine
 		name:Lunar Mine|Lunar Mines
-		desc:Need Description<//><b>Effect:</b><.>Produces 1,600,000 coins per second.
+		desc:Strip down the moon into coins! It wasn't doing much anyway!<//><b>Effect:</b><.>Produces 1,600,000 coins per second.
 		icon:icons[3,9]
 		cost:7.5e10 coins
 		on tick:yield 1.6e6 coins
@@ -362,7 +362,7 @@ Buildings
 
 	*dysonSphere
 		name:Dyson Sphere|Dyson Spheres
-		desc:Need Description<//><b>Effect:</b><.>Produces 10,000,000 coins per second.
+		desc:Harvest the suns energy to fabricate more coins! Who needs sunlight anyway!<//><b>Effect:</b><.>Produces 10,000,000 coins per second.
 		icon:icons[3,10]
 		cost:1e12 coins
 		on tick:yield 1e7 coins
@@ -378,7 +378,7 @@ Buildings
 
 	*galaxy
 		name:NGC 253
-		desc:Need Description<//><b>Effect:</b><.>Produces 430,000,000 coins per second.
+		desc:A galaxy of coins! Channel the energy of a billion stars into making coins!<//><b>Effect:</b><.>Produces 430,000,000 coins per second.
 		Icon:icons[3,12]
 		cost:1.7e14 coins
 		on tick:yield 4.3e8 coins
@@ -386,7 +386,7 @@ Buildings
 
 	*tesseract|tesseracts
 		name:Solid Gold Tesseract|Solid Gold Tesseracts
-		desc:Need Description<//><b>Effect:</b><.>Produces 2,900,000,000 coins per second.
+		desc:Enter the 4th Coin-based dimension to pull 3 dimensional coins from a dimension 90* perpendicular from our own!<//><b>Effect:</b><.>Produces 2,900,000,000 coins per second.
 		Icon:icons[3,13]
 		cost:2.1e15 coins
 		on tick:yield 2.9e9 coins
@@ -394,7 +394,7 @@ Buildings
 		
 	*gCUT
 		name:Grand Coin Unification Theory
-		desc:Need Description<//><b>Effect:</b><.>Produces 21,000,000,000 coins per second.
+		desc:Control the four fundemental forces of the universe to make Demas the fifth.<//><b>Effect:</b><.>Produces 21,000,000,000 coins per second.
 		Icon:icons[3,14]
 		cost:2.6e16 coins
 		on tick:yield 2.1e10 coins
@@ -403,7 +403,7 @@ Buildings
 	*everything
 		name:Everything
 		text:Everything ([this]%)
-		desc:Buy everything.<//><b>Completion progress: [this]%</b>
+		desc:Omne est denarios. ipse mundus ante nos frangitur, unum fit omnia; denarios. Adorate nummos, ave nos; nos sumus mundi praevaricatores, qui verum intelligunt. Facti sumus deos.<//><b>Completion progress: [this]%</b><q>everything is coins. the world itself breaks down before us, all becomes one thing; coins. Worship coins, hail us; we are the world breakers, the ones who understand the truth. We have become gods.</q>
 		Icon:icons[3,15]
 		cost:1.2773420922e29 coins
 		req:2.6e16 coins:earned
@@ -1920,7 +1920,7 @@ Achievements
 
 *coinAch1
 	name:It all starts with a single click
-	desc:Get <b>1</b> coin. </><q>This is a good start!<q>
+	desc:Get <b>1</b> coin.<q>This is a good start!</q>
 	req:1 coin:earned
 	Icon:icons[1,18]
 	on earn:yield 1 achievementNum
@@ -2068,14 +2068,14 @@ Achievements
 		
 *coinPsAch5
 		name:Fiona Coin
-		desc:Produce <b>10,000</b> coins per second.</><q>”Oh darling, wont you believe me”</q>
+		desc:Produce <b>10,000</b> coins per second.<q>”Oh darling, wont you believe me”</q>
 		req:1e4 coins per second
 		icon:icons[7,18]
 		on earn:yield 1 achievementNum
 
 *coinPsAch6
 		name:Blood Money
-		desc:Produce <b>1,000,000</b> coins per second.</><q>”But at what cost?”</q>
+		desc:Produce <b>1,000,000</b> coins per second.<q>”But at what cost?”</q>
 		req:1e6 coins per second
 		icon:icons[8,18]
 		on earn:yield 1 achievementNum
