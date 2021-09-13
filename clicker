@@ -281,7 +281,7 @@ Buildings
 		
 	*couchCushions
 		name:Couch Cushions
-		desc:Couch cushions that hide precious coins.<//><b>Effect:</b><.>Produces 1 coin every 10 seconds.<q>A little effort to shake out the couch cushions is a surefire way to get more coins!</q>
+		desc:Couch cushions that hide precious coins.<//><b>Effect:</b><.>Produces 1 coin every 10 seconds.<q>”A little effort to shake out the couch cushions is a surefire way to get more coins!”</q>
 		icon:icons[3,0]
 		cost:15 coins
 		on tick:yield (0.1*((thousandFing*0.01)+1)) coin
@@ -289,7 +289,7 @@ Buildings
 	
 	*tipJar|tipJars
 		name:Tip Jar|Tip Jars
-		desc:Jars that accumulate coins over time.<//><b>Effect:</b><.>Produces 1 coin every second.<q>Leaving out a Tip Jar for people who like Demas will easily bring in the coins!</q>
+		desc:Jars that accumulate coins over time.<//><b>Effect:</b><.>Produces 1 coin every second.<q>”Leaving out a Tip Jar for people who like Demas will easily bring in the coins!”</q>
 		icon:icons[3,1]
 		cost:100 coins
 		on tick:yield 1 coins
@@ -297,7 +297,7 @@ Buildings
 	
 	*piggyBank|piggyBanks
 		name:Piggy Bank|Piggy Banks
-		desc:A small ceramic pig with coins inside.<//><b>Effect:</b><.>Produces 8 coins per second.<q>Oink!</q>
+		desc:A small ceramic pig with coins inside.<//><b>Effect:</b><.>Produces 8 coins per second.<q>”Oink!”</q>
 		icon:icons[3,2]
 		cost:1100 coins
 		on tick:yield 8 coins
@@ -305,7 +305,7 @@ Buildings
 	
 	*safe|safes
 		name:Safe|Safes
-		desc:Gotta keep your coins somewhere, but where are they coming from?<//><b>Effect:</b><.>Produces 47 coins per second.<q>Contrary to popular belief: around Demas your coins are anything but "Safe".</q>
+		desc:Gotta keep your coins somewhere, but where are they coming from?<//><b>Effect:</b><.>Produces 47 coins per second.<q>”Contrary to popular belief: around Demas your coins are anything but ‘Safe’”.</q>
 		icon:icons[3,3]
 		cost:12000 coins
 		on tick:yield 47 coins
@@ -403,7 +403,7 @@ Buildings
 	*everything
 		name:Everything
 		text:Everything ([this]%)
-		desc:This is it, buy everything in existence. <//><b>Completion progress: [this]%</b><q>Everything is coins. The world itself breaks down before us, all becomes one thing; coins. Worship coins, hail us; we are the world breakers, the ones who understand the truth. We have become gods.</q>
+		desc:This is it, buy everything in existence. <//><b>Completion progress: [this]%</b><q>”Everything is coins. The world itself breaks down before us, all becomes one thing; coins. Worship coins, hail us; we are the world breakers, the ones who understand the truth. We have become gods.”</q>
 		Icon:icons[3,15]
 		cost:1.2773420922e29 coins
 		req:2.6e16 coins:earned
@@ -1920,7 +1920,7 @@ Achievements
 
 *coinAch1
 	name:It all starts with a single click
-	desc:Get <b>1</b> coin.<q>This is a good start!</q>
+	desc:Get <b>1</b> coin.<q>”This is a good start!”</q>
 	req:1 coin:earned
 	Icon:icons[1,18]
 	on earn:yield 1 achievementNum
