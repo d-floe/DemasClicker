@@ -169,4 +169,5 @@
 
 #toasts {margin-bottom: 20px;}
 
-.title .subtitle {padding-bottom: 4px;}
+.subtitle {padding-bottom: 4px;}
+.title {padding-bottom: 4px;}
