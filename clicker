@@ -2032,7 +2032,7 @@ Achievements
 	
 *coinAch17
 	name:Demas's Number #1 Fan
-	desc:Earn <b>1,000,000,000,000,000,000,000,000</b> total coins.</><q>”I think Demas might like you!”</q>
+	desc:Earn <b>1,000,000,000,000,000,000,000,000</b> total coins.<q>”I think Demas might like you!”</q>
 	req:1e24 coin:earned
 	Icon:icons[1,15]
 	on earn:yield 1 achievementNum
