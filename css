@@ -98,7 +98,7 @@
 .upgrade.cantAfford
 {
 	box-shadow:0px 0px 4px #39f;
-	border-radius:8px;
+	border-radius:1px;
 }
 .upgrade.cantAfford:hover
 {
@@ -112,8 +112,8 @@
 
 .building
 {
-	border-top-left-radius:20px;
-	border-bottom-left-radius:20px;
+	border-top-left-radius:1px;
+	border-bottom-left-radius:1px;
 	display:block;
 	margin-right:0px;
 	font-size:14px;
