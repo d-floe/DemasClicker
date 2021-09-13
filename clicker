@@ -36,7 +36,7 @@ Layout
 
 Buttons
 	*coinButton
-		name:Make a some coins
+		name:Make some coins
 		desc:Click Demas to get more coins!
 		on click:anim icon wobble
 		on click:yield (1*((thousandFing*0.01)+1)*clickMultiplier*nickMultiplier) coin
