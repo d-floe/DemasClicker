@@ -27,12 +27,13 @@ Layout
 	    contains:BulkDisplay, Buildings
 	    header:Buildings
 	    tooltip origin:left
+		ps:show
 	  *upgrades
 	    contains:Upgrades
 	    header:Upgrades
 	    costs:hide
 	    names:hide
-		
+
 Buttons
 	*coinButton
 		name:Make a some coins
