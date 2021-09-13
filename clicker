@@ -15,7 +15,7 @@ Settings
 
 Layout
 	*main
-		contains:res, buttons
+		contains:res, buttons, Log
 	*res
 		contains:Resources
 		class:fullWidth
