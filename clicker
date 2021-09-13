@@ -15,24 +15,24 @@ Settings
 
 Layout
 	*main
-	  contains:res, buttons
-	  *res
-	    contains:Resources
-	    class:fullWidth
-	  *buttons
-	    contains:Buttons
+		contains:res, buttons
+	*res
+		contains:Resources
+		class:fullWidth
+	*buttons
+		contains:Buttons
 	*store
-	  contains:buildings, upgrades
-	  *buildings
-	    contains:BulkDisplay, Buildings
-	    header:Buildings
-	    tooltip origin:left
-		ps:show
-	  *upgrades
-	    contains:Upgrades
-	    header:Upgrades
-	    costs:hide
-	    names:hide
+		contains:buildings, upgrades
+	*buildings
+		contains:BulkDisplay, Buildings
+			header:Buildings
+			tooltip origin:left
+			ps:show
+	*upgrades
+		contains:Upgrades
+		header:Upgrades
+		costs:hide
+		names:hide
 
 Buttons
 	*coinButton
