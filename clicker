@@ -11,7 +11,7 @@ Settings
 	building cost increase:115%
 	building cost refund:25%
 	spritesheet:icons, 48 by 48, https://i.imgur.com/Fb8e4yD.png 
-	stylesheet:https://pastebin.com/raw/TAVipGzX
+	stylesheet:https://raw.githubusercontent.com/d-floe/DemasClicker/main/css
 
 Layout
 	use default
