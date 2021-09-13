@@ -14,7 +14,24 @@ Settings
 	stylesheet:https://raw.githubusercontent.com/d-floe/DemasClicker/main/css
 
 Layout
-	use default
+	*main
+	  contains:res, buttons
+	  *res
+	    contains:Resources
+	    class:fullWidth
+	  *buttons
+	    contains:Buttons
+	*store
+	  contains:buildings, upgrades
+	  *buildings
+	    contains:BulkDisplay, Buildings
+	    header:Buildings
+	    tooltip origin:left
+	  *upgrades
+	    contains:Upgrades
+	    header:Upgrades
+	    costs:hide
+	    names:hide
 		
 Buttons
 	*coinButton
