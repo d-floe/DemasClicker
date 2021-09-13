@@ -386,7 +386,7 @@ Buildings
 
 	*tesseract|tesseracts
 		name:Solid Gold Tesseract|Solid Gold Tesseracts
-		desc:Enter the 4th Coin-based dimension to pull 3 dimensional coins from a dimension 90* perpendicular from our own!<//><b>Effect:</b><.>Produces 2,900,000,000 coins per second.
+		desc:Enter the 4th Coin-based dimension to pull 3 dimensional coins from a dimension 90° perpendicular to our own!<//><b>Effect:</b><.>Produces 2,900,000,000 coins per second.
 		Icon:icons[3,13]
 		cost:2.1e15 coins
 		on tick:yield 2.9e9 coins
@@ -2081,28 +2081,28 @@ Achievements
 		on earn:yield 1 achievementNum
 
 *coinPsAch7
-		name:CPS Achievement 7
+		name:Big Business
 		desc:Produce <b>500,000,000</b> coins per second.
 		req:1e8 coins per second
 		icon:icons[9,18]
 		on earn:yield 1 achievementNum
 
 *coinPsAch8
-		name:Big Business
+		name:COINS BABY
 		desc:Produce <b>1,000,000,000</b> coins per second.
 		req:1e9 coins per second
 		icon:icons[10,18]
 		on earn:yield 1 achievementNum
 
 *coinPsAch9
-		name:COINS BABY
+		name:.bf allin h
 		desc:Produce <b>500,000,000,000</b> coins per second.
 		req:5e11 coins per second
 		icon:icons[11,18]
 		on earn:yield 1 achievementNum
 		
 *coinPsAch10
-		name:.bf allin h
+		name:NOT WHEN I SHIFT INTO MAXIMUM OVERDRIVE
 		desc:Produce <b>1,000,000,000,000</b> coins per second.
 		req:1e12 coins per second
 		icon:icons[12,18]
@@ -2111,29 +2111,29 @@ Achievements
 // GOLDEN COINS
 
 *goldenAch1
-		name:Lucky!
+		name:Ooh Shiny!
 		desc:Find <b>1</b> golden coin.
 		req:1 shinyNum
 		Icon:icons[0,0]
 		on earn:yield 1 achievementNum
 
 *goldenAch2
-		name:Lucky 2!
-		desc:Find <b>7</b> golden coins.
+		name:Cover me in coins
+		desc:Find <b>7</b> golden coins.<q>”Demas is gonna be happy about this!”</q>
 		req:7 shinyNum
 		Icon:icons[0,2]
 		on earn:yield 1 achievementNum
 
 *goldenAch3
-		name:Lucky 3!
-		desc:Find <b>77</b> golden coins.
+		name:Coin sniper
+		desc:Find <b>77</b> golden coins.<q>”Demas is impressed with your commitment!”</q>
 		req:77 shinyNum
 		Icon:icons[0,3]
 		on earn:yield 1 achievementNum
 		
 *goldenAch4
-		name:Lucky 4!
-		desc:Find <b>777</b> golden coins.
+		name:Fortune favors the gold
+		desc:Find <b>777</b> golden coins.<q>”Demas is kinda worried for you.”</q> 
 		req:777 shinyNum
 		Icon:icons[0,4]
 		on earn:yield 1 achievementNum
@@ -2141,80 +2141,80 @@ Achievements
 // EVERYTHING
 
 *everythingAch1
-		name:Everything Achievement 1
-		desc:Have <b>1%</b> of everything.
+		name:Wait, I have to buy how much more??
+		desc:You've bought <b>1%</b> of everything! <//>Demas needs you to buy 100 for her master plan!
 		req:1 everything
 		icon:icons[3,15] 
 		on earn:yield 1 achievementNum
 *everythingAch2
-		name:Everything Achievement 2
-		desc:Have <b>10%</b> of everything.
+		name:Lockpicking increased
+		desc:You've bought <b>10%</b> of everything! <//>No sweat!
 		req:10 everything
 		icon:icons[4,15] 
 		on earn:yield 1 achievementNum
 *everythingAch3
-		name:Everything Achievement 3
-		desc:Have <b>20%</b> of everything.
+		name:Sigma Grindset
+		desc:You've bought <b>20%</b> of everything! <//>There are plenty more to get so keep grinding!
 		req:20 everything
 		icon:icons[5,15] 
 		on earn:yield 1 achievementNum
 *everythingAch4
-		name:Everything Achievement 4
-		desc:Have <b>30%</b> of everything.
+		name:Fitness Montage Music
+		desc:You've bought <b>30%</b> of everything! <//>A third done and you're having fun!
 		req:30 everything
 		icon:icons[6,15] 
 		on earn:yield 1 achievementNum
 *everythingAch5
-		name:Everything Achievement 5
-		desc:Have <b>40%</b> of everything.
+		name:Need for Speed
+		desc:You've bought <b>40%</b> of everything! <//>They just keep coming, don't they?
 		req:40 everything
 		icon:icons[7,15] 
 		on earn:yield 1 achievementNum
 *everythingAch6
-		name:Everything Achievement 6
-		desc:Have <b>50%</b> of everything.
+		name:Living on a Prayer
+		desc:You've bought <b>50%</b> of everything! <//>OOOOOOOOOOOOOOOOOOH YOU'RE HALFWAY THERE!
 		req:50 everything
 		icon:icons[8,15] 
 		on earn:yield 1 achievementNum
 *everythingAch7
-		name:Everything Achievement 7
-		desc:Have <b>60%</b> of everything.
+		name:Over the Hill
+		desc:You've bought <b>60%</b> of everything! <//>Things might start to seem like they're slowing down but there are plenty more to go!
 		req:60 everything
 		icon:icons[9,15] 
 		on earn:yield 1 achievementNum
 *everythingAch8
-		name:Nice.
-		desc:Have <b>69%</b> of everything. Nice.
+		name:Nice
+		desc:You've bought <b>69%</b> of everything! <//>Nice.
 		req:69 everything
 		icon:icons[10,15] 
 		on earn:yield 1 achievementNum
 *everythingAch9
-		name:Everything Achievement 9
-		desc:Have <b>70%</b> of everything.
+		name:Dont Stop Me Now
+		desc:You've bought <b>70%</b> of everything! <//>Demas is rooting for you!
 		req:70 everything
 		icon:icons[11,15] 
 		on earn:yield 1 achievementNum
 *everythingAch10
-		name:Everything Achievement 10
-		desc:Have <b>80%</b> of everything.
+		name:Acceptable in the 80s
+		desc:You've bought <b>80%</b> of everything! <//>Focus now!
 		req:70 everything
 		icon:icons[12,15] 
 		on earn:yield 1 achievementNum
 *everythingAch11
-		name:Everything Achievement 11
-		desc:Have <b>90%</b> of everything.
+		name:Pure dedication
+		desc:You've bought <b>90%</b> of everything! <//>This is the home stretch!
 		req:70 everything
 		icon:icons[0,15] 
 		on earn:yield 1 achievementNum
 *everythingAch12
-		name:Almost there!
-		desc:Have <b>99%</b> of everything.
+		name:SO CLOSE
+		desc:You've bought <b>99%</b> of everything! Press on! <//>You are so close!
 		req:99 everything
 		icon:icons[0,16] 
 		on earn:yield 1 achievementNum
 *everythingAch13
-		name:Everything Achievement 13
-		desc:Have <b>100%</b> of everything. GG.
+		name:Unlock Everything
+		desc:You've bought <b>100%</b> of everything! <//>You've made Demas unbelievably happy! You should screenshot this and go send it in <b>#general</b> chat!
 		req:100 everything
 		icon:icons[0,17] 
 		on earn:yield 1 achievementNum
@@ -2223,50 +2223,50 @@ Achievements
 //Clicks
 
 *clickAch1
-		name:Click Achievement 1
-		desc:Click Demas <b>1</b> time.
+		name:You did it!
+		desc:Click Demas <b>1</b> time. <q>”You might think this would hurt but Demas' has quite strong horns!”</q>
 		req:1 coinButton clicks
 		icon:icons[0,8]
 		on earn:yield 1 achievementNum
 
 *clickAch2
-		name:Click Achievement 2
-		desc:Click Demas <b>10</b> times.
+		name:Haha that tickles!
+		desc:Click Demas <b>10</b> times. <q>”At this point you probably have noticed that the horns are sharper than they look!”</q>
 		req:10 coinButton clicks
 		icon:icons[0,9]
 		on earn:yield 1 achievementNum
 
 *clickAch3
-		name:Click Achievement 3
-		desc:Click Demas <b>100</b> times.
+		name:Iron Clicker
+		desc:Click Demas <b>100</b> times.<q>”You should feel lucky you don't have to click Apricot, you could easily lose your hand!”</q>
 		req:100 coinButton clicks
 		icon:icons[0,10]
 		on earn:yield 1 achievementNum
 
 *clickAch4
-		name:Click Achievement 4
-		desc:Click Demas <b>500</b> times.
+		name:I will click 500 more
+		desc:Click Demas <b>500</b> times.<q>”NOTE: Clicking on goats in real life may or may not yield different results.”</q>
 		req:500 coinButton clicks
 		icon:icons[0,11]
 		on earn:yield 1 achievementNum
 
 *clickAch5
-		name:Click Achievement 5
-		desc:Click Demas <b>1,000</b> times.
+		name:Coin Addiction
+		desc:Click Demas <b>1,000</b> times.<q>”Sometimes when you are not looking Demas clicks herself...”</q>
 		req:1e3 coinButton clicks
 		icon:icons[0,12]
 		on earn:yield 1 achievementNum
 
 *clickAch6
-		name:Click Achievement 6
-		desc:Click Demas <b>5,000</b> times.
+		name:Aint that a click in the head?
+		desc:Click Demas <b>5,000</b> times.<q>”Dennis would like you to know he is most proud of this achievement name.”</q>
 		req:5e3 coinButton clicks
 		icon:icons[0,13]
 		on earn:yield 1 achievementNum
 
 *clickAch7
-		name:Click Achievement 7
-		desc:Click Demas <b>10,000</b> times.
+		name:Big Click Energy
+		desc:Click Demas <b>10,000</b> times.<q>”Shamus would like you to know he is most proud of this achievement name.”</q>
 		req:1e4 coinButton clicks
 		icon:icons[0,14]
 		on earn:yield 1 achievementNum
@@ -2275,69 +2275,69 @@ Achievements
 
 *lastAch
 		name:Completionist
-		desc:Get every other achievement
+		desc:You got every single achievement! Demas would like to thank you so much for enjoying this game!
 		Req:201 achievementNum
 		icon:icons[0,18]
 		on earn:yield 1 achievementNum
 //Building Achievements
 	//couch
 	*couchCushionsAch1
-		name:Couch Achievement 1
-		desc:Have <b>1</b> set of couch cushions.
+		name:Just a nap
+		desc:Have <b>1</b> set of couch cushions.<q>”A little rest now and then is okay!”</q>
 		req:1 couchCushions
 		icon:icons[3,0] 
 		on earn:yield 1 achievementNum
 	*couchCushionsAch2
-		name:Couch Achievement 2
-		desc:Have <b>50</b> couch cushions.
+		name:Couch Potato
+		desc:Have <b>50</b> couch cushions.<q>”You bought 50 couches! There are a buncha achievments for buying every building all the way to 450!”</q>
 		req:50 couchCushions
 		Icon:icons[4,0]
 		on earn:yield 1 achievementNum
 	*couchCushionsAch3
-		name:Couch Achievement 3
-		desc:Have <b>100</b> couch cushions.
+		name:Really Comfy
+		desc:Have <b>100</b> couch cushions.<q>”Get up, this isn't what we meant by "get a Lazy Boy".”</q>
 		req:100 couchCushions
 		icon:icons[5,0]  
 		on earn:yield 1 achievementNum
 	*couchCushionsAch4
-		name:Couch Achievement 4
-		desc:Have <b>150</b> couch cushions.
+		name:Sofa King
+		desc:Have <b>150</b> couch cushions.<q>”You know sitting around all day is actually pretty unhealthy! You should get up and stretch!”</q>
 		req:150 couchCushions
 		icon:icons[6,0]  
 		on earn:yield 1 achievementNum
 	*couchCushionsAch5
-		name:Couch Achievement 5
-		desc:Have <b>200</b> couch cushions.
+		name:Maximum Comf
+		desc:Have <b>200</b> couch cushions.<q>”You know, one of these couches actually has a bed in it! (There are still coins in the mattress).”</q>
 		req:200 couchCushions
 		icon:icons[7,0]  
 		on earn:yield 1 achievementNum
 	*couchCushionsAch6
-		name:Couch Achievement 6
-		desc:Have <b>250</b> couch cushions.
+		name:Got a blanket?
+		desc:Have <b>250</b> couch cushions.<q>”Did you find Apricot's car keys yet?”</q>
 		req:250 couchCushions
 		icon:icons[8,0]  
 		on earn:yield 1 achievementNum
 	*couchCushionsAch7
-		name:Couch Achievement 7
-		desc:Have <b>300</b> couch cushions.
+		name:Netflix and chill
+		desc:Have <b>300</b> couch cushions.<q>”You would not believe how many dust bunnies are in these things, and they are NOT as cute as they sound!”</q>
 		req:300 couchCushions
 		icon:icons[9,0]  
 		on earn:yield 1 achievementNum
 	*couchCushionsAch8
-		name:Couch Achievement 8
-		desc:Have <b>350</b> couch cushions.
+		name:Sleepin' makes me feel good
+		desc:Have <b>350</b> couch cushions.<q>”It's actually surprising you bought so many of the first building.”</q>
 		req:350 couchCushions
 		icon:icons[10,0]
 		on earn:yield 1 achievementNum  
 	*couchCushionsAch9
-		name:Couch Achievement 9
-		desc:Have <b>400</b> couch cushions.
+		name:To sit or not to sit
+		desc:Have <b>400</b> couch cushions.<q>”You'd actually be surprised by how much gets lost in these things, maybe you should start selling the remotes!”</q>
 		req:400 couchCushions
 		icon:icons[11,0]  
 		on earn:yield 1 achievementNum
 	*couchCushionsAchie10
-		name:Couch Achievement 10
-		desc:Have <b>450</b> couch cushions.
+		name:I am become sleepy, the go-er to bed
+		desc:Have <b>450</b> couch cushions.<q>”<b>EDITOR'S NOTE:</b> Why does this look like the Simpson's couch? </> <b>ARTIST'S NOTE:</b> SHUT UP”</q>
 		req:450 couchCushions
 		icon:icons[12,0]  
 		on earn:yield 1 achievementNum
