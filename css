@@ -171,4 +171,4 @@
 
 .title {padding-bottom: 4px;}
 
-.desc {text-indent:0px;}
+.desc>div {text-indent:0px;}
