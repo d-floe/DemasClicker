@@ -1920,7 +1920,7 @@ Achievements
 
 *coinAch1
 	name:It all starts with a single click
-	desc:Get <b>1</b> coin. </><i>This is a good start!</i>
+	desc:Get <b>1</b> coin. </><q>This is a good start!<q>
 	req:1 coin:earned
 	Icon:icons[1,18]
 	on earn:yield 1 achievementNum
@@ -2068,14 +2068,14 @@ Achievements
 		
 *coinPsAch5
 		name:Fiona Coin
-		desc:Produce <b>10,000</b> coins per second.</><i>”Oh darling, wont you believe me”</i>
+		desc:Produce <b>10,000</b> coins per second.</><q>”Oh darling, wont you believe me”</q>
 		req:1e4 coins per second
 		icon:icons[7,18]
 		on earn:yield 1 achievementNum
 
 *coinPsAch6
 		name:Blood Money
-		desc:Produce <b>1,000,000</b> coins per second.</><i>”But at what cost?”</i>
+		desc:Produce <b>1,000,000</b> coins per second.</><q>”But at what cost?”</q>
 		req:1e6 coins per second
 		icon:icons[8,18]
 		on earn:yield 1 achievementNum
