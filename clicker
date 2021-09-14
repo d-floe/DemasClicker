@@ -644,7 +644,7 @@ Upgrades
 		req:2.5e18 coins:earned
 	*Thorn
 		name:Thorn
-		desc:Coin production multiplier <b>+2%</b>
+		desc:Coin production multiplier <b>+2%</b><q>”01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001”</q>
 		icon:icons[1,15]
 		cost:1e11 coins
 		on earn:yield 2 prodMultiplier
@@ -687,70 +687,70 @@ Upgrades
  	//clicking upgrades
 	*clickUpgrade1
 		name:Click Upgrade 1
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[3,17]
 		req:1e3 coinsFromClicks
 		cost:5e4 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade2
 		name:Click Upgrade 2
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[4,17]
 		req:1e5 coinsFromClicks
 		cost:5e6 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade3
 		name:Click Upgrade 3
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[5,17]
 		req:1e7 coinsFromClicks
 		cost:5e8 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade4
 		name:Click Upgrade 4
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains +1%</b> of your Coin Production.
 		Icon:icons[6,17]
 		req:1e9 coinsFromClicks
 		cost:5e10 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade5
 		name:Click Upgrade 5
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[7,17]
 		req:1e11 coinsFromClicks
 		cost:5e12 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade6
 		name:Click Upgrade 6
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[8,17]
 		req:1e13 coinsFromClicks
 		cost:5e14 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade7
 		name:Click Upgrade 7
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[9,17]
 		req:1e15 coinsFromClicks
 		cost:5e16 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade8
 		name:Click Upgrade 8
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[10,17]
 		req:1e17 coinsFromClicks
 		cost:5e18 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade9
 		name:Click Upgrade 9
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[11,17]
 		req:1e19 coinsFromClicks
 		cost:5e20 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade10
 		name:Click Upgrade 10
-		desc:Clicking gains +1% of your Coin Production.
+		desc:Clicking gains <b>+1%</b> of your Coin Production.
 		Icon:icons[12,17]
 		req:1e21 coinsFromClicks
 		cost:5e22 coins
