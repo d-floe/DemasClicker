@@ -2343,856 +2343,856 @@ Achievements
 		on earn:yield 1 achievementNum
 	//tip jar
 	*tipJarAch1
-		name:Tip Jar Achievement 1
-		desc:Have <b>1</b> Tip Jar.
+		name:Take a penny, leave a penny
+		desc:Have <b>1</b> Tip Jar.<q>”Demas's idea was to leave this at the counter of a local bank!”</q>
 		req:1 tipJar
 		icon:icons[3,1] 
 		on earn:yield 1 achievementNum
 	*tipJarAch2
-		name:Tip Jar Achievement 2
-		desc:Have <b>50</b> Tip Jars.
+		name:Lemonade stand
+		desc:Have <b>50</b> Tip Jars.<q>”The kids running the lemonade stand sure did not appreciate using their pitcher as a tip jar, but the coins taste great!”</q>
 		req:50 tipJar
 		Icon:icons[4,1]
 		on earn:yield 1 achievementNum
 	*tipJarAch3
-		name:Tip Jar Achievement 3
-		desc:Have <b>100</b> Tip Jars.
+		name:Your local diner
+		desc:Have <b>100</b> Tip Jars.<q>”Can you believe these tip jars accept BitCoin™?!?”</q>
 		req:100 tipJar
 		icon:icons[5,1]  
 		on earn:yield 1 achievementNum
 	*tipJarAch4
-		name:Tip Jar Achievement 4
-		desc:Have <b>150</b> Tip Jars.
+		name:Government mandated tipping
+		desc:Have <b>150</b> Tip Jars.<q>”Leaving a tip jar in the Oval Office sure sends a message!”</q>
 		req:150 tipJar
 		icon:icons[6,1]  
 		on earn:yield 1 achievementNum
 	*tipJarAch5
-		name:Tip Jar Achievement 5
-		desc:Have <b>200</b> Tip Jars.
+		name:Money maker
+		desc:Have <b>200</b> Tip Jars.<q>”The reason these things are so expensive is they are not made of glass, but rather solid diamond!”</q>
 		req:200 tipJar
 		icon:icons[7,1]  
 		on earn:yield 1 achievementNum
 	*tipJarAch6
-		name:Tip Jar Achievement 6
-		desc:Have <b>250</b> Tip Jars.
+		name:Hot tip
+		desc:Have <b>250</b> Tip Jars.<q>”There is a very embarassing photo of Demas getting her fist stuck in one of these....”</q>
 		req:250 tipJar
 		icon:icons[8,1]  
 		on earn:yield 1 achievementNum
 	*tipJarAch7
-		name:Tip Jar Achievement 7
-		desc:Have <b>300</b> Tip Jars.
+		name:Just the tip of the iceberg
+		desc:Have <b>300</b> Tip Jars.<q>”You'd be shocked how many people try to keep the change. Unbelievable!”</q>
 		req:300 tipJar
 		icon:icons[9,1]  
 		on earn:yield 1 achievementNum
 	*tipJarAch8
-		name:Tip Jar Achievement 8
-		desc:Have <b>350</b> Tip Jars.
+		name:Pay day
+		desc:Have <b>350</b> Tip Jars.<q>”Fun Fact: The most profitable tip jar is the one they bring out with the bread at Olive Garden™”</q>
 		req:350 tipJar
 		icon:icons[10,1]  
 		on earn:yield 1 achievementNum
 	*tipJarAch9
-		name:Tip Jar Achievement 9
-		desc:Have <b>400</b> Tip Jars.
+		name:Pizza delivery man
+		desc:Have <b>400</b> Tip Jars.<q>”<b>PLEASE INSERT ONE COIN TO READ THIS ACHIEVEMENT</b>”</q>
 		req:400 tipJar
 		icon:icons[11,1]  
 		on earn:yield 1 achievementNum
 	*tipJarAch10
-		name:Tip Jar Achievement 10
-		desc:Have <b>450</b> Tip Jars.
+		name:Take-a-Penny, Take-a-Penny
+		desc:Have <b>450</b> Tip Jars.<q>”Demas's best tip for being a self made millionaire? Everytime you see one of those Take-a-Penny, Leave-a-Penny bowls at a store: just take a penny!”</q>
 		req:450 tipJar
 		icon:icons[12,1]  
 		on earn:yield 1 achievementNum
 	//piggy bank
 	*piggyBankAch1
-		name:Piggy Bank Achievement 1
-		desc:Have <b>1</b> Piggy Bank.
+		name:Oink
+		desc:Have <b>1</b> Piggy Bank.<q>”Demas wants you to know that she takes no joy in smashing a poor defenseless piggy bank open.”</q>
 		req:1 piggyBank
 		icon:icons[3,2] 
 		on earn:yield 1 achievementNum
 	*piggyBankAch2
-		name:Piggy Bank Achievement 2
-		desc:Have <b>50</b> Piggy Banks.
+		name:Oink oink
+		desc:Have <b>50</b> Piggy Banks.<q>”Every 100th pig has a truffle in it!”</q>
 		req:50 piggyBank
 		Icon:icons[4,2]
 		on earn:yield 1 achievementNum
 	*piggyBankAch3
-		name:Piggy Bank Achievement 3
-		desc:Have <b>100</b> Piggy Banks.
+		name:Buu buu
+		desc:Have <b>100</b> Piggy Banks.<q>”They actually store these in a porcelain pig pen. (You have to break the gate to get in).”</q>
 		req:100 piggyBank
 		icon:icons[5,2]  
 		on earn:yield 1 achievementNum
 	*piggyBankAch4
-		name:Piggy Bank Achievement 4
-		desc:Have <b>150</b> Piggy Banks.
+		name:Grunz grunz
+		desc:Have <b>150</b> Piggy Banks.<q>”Oink”</q>
 		req:150 piggyBank
 		icon:icons[6,2]  
 		on earn:yield 1 achievementNum
 	*piggyBankAch5
-		name:Piggy Bank Achievement 5
-		desc:Have <b>200</b> Piggy Banks.
+		name:Hunk hunk
+		desc:Have <b>200</b> Piggy Banks.<q>”That pig you just smashed was going to be an actor... his name was Mark Truffalo.”</q>
 		req:200 piggyBank
 		icon:icons[7,2]  
 		on earn:yield 1 achievementNum
 	*piggyBankAch6
-		name:Piggy Bank Achievement 6
-		desc:Have <b>250</b> Piggy Banks.
+		name:Knor knor
+		desc:Have <b>250</b> Piggy Banks.<q>”I think he found something!”</q>
 		req:250 piggyBank
 		icon:icons[8,2]  
 		on earn:yield 1 achievementNum
 	*piggyBankAch7
-		name:Piggy Bank Achievement 7
-		desc:Have <b>300</b> Piggy Banks.
+		name:Groin groin
+		desc:Have <b>300</b> Piggy Banks.<q>”Do piggy banks dream of electric goats?”</q>
 		req:300 piggyBank
 		icon:icons[9,2]  
 		on earn:yield 1 achievementNum
 	*piggyBankAch8
-		name:Piggy Bank Achievement 8
-		desc:Have <b>350</b> Piggy Banks.
+		name:Hrgu hrgu
+		desc:Have <b>350</b> Piggy Banks.<q>”Hey that one bit me!”</q>
 		req:350 piggyBank
 		icon:icons[10,2]  
 		on earn:yield 1 achievementNum
 	*piggyBankAch9
-		name:Piggy Bank Achievement 9
-		desc:Have <b>400</b> Piggy Banks.
+		name:Noff noff
+		desc:Have <b>400</b> Piggy Banks.<q>”Did you know the curlier the tail, the more coins inside!”</q>
 		req:400 piggyBank
 		icon:icons[11,2]  
 		on earn:yield 1 achievementNum
 	*piggyBankAch10
-		name:Piggy Bank Achievement 10
-		desc:Have <b>450</b> Piggy Banks.
+		name:What do you want, man?
+		desc:Have <b>450</b> Piggy Banks.<q>”Okay remember when I said Demas doesn't enjoy smashing these things open? I lied.”</q>
 		req:450 piggyBank
 		icon:icons[12,2]  
 		on earn:yield 1 achievementNum
 	//safe
 	*safeAch1
-		name:Safe Achievement 1
-		desc:Have <b>1</b> Safe.
+		name:Safe and sound
+		desc:Have <b>1</b> Safe.<q>”Demas needs you to lock pick this thing open (please)!”</q>
 		req:1 safe
 		icon:icons[3,3] 
 		on earn:yield 1 achievementNum
 	*safeAch2
-		name:Safe Achievement 2
-		desc:Have <b>50</b> Safes.
+		name:Vault Tech Calling
+		desc:Have <b>50</b> Safes.<q>”We used to have Demas ram into these to open them but when she started talking to the floor we got worried.”</q>
 		req:50 safe
 		Icon:icons[4,3]
 		on earn:yield 1 achievementNum
 	*safeAch3
-		name:Safe Achievement 3
-		desc:Have <b>100</b> Safes.
+		name:The North Safe
+		desc:Have <b>100</b> Safes.<q>”Anyone got a Daedric Artifact to get this thing open?”</q>
 		req:100 safe
 		icon:icons[5,3]  
 		on earn:yield 1 achievementNum
 	*safeAch4
-		name:Safe Achievement 4
-		desc:Have <b>150</b> Safes.
+		name:An apple a day keeps the locker away
+		desc:Have <b>150</b> Safes.<q>”You might think getting stuffed into a locker sucks, but have you ever got stuck in a bank vault?”</q>
 		req:150 safe
 		icon:icons[6,3]  
 		on earn:yield 1 achievementNum
 	*safeAch5
-		name:Safe Achievement 5
-		desc:Have <b>200</b> Safes.
+		name:Show me your secrets
+		desc:Have <b>200</b> Safes.<q>”Fort Knox is nothing, get in there champ!”</q>
 		req:200 safe
 		icon:icons[7,3]  
 		on earn:yield 1 achievementNum
 	*safeAch6
-		name:Safe Achievement 6
-		desc:Have <b>250</b> Safes.
+		name:Lock Blocked
+		desc:Have <b>250</b> Safes.<q>”THIS JUST IN: ALL SAFES HAVE "SECRET" BACK DOOR, MORE AT 5!”</q>
 		req:250 safe
 		icon:icons[8,3]  
 		on earn:yield 1 achievementNum
 	*safeAch7
-		name:Safe Achievement 7
-		desc:Have <b>300</b> Safes.
+		name:Nobody's breaking in, dude
+		desc:Have <b>300</b> Safes.<q>”Okay some of these have keypads..... try 1-1-1... uh... 1?”</q>
 		req:300 safe
 		icon:icons[9,3]  
 		on earn:yield 1 achievementNum
 	*safeAch8
-		name:Safe Achievement 8
-		desc:Have <b>350</b> Safes.
+		name:Leave the money, take the safe
+		desc:Have <b>350</b> Safes.<q>”You actually could just sell the Safes for scrap metal.”</q>
 		req:350 safe
 		icon:icons[10,3]  
 		on earn:yield 1 achievementNum
 	*safeAch9
-		name:Safe Achievement 9
-		desc:Have <b>400</b> Safes.
+		name:Vault in the wound
+		desc:Have <b>400</b> Safes.<q>”THERE IS ANOTHER SAFE INSIDE THIS ONE?!?!”</q>
 		req:400 safe
 		icon:icons[11,3]  
 		on earn:yield 1 achievementNum
 	*safeAch10
-		name:Safe Achievement 10
-		desc:Have <b>450</b> Safes.
+		name:Protection II
+		desc:Have <b>450</b> Safes.<q>”<b>This Achievement flavor text is sealed until 2050.</b>”</q>
 		req:450 safe
 		icon:icons[12,3]  
 		on earn:yield 1 achievementNum
 	//coin pusher
 	*coinPusherAch1
-		name:Coin Pusher Achievement 1
-		desc:Have <b>1</b> Coin Pusher.
+		name:The old arcade
+		desc:Have <b>1</b> Coin Pusher.<q>”Every 100th pig has a truffle in it!
 		req:1 coinPusher
 		icon:icons[3,4] 
 		on earn:yield 1 achievementNum
 	*coinPusherAch2
-		name:Coin Pusher Achievement 2
-		desc:Have <b>50</b> Coin Pushers.
+		name:Pushin' coins
+		desc:Have <b>50</b> Coin Pushers.<q>”To earn more coins, Demas has edited a version of Mortal Kombat to force you to spend Coins for Fatalities!”</q>
 		req:50 coinPusher
 		Icon:icons[4,4]
 		on earn:yield 1 achievementNum
 	*coinPusherAch3
-		name:Coin Pusher Achievement 3
-		desc:Have <b>100</b> Coin Pushers.
+		name:Gonna Need More Glue
+		desc:Have <b>100</b> Coin Pushers.<q>”There is a GIANT magnet under the arcade to ensure coins don't go very far.”</q>
 		req:100 coinPusher
 		icon:icons[5,4]  
 		on earn:yield 1 achievementNum
 	*coinPusherAch4
-		name:Coin Pusher Achievement 4
-		desc:Have <b>150</b> Coin Pushers.
+		name:Give and Ta-Give
+		desc:Have <b>150</b> Coin Pushers.<q>”To earn more coins, Demas has edited a version of Space Invaders to feature microtransactions to decorate your ship!”</q>
 		req:150 coinPusher
 		icon:icons[6,4]  
 		on earn:yield 1 achievementNum
 	*coinPusherAch5
-		name:Coin Pusher Achievement 5
-		desc:Have <b>200</b> Coin Pushers.
+		name:They all fall down
+		desc:Have <b>200</b> Coin Pushers.<q>”Surprisingly, the coin pusher is only the 2nd most profitable machine at the arcade behind the Mortal Kombat cabinet!”</q>
 		req:200 coinPusher
 		icon:icons[7,4]  
 		on earn:yield 1 achievementNum
 	*coinPusherAch6
-		name:Coin Pusher Achievement 6
-		desc:Have <b>250</b> Coin Pushers.
+		name:Coin Fall Flat
+		desc:Have <b>250</b> Coin Pushers.<q>”Every 100th pig has a truffle in it!”</q>
 		req:250 coinPusher
 		icon:icons[8,4]  
 		on earn:yield 1 achievementNum
 	*coinPusherAch7
-		name:Coin Pusher Achievement 7
-		desc:Have <b>300</b> Coin Pushers.
+		name:Centrifugal Coin Pusher
+		desc:Have <b>300</b> Coin Pushers.<q>”No one has noticed yet but the coins at the front that do fall down are chocolate!”</q>
 		req:300 coinPusher
 		icon:icons[9,4]  
 		on earn:yield 1 achievementNum
 	*coinPusherAch8
-		name:Coin Pusher Achievement 8
-		desc:Have <b>350</b> Coin Pushers.
+		name:Like Dominos
+		desc:Have <b>350</b> Coin Pushers.<q>”To earn more coins, Demas has edited a version of Pac-Man to feature 15 Ghosts!”</q>
 		req:350 coinPusher
 		icon:icons[10,4]  
 		on earn:yield 1 achievementNum
 	*coinPusherAch9
-		name:Coin Pusher Achievement 9
-		desc:Have <b>400</b> Coin Pushers.
+		name:A Sticky Situation
+		desc:Have <b>400</b> Coin Pushers.<q>”<b>PURSUANT TO MUNICPAL SAFTEY CODE SECTION 4 § 75 WE ARE OBLIGATED TO INFORM YOU THAT THE ANTIVANDAL SYSTEM THAT PROTECTS THE MACHINES FROM UNAUTHORIZED MOVEMENT IS A LAVA PIT.</b>”</q>
 		req:400 coinPusher
 		icon:icons[11,4]  
 		on earn:yield 1 achievementNum
 	*coinPusherAch10
-		name:Coin Pusher Achievement 10
-		desc:Have <b>450</b> Coin Pushers.
+		name:The Final Push
+		desc:Have <b>450</b> Coin Pushers.<q>”To earn more coins, Demas hasn't actually edited a version of Donkey Kong. To make extra money she has a Referee nearby you can pay for a World Record!”</q>
 		req:450 coinPusher
 		icon:icons[12,4]  
 		on earn:yield 1 achievementNum
 	//slot machine
 	*slotMachineAch1
-		name:Slot Machine Achievement 1
-		desc:Have <b>1</b> Slot Machine.
+		name:Lucky Number 7
+		desc:Have <b>1</b> Slot Machine.<q>”If you think 3 Seven's are lucky: try to take a coin from Demas and live. That is a real test of luck.”</q>
 		req:1 slotMachine
 		icon:icons[3,5] 
 		on earn:yield 1 achievementNum
 	*slotMachineAch2
-		name:Slot Machine Achievement 2
-		desc:Have <b>50</b> Slot Machines.
+		name:Definitely not rigged
+		desc:Have <b>50</b> Slot Machines.<q>”There is actually a Negative symbol infront of the jackpot! Man has that brought in a lot of coins!”</q>
 		req:50 slotMachine
 		Icon:icons[4,5]
 		on earn:yield 1 achievementNum
 	*slotMachineAch3
-		name:Slot Machine Achievement 3
-		desc:Have <b>100</b> Slot Machines.
+		name:Just a little more
+		desc:Have <b>100</b> Slot Machines.<q>”Demas's Casino actually allows you to cash IN coins for chips, not out.”</q>
 		req:100 slotMachine
 		icon:icons[5,5]  
 		on earn:yield 1 achievementNum
 	*slotMachineAch4
-		name:Slot Machine Achievement 4
-		desc:Have <b>150</b> Slot Machines.
+		name:The house always wins
+		desc:Have <b>150</b> Slot Machines.<q>”If you focus reeeeeally hard you can see that some machines have a fourth wheel!”</q>
 		req:150 slotMachine
 		icon:icons[6,5]  
 		on earn:yield 1 achievementNum
 	*slotMachineAch5
-		name:Slot Machine Achievement 5
-		desc:Have <b>200</b> Slot Machines.
+		name:... except when it doesnt
+		desc:Have <b>200</b> Slot Machines.<q>”Some lucky mail man walked in with a .357 on his belt. We gave him a lot of bottle caps and he left, thankfully.”</q>
 		req:200 slotMachine
 		icon:icons[7,5]  
 		on earn:yield 1 achievementNum
 	*slotMachineAch6
-		name:Slot Machine Achievement 6
-		desc:Have <b>250</b> Slot Machines.
+		name:Vegas, baby!
+		desc:Have <b>250</b> Slot Machines.<q>”The meat at this casino tastes kinda funny. Is this how chicken is supposed to taste?”</q>
 		req:250 slotMachine
 		icon:icons[8,5]  
 		on earn:yield 1 achievementNum
 	*slotMachineAch7
-		name:Slot Machine Achievement 7
-		desc:Have <b>300</b> Slot Machines.
+		name:Double or nothing
+		desc:Have <b>300</b> Slot Machines.<q>”Local ordinance requires the casino to post the winning odds somewhere in the casino. Sadly the only open wall space was in one of the bathroom stalls.”</q>
 		req:300 slotMachine
 		icon:icons[9,5]  
 		on earn:yield 1 achievementNum
 	*slotMachineAch8
-		name:Slot Machine Achievement 8
-		desc:Have <b>350</b> Slot Machines.
+		name:It's time for you to go
+		desc:Have <b>350</b> Slot Machines.<q>”The all-you-can-eat buffet used to offer sea food. There was an incident with Apricot that led to management reevaluating the meaning of "all-you-can-eat".”</q>
 		req:350 slotMachine
 		icon:icons[10,5]  
 		on earn:yield 1 achievementNum
 	*slotMachineAch9
-		name:Slot Machine Achievement 9
-		desc:Have <b>400</b> Slot Machines.
+		name:Mega Casino Royale
+		desc:Have <b>400</b> Slot Machines.<q>”All the coins are kept in a vault deep underneath the Casino!”</q>
 		req:400 slotMachine
 		icon:icons[11,5]  
 		on earn:yield 1 achievementNum
 	*slotMachineAch10
-		name:Slot Machine Achievement 10
-		desc:Have <b>450</b> Slot Machines.
+		name:I don't have a problem, YOU have a problem
+		desc:Have <b>450</b> Slot Machines.<q>”Hey, just thought we should take the time to remind you that Gambling is a very risky venture, and you should probably not do it in real life!”</q>
 		req:450 slotMachine
 		icon:icons[12,5] 
 		on earn:yield 1 achievementNum
 	//minting factory
 	*mintingFactoryAch1
-		name:Minting Factory Achievement 1
-		desc:Have <b>1</b> Minting Factory.
+		name:Industrial Revolution
+		desc:Have <b>1</b> Minting Factory.<q>”Steam powered coins? Valve will not be happy...”</q>
 		req:1 mintingFactory
 		icon:icons[3,6] 
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch2
-		name:Minting Factory Achievement 2
-		desc:Have <b>50</b> Minting Factories.
+		name:3D Minting
+		desc:Have <b>50</b> Minting Factories.<q>”We tried to put BitCoins™ in this thing but it just started making CD's!”</q>
 		req:50 mintingFactory
 		Icon:icons[4,6]
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch3
-		name:Minting Factory Achievement 3
-		desc:Have <b>100</b> Minting Factories.
+		name:Federal Reserve
+		desc:Have <b>100</b> Minting Factories.<q>”The Reserve has gone from the Gold Standard to the Coin Standard.”</q>
 		req:100 mintingFactory
 		icon:icons[5,6]  
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch4
-		name:Minting Factory Achievement 4
-		desc:Have <b>150</b> Minting Factories.
+		name:Actual Money Printer
+		desc:Have <b>150</b> Minting Factories.<q>”RDM RDM RDM RDM RDM!”</q>
 		req:150 mintingFactory
 		icon:icons[6,6]  
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch5
-		name:Minting Factory Achievement 5
-		desc:Have <b>200</b> Minting Factories.
+		name:Blue-Dollar Workers
+		desc:Have <b>200</b> Minting Factories.<q>”Demas makes a Coin, I make a click, world domination is quite the simple trick!”</q>
 		req:200 mintingFactory
 		icon:icons[7,6]  
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch6
-		name:Minting Factory Achievement 6
-		desc:Have <b>250</b> Minting Factories.
+		name:Over Production
+		desc:Have <b>250</b> Minting Factories.<q>”Do you actually know where you are gonna store any of these coins?”</q>
 		req:250 mintingFactory
 		icon:icons[8,6]  
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch7
-		name:Minting Factory Achievement 7
-		desc:Have <b>300</b> Minting Factories.
+		name:Coin Powered Machinery
+		desc:Have <b>300</b> Minting Factories.<q>”These coins are printed with Depleted Uranium!”</q>
 		req:300 mintingFactory
 		icon:icons[9,6]  
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch8
-		name:Minting Factory Achievement 8
-		desc:Have <b>350</b> Minting Factories.
+		name:Golden Gears
+		desc:Have <b>350</b> Minting Factories.<q>”Even the machines themselves are made of coins!”</q>
 		req:350 mintingFactory
 		icon:icons[10,6]  
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch9
-		name:Minting Factory Achievement 9
-		desc:Have <b>400</b> Minting Factories.
+		name:Minting Lasers
+		desc:Have <b>400</b> Minting Factories.<q>”Demas has picked up a habit of signing the coins!”</q>
 		req:400 mintingFactory
 		icon:icons[11,6]  
 		on earn:yield 1 achievementNum
 	*mintingFactoryAch10
-		name:Minting Factory Achievement 10
-		desc:Have <b>450</b> Minting Factories.
+		name:Zero Lunch Breaks
+		desc:Have <b>450</b> Minting Factories.<q>”To the workers, no lunch breaks wasn't even half as big a problem as the no bathroom breaks policy from last quarter...”</q>
 		req:450 mintingFactory
 		icon:icons[12,6] 
 		on earn:yield 1 achievementNum
 	//coin corporation
 	*coinCorpAch1
-		name:Coin Corporation Achievement 1
-		desc:Have <b>1</b> Coin Corporation.
+		name:Small Business Venture
+		desc:Have <b>1</b> Coin Corporation.<q>”Demas LLC. The LLC stands for Lotsa Lotsa Coins!”</q>
 		req:1 coinCorp
 		icon:icons[3,7] 
 		on earn:yield 1 achievementNum
 	*coinCorpAch2
-		name:Coin Corporation Achievement 2
-		desc:Have <b>50</b> Coin Corporations.
+		name:Initial Public Offering
+		desc:Have <b>50</b> Coin Corporations.<q>”When Demas said the competion would see the stocks I didn't know she meant a Pillory!”</q>
 		req:50 coinCorp
 		Icon:icons[4,7]
 		on earn:yield 1 achievementNum
 	*coinCorpAch3
-		name:Coin Corporation Achievement 3
-		desc:Have <b>100</b> Coin Corporations.
+		name:Market Manipulation
+		desc:Have <b>100</b> Coin Corporations.<q>”They said this market was so volatile it would flip like a coin, boy were they not kidding!”</q>
 		req:100 coinCorp
 		icon:icons[5,7]  
 		on earn:yield 1 achievementNum
 	*coinCorpAch4
-		name:Coin Corporation Achievement 4
-		desc:Have <b>150</b> Coin Corporations.
+		name:Coinporate Synergy
+		desc:Have <b>150</b> Coin Corporations.<q>”R&D has come out with a new strategy: Buy High, Sell Higher!”</q>
 		req:150 coinCorp
 		icon:icons[6,7]  
 		on earn:yield 1 achievementNum
 	*coinCorpAch5
-		name:Coin Corporation Achievement 5
-		desc:Have <b>200</b> Coin Corporations.
+		name:Grand Board of Directors
+		desc:Have <b>200</b> Coin Corporations.<q>”The Board is actually comprised of 10% Balsa, 89% Pine, and 1% Goat!”</q>
 		req:200 coinCorp
 		icon:icons[7,7]  
 		on earn:yield 1 achievementNum
 	*coinCorpAch6
-		name:Coin Corporation Achievement 6
-		desc:Have <b>250</b> Coin Corporations.
+		name:Mega Corp
+		desc:Have <b>250</b> Coin Corporations.<q>”Putting the "Can" in 'Mercantalism!”</q>
 		req:250 coinCorp
 		icon:icons[8,7]  
 		on earn:yield 1 achievementNum
 	*coinCorpAch7
-		name:Coin Corporation Achievement 7
-		desc:Have <b>300</b> Coin Corporations.
+		name:Corporate Militarization
+		desc:Have <b>300</b> Coin Corporations.<q>”La-Li-Lu-Le-Lo”</q>
 		req:300 coinCorp
 		icon:icons[9,7]  
 		on earn:yield 1 achievementNum
 	*coinCorpAch8
-		name:Coin Corporation Achievement 8
-		desc:Have <b>350</b> Coin Corporations.
+		name:Coin Lobbying
+		desc:Have <b>350</b> Coin Corporations.<q>”You would not believe how effective bribes are!”</q>
 		req:350 coinCorp
 		icon:icons[10,7]  
 		on earn:yield 1 achievementNum
 	*coinCorpAch9
-		name:Coin Corporation Achievement 9
-		desc:Have <b>400</b> Coin Corporations.
+		name:Questionable Ethics
+		desc:Have <b>400</b> Coin Corporations.<q>”I mean seriously! Who is actually living on this wildlife preserve!”</q>
 		req:400 coinCorp
 		icon:icons[11,7]
 		on earn:yield 1 achievementNum  
 	*coinCorpAch10
-		name:Coin Corporation Achievement 10
-		desc:Have <b>450</b> Coin Corporations.
+		name:Too Big to Fail
+		desc:Have <b>450</b> Coin Corporations.<q>”Even the coins have little golden parachutes!”</q>
 		req:450 coinCorp
 		icon:icons[12,7]  
 		on earn:yield 1 achievementNum
 	//world coingress
 	*worldCoinAch1
-		name:World Coingress Achievement 1
-		desc:Have <b>1</b> member in World Coingress.
+		name:First Coin Summit
+		desc:Have <b>1</b> member in World Coingress.<q>”The crowd was hushed as delegates from every major nation agreed: Coins are the way of the future!”</q>
 		req:1 worldCoingress
 		icon:icons[3,8] 
 		on earn:yield 1 achievementNum
 	*worldCoinAch2
-		name:World Coingress Achievement 2
-		desc:Have <b>50</b> members in World Coingress.
+		name:North Atlantic Coin Organization
+		desc:Have <b>50</b> members in World Coingress.<q>”Read my lips: More Coins More Fasterer!”</q>
 		req:50 worldCoingress
 		Icon:icons[4,8]
 		on earn:yield 1 achievementNum
 	*worldCoinAch3
-		name:World Coingress Achievement 3
-		desc:Have <b>100</b> members in World Coingress.
+		name:Coin Mandated Law
+		desc:Have <b>100</b> members in World Coingress.<q>”Ich Bin Ein Coin!”</q>
 		req:100 worldCoingress
 		icon:icons[5,8]  
 		on earn:yield 1 achievementNum
 	*worldCoinAch4
-		name:World Coingress Achievement 4
-		desc:Have <b>150</b> members in World Coingress.
+		name:Global Coin Superpower
+		desc:Have <b>150</b> members in World Coingress.<q>”Those who control the coins control the future.”</q>
 		req:150 worldCoingress
 		icon:icons[6,8]  
 		on earn:yield 1 achievementNum
 	*worldCoinAch5
-		name:World Coingress Achievement 5
-		desc:Have <b>200</b> members in World Coingress.
+		name:Neocoinolonialism
+		desc:Have <b>200</b> members in World Coingress.<q>”New Delegates to World Coingress must first pass polygraph question: ‘Do you like coins?’”</q>
 		req:200 worldCoingress
 		icon:icons[7,8]  
 		on earn:yield 1 achievementNum
 	*worldCoinAch6
-		name:World Coingress Achievement 6
-		desc:Have <b>250</b> members in World Coingress.
+		name:Illuminati Overlords
+		desc:Have <b>250</b> members in World Coingress.<q>”Despite the name, no coins are actually allowed on the premises, for fear of an international incident.”</q>
 		req:250 worldCoingress
 		icon:icons[8,8]  
 		on earn:yield 1 achievementNum
 	*worldCoinAch7
-		name:World Coingress Achievement 7
-		desc:Have <b>300</b> members in World Coingress.
+		name:Grand Global Coinspiracy
+		desc:Have <b>300</b> members in World Coingress.<q>”Even the shadow world government is forced to attend the World Coingress!”</q>
 		req:300 worldCoingress
 		icon:icons[9,8]  
 		on earn:yield 1 achievementNum
 	*worldCoinAch8
-		name:World Coingress Achievement 8
-		desc:Have <b>350</b> members in World Coingress.
+		name:Big Sister
+		desc:Have <b>350</b> members in World Coingress.<q>”The Coin War brews as the USSR and U.S. jockey for control of the world's precious metal supplies!”</q>
 		req:350 worldCoingress
 		icon:icons[10,8]  
 		on earn:yield 1 achievementNum
 	*worldCoinAch9
-		name:World Coingress Achievement 9
-		desc:Have <b>400</b> members in World Coingress.
+		name:1984 Coins
+		desc:Have <b>400</b> members in World Coingress.<q>”THIS JUST IN: WORLD COINGRESS DECLARES MORE COINS: DOUBLE PLUS GOOD!”</q>
 		req:400 worldCoingress
 		icon:icons[11,8]  
 		on earn:yield 1 achievementNum
 	*worldCoinAch10
-		name:World Coingress Achievement 10
-		desc:Have <b>450</b> members in World Coingress.
+		name:Orwellian Nightmare
+		desc:Have <b>450</b> members in World Coingress.<q>”The masses never revolt of their own accord, and they never revolt merely because they are oppressed. Indeed, so long as they are not permitted to have standards of comparison, they never even become aware that they are oppressed.”</q>
 		req:450 worldCoingress
 		icon:icons[12,8]  
 		on earn:yield 1 achievementNum
 	//lunar mine
 	*lunarMineAch1
-		name:Lunar Mine Achievement 1
-		desc:Have <b>1</b> Lunar Mine.
+		name:To the Moon!
+		desc:Have <b>1</b> Lunar Mine.<q>”Landable Rocket technology being where it is, Demas settled on two catapults to get the job done.”</q>
 		req:1 lunarMine
 		icon:icons[3,9] 
 		on earn:yield 1 achievementNum
 	*lunarMineAch2
-		name:Lunar Mine Achievement 2
-		desc:Have <b>50</b> Lunar Mines.
+		name:One Small Step
+		desc:Have <b>50</b> Lunar Mines.<q>”The prehistoric ruins on the moon have put up little resistance to the mining drills.”</q>
 		req:50 lunarMine
 		Icon:icons[4,9]
 		on earn:yield 1 achievementNum
 	*lunarMineAch3
-		name:Lunar Mine Achievement 3
-		desc:Have <b>100</b> Lunar Mines.
+		name:The Dark Side
+		desc:Have <b>100</b> Lunar Mines.<q>”Demas is too ashamed to admit it, but she did taste the moon just to be sure it wasn't cheese.”</q>
 		req:100 lunarMine
 		icon:icons[5,9]  
 		on earn:yield 1 achievementNum
 	*lunarMineAch4
-		name:Lunar Mine Achievement 4
-		desc:Have <b>150</b> Lunar Mines.
+		name:Mass Colonization
+		desc:Have <b>150</b> Lunar Mines.<q>”Looking to escape the unemployment on Earth, come to one of our luxrious lunar colonies, now with less rocks!”</q>
 		req:150 lunarMine
 		icon:icons[6,9]  
 		on earn:yield 1 achievementNum
 	*lunarMineAch5
-		name:Lunar Mine Achievement 5
-		desc:Have <b>200</b> Lunar Mines.
+		name:Lunar Expansion
+		desc:Have <b>200</b> Lunar Mines.<q>”Technically we are not destroying the surface of the moon, but rather we are adding new craters!”</q>
 		req:200 lunarMine
 		icon:icons[7,9]  
 		on earn:yield 1 achievementNum
 	*lunarMineAch6
-		name:Lunar Mine Achievement 6
-		desc:Have <b>250</b> Lunar Mines.
+		name:We Need More Moons
+		desc:Have <b>250</b> Lunar Mines.<q>”That's no moon... wait... no, yeah it is.”</q>
 		req:250 lunarMine
 		icon:icons[8,9]  
 		on earn:yield 1 achievementNum
 	*lunarMineAch7
-		name:Lunar Mine Achievement 7
-		desc:Have <b>300</b> Lunar Mines.
+		name:Lunar Super Quarries
+		desc:Have <b>300</b> Lunar Mines.<q>”After a while, you start to imagine the Earth is like the Moon's Moon!”</q>
 		req:300 lunarMine
 		icon:icons[9,9]  
 		on earn:yield 1 achievementNum
 	*lunarMineAch8
-		name:Lunar Mine Achievement 8
-		desc:Have <b>350</b> Lunar Mines.
+		name:Core Resource Extraction
+		desc:Have <b>350</b> Lunar Mines.<q>”SPAAAAAAAAAAAAAAAAAACE!”</q>
 		req:350 lunarMine
 		icon:icons[10,9]  
 		on earn:yield 1 achievementNum
 	*lunarMineAch9
-		name:Lunar Mine Achievement 9
-		desc:Have <b>400</b> Lunar Mines.
+		name:Gray Goo
+		desc:Have <b>400</b> Lunar Mines.<q>”You'd be surprised how good these nanomachines are at mining! Anything! Even the lunar base!”</q>
 		req:400 lunarMine
 		icon:icons[11,9]  
 		on earn:yield 1 achievementNum
 	*lunarMineAch10
-		name:Lunar Mine Achievement 10
-		desc:Have <b>450</b> Lunar Mines.
+		name:Total Star System Depletion
+		desc:Have <b>450</b> Lunar Mines.<q>”OH MY GOD WE RAN OUT OF MOONS!”</q>
 		req:450 coinCorp
 		icon:icons[12,9]  
 		on earn:yield 1 achievementNum
 //dyson sphere
 	*dysonSphereAch1
-		name:Dyson Sphere Achievement 1
-		desc:Have <b>1</b> Dyson Sphere.
+		name:Type II Civilization
+		desc:Have <b>1</b> Dyson Sphere.<q>”At first Demas thought Dyson was the brand of vacuum, and it made this idea sound very, very stupid.”</q>
 		req:1 dysonSphere
 		icon:icons[3,10] 
 		on earn:yield 1 achievementNum
 	*dysonSphereAch2
-		name:Dyson Sphere Achievement 2
-		desc:Have <b>50</b> Dyson Spheres.
+		name:Nuke the Sun
+		desc:Have <b>50</b> Dyson Spheres.<q>”Getting the sphere around the sun was the easy part. Getting out from the inside proved much, much harder.
 		req:50 dysonSphere
 		Icon:icons[4,10]
 		on earn:yield 1 achievementNum
 	*dysonSphereAch3
-		name:Dyson Sphere Achievement 3
-		desc:Have <b>100</b> Dyson Spheres.
+		name:Supernova Escallation
+		desc:Have <b>100</b> Dyson Spheres.<q>”We assure you the explosion inside the sphere are well within expected parameters.
 		req:100 dysonSphere
 		icon:icons[5,10]  
 		on earn:yield 1 achievementNum
 	*dysonSphereAch4
-		name:Dyson Sphere Achievement 4
-		desc:Have <b>150</b> Dyson Spheres.
+		name:Gamma Ray Bursts
+		desc:Have <b>150</b> Dyson Spheres.<q>”They said you could never sell fresh air and sunlight. We proved one of those things wrong.
 		req:150 dysonSphere
 		icon:icons[6,10]  
 		on earn:yield 1 achievementNum
 	*dysonSphereAch5
-		name:Dyson Sphere Achievement 5
-		desc:Have <b>200</b> Dyson Spheres.
+		name:Neutron Stars
+		desc:Have <b>200</b> Dyson Spheres.<q>”Earth might be freezing now, but coins are hot as ever!
 		req:200 dysonSphere
 		icon:icons[7,10]  
 		on earn:yield 1 achievementNum
 	*dysonSphereAch6
-		name:Dyson Sphere Achievement 6
-		desc:Have <b>250</b> Dyson Spheres.
+		name:Binary Star Systems
+		desc:Have <b>250</b> Dyson Spheres.<q>”Can you believe people used to care about ‘sunrises’ and ‘sunsets’. What freaks!”</q>
 		req:250 dysonSphere
 		icon:icons[8,10]  
 		on earn:yield 1 achievementNum
 	*dysonSphereAch7
-		name:Dyson Sphere Achievement 7
-		desc:Have <b>300</b> Dyson Spheres.
+		name:Automated Solar Arrays
+		desc:Have <b>300</b> Dyson Spheres.<q>”Putting the "hot" in 'photovoltaic'!”</q>
 		req:300 dysonSphere
 		icon:icons[9,10]  
 		on earn:yield 1 achievementNum
 	*dysonSphereAch8
-		name:Dyson Sphere Achievement 8
-		desc:Have <b>350</b> Dyson Spheres.
+		name:Way Too Much Energy
+		desc:Have <b>350</b> Dyson Spheres.<q>”Gordan slot the sphere around the Class G star...”</q>
 		req:350 dysonSphere
 		icon:icons[10,10]  
 		on earn:yield 1 achievementNum
 	*dysonSphereAch9
-		name:Dyson Sphere Achievement 9
-		desc:Have <b>400</b> Dyson Spheres.
+		name:ITS NOT SHUTTING DOWN
+		desc:Have <b>400</b> Dyson Spheres.<q>”HELP! NOOOO! STOP! EYURK!”</q>
 		req:400 dysonSphere
 		icon:icons[11,10]  
 		on earn:yield 1 achievementNum
 	*dysonSphereAch10
-		name:Dyson Sphere Achievement 10
-		desc:Have <b>450</b> Dyson Spheres.
+		name:Coins... but at what cost?
+		desc:Have <b>450</b> Dyson Spheres.<q>”Now how about that coin I owed you!”</q>
 		req:450 coinCorp
 		icon:icons[12,10]  
 		on earn:yield 1 achievementNum
 	//coin vortex
 	*coinVortexAch1
-		name:Coin Vortex Achievement 1
-		desc:Have <b>1</b> Coin Vortex.
+		name:The Singularity
+		desc:Have <b>1</b> Coin Vortex.<q>”The beginning and the end. The Alpha and the Omega. The coin and the goat.”</q>
 		req:1 coinVortex
 		icon:icons[3,11] 
 		on earn:yield 1 achievementNum
 	*coinVortexAch2
-		name:Coin Vortex Achievement 2
-		desc:Have <b>50</b> Coin Vortices.
+		name:Resonance Cascade
+		desc:Have <b>50</b> Coin Vortices.<q>”Demas doesn't need to hear this, she's a highly trained professional.”</q>
 		req:50 coinVortex
 		Icon:icons[4,11]
 		on earn:yield 1 achievementNum
 	*coinVortexAch3
-		name:Coin Vortex Achievement 3
-		desc:Have <b>100</b> Coin Vortices.
+		name:Event Horizon
+		desc:Have <b>100</b> Coin Vortices.<q>”The coins falling in move slower and slower.....”</q>
 		req:100 coinVortex
 		icon:icons[5,11]  
 		on earn:yield 1 achievementNum
 	*coinVortexAch4
-		name:Coin Vortex Achievement 4
-		desc:Have <b>150</b> Coin Vortices.
+		name:Super-Duper-Massive Black Holes
+		desc:Have <b>150</b> Coin Vortices.<q>”Where do they even find these things!”</q>
 		req:150 coinVortex
 		icon:icons[6,11]  
 		on earn:yield 1 achievementNum
 	*coinVortexAch5
-		name:Coin Vortex Achievement 5
-		desc:Have <b>200</b> Coin Vortices.
+		name:Coin Accretion Disks
+		desc:Have <b>200</b> Coin Vortices.<q>”A constant stream of coins is collected with a REALLY big net!”</q>
 		req:200 coinVortex
 		icon:icons[7,11]  
 		on earn:yield 1 achievementNum
 	*coinVortexAch6
-		name:Coin Vortex Achievement 6
-		desc:Have <b>250</b> Coin Vortices.
+		name:White Holes
+		desc:Have <b>250</b> Coin Vortices.<q>”Oh so that's how we get them back!”</q>
 		req:250 coinVortex
 		icon:icons[8,11]  
 		on earn:yield 1 achievementNum
 	*coinVortexAch7
-		name:Coin Vortex Achievement 7
-		desc:Have <b>300</b> Coin Vortices.
+		name:The Double Coin Experiment
+		desc:Have <b>300</b> Coin Vortices.<q>”Demas taking your coins is the ultimate spooky action at a distance!”</q>
 		req:300 coinVortex
 		icon:icons[9,11]  
 		on earn:yield 1 achievementNum
 	*coinVortexAch8
-		name:Coin Vortex Achievement 8
-		desc:Have <b>350</b> Coin Vortices.
+		name:Dirt Devil
+		desc:Have <b>350</b> Coin Vortices.<q>”<b>EDITORS NOTE: DAMN IT, I THOUGHT WE SAID NO TO THE VACUUM JOKES WITH THE ‘DYSON SPHERE’</b>”</q>
 		req:350 coinVortex
 		icon:icons[10,11]  
 		on earn:yield 1 achievementNum
 	*coinVortexAch9
-		name:Coin Vortex Achievement 9
-		desc:Have <b>400</b> Coin Vortices.
+		name:ClickHole
+		desc:Have <b>400</b> Coin Vortices.<q>”This isn't just ordinary spam.”</q>
 		req:400 coinVortex
 		icon:icons[11,11]  
 		on earn:yield 1 achievementNum
 	*coinVortexAch10
-		name:Coin Vortex Achievement 10
-		desc:Have <b>450</b> Coin Vortices.
+		name:Hawcoin Radiation
+		desc:Have <b>450</b> Coin Vortices.<q>”S=πR^2”</q>
 		req:450 coinVortex
 		icon:icons[12,11]  
 		on earn:yield 1 achievementNum
 //galaxy
 	*galaxyAch1
-		name:NBC 253 Achievement 1
-		desc:Harness the power of NBC 253 <b>1x</b>.
+		name:NBC 253
+		desc:Harness the power of NBC 253 <b>1x</b>.<q>”NBC 253 is a real galaxy. Go look it up.”</q>
 		req:1 galaxy
 		icon:icons[3,12] 
 		on earn:yield 1 achievementNum
 	*galaxyAch2
-		name:NBC 253 Achievement 2
-		desc:Harness the power of NBC 253 <b>50x</b>.
+		name:Spore ain't got nothing on this!
+		desc:Harness the power of NBC 253 <b>50x</b>.<q>”You looked it up, huh? Pretty smart of us if I do say so myself!”</q>
 		req:50 galaxy
 		Icon:icons[4,12]
 		on earn:yield 1 achievementNum
 	*galaxyAch3
-		name:NBC 253 Achievement 3
-		desc:Harness the power of NBC 253 <b>100x</b>.
+		name:Milky Way is just a Candybar
+		desc:Harness the power of NBC 253 <b>100x</b>.<q>”We spent a LOT of time writing all this flavor text. You better appreciate it.”</q>
 		req:100 galaxy
 		icon:icons[5,12]  
 		on earn:yield 1 achievementNum
 	*galaxyAch4
-		name:NBC 253 Achievement 4
-		desc:Harness the power of NBC 253 <b>150x</b>.
+		name:Cosmic Microwave Dinner
+		desc:Harness the power of NBC 253 <b>150x</b>.<q>”I am serious. Demas will find you. She is VERY defensive about her creative writing, she took a class and everything.”</q>
 		req:150 galaxy
 		icon:icons[6,12]  
 		on earn:yield 1 achievementNum
 	*galaxyAch5
-		name:NBC 253 Achievement 5
-		desc:Harness the power of NBC 253 <b>200x</b>.
+		name:Coindromeda
+		desc:Harness the power of NBC 253 <b>200x</b>.<q>”Oh, I am being told we have to write something here about you getting achievements, yeah I think we can do that.”</q>
 		req:200 galaxy
 		icon:icons[7,12]  
 		on earn:yield 1 achievementNum
 	*galaxyAch6
-		name:NBC 253 Achievement 6
-		desc:Harness the power of NBC 253 <b>250x</b>.
+		name:4.5 Fundemental Forces
+		desc:Harness the power of NBC 253 <b>250x</b>.<q>”yay you got 250 of [insert building here!]!!”</q>
 		req:250 galaxy
 		icon:icons[8,12]  
 		on earn:yield 1 achievementNum
 	*galaxyAch7
 		name:NBC 253 Achievement 7
-		desc:Harness the power of NBC 253 <b>300x</b>.
+		desc:Harness the power of NBC 253 <b>300x</b>.<q>”DO YOU THINK THIS THING SUPPORTS EMOJIS???”</q>
 		req:300 galaxy
 		icon:icons[9,12]  
 		on earn:yield 1 achievementNum
 	*galaxyAch8
-		name:NBC 253 Achievement 8
-		desc:Harness the power of NBC 253 <b>350x</b>.
+		name:Nefarious Nubulae
+		desc:Harness the power of NBC 253 <b>350x</b>.<q>”☐”</q>
 		req:350 galaxy
 		icon:icons[10,12]  
 		on earn:yield 1 achievementNum
 	*galaxyAch9
-		name:NBC 253 Achievement 9
-		desc:Harness the power of NBC 253 <b>400x</b>.
+		name:Large Magellanic Coin
+		desc:Harness the power of NBC 253 <b>400x</b>.<q>”DANGIT”</q>
 		req:400 galaxy
 		icon:icons[11,12]  
 		on earn:yield 1 achievementNum
 	*galaxyAch10
-		name:NBC 253 Achievement 10
-		desc:Harness the power of NBC 253 <b>450x</b>.
+		name:Your Coin Count is moving so fast it is Blue Shifted!
+		desc:Harness the power of NBC 253 <b>450x</b>.<q>”Space Fact #867453: The word galaxy is derived from the Greek word galaxias which literally means ‘milky’!”</q>
 		req:450 coinCorp
 		icon:icons[12,12]  
 		on earn:yield 1 achievementNum
 		
 //tesseract
 	*tesseractAch1
-		name:Solid Gold Tesseract Achievement 1
-		desc:Have <b>1</b> Solid Gold Tesseract.
+		name:The Real Infinity Stones
+		desc:Have <b>1</b> Solid Gold Tesseract.<q>”Demas didn't even intend to use these things to make coins, they were originally just a storage device!”</q>
 		req:1 tesseract
 		icon:icons[3,13] 
 		on earn:yield 1 achievementNum
 	*tesseractAch2
-		name:Solid Gold Tesseract Achievement 2
-		desc:Have <b>50</b> Solid Gold Tesseracts.
+		name:Parallel Coiniverses
+		desc:Have <b>50</b> Solid Gold Tesseracts.<q>”Scientists are deeply concerned that they may be taking these coins from a Parralel Demas.”</q>
 		req:50 tesseract
 		Icon:icons[4,13]
 		on earn:yield 1 achievementNum
 	*tesseractAch3
-		name:Solid Gold Tesseract Achievement 3
-		desc:Have <b>100</b> Solid Gold Tesseracts.
+		name:A Coin Within a Coin
+		desc:Have <b>100</b> Solid Gold Tesseracts.<q>”Though they are of equal complexity, these Tesseracts are not to be confused with a Rubix cube!”</q>
 		req:100 tesseract
 		icon:icons[5,13]  
 		on earn:yield 1 achievementNum
 	*tesseractAch4
-		name:Solid Gold Tesseract Achievement 4
-		desc:Have <b>150</b> Solid Gold Tesseracts.
+		name:It’s Not Time Travel, its String Theory
+		desc:Have <b>150</b> Solid Gold Tesseracts.<q>”Can you believe that we have only had two paradoxes in the month we have had these things!”</q>
 		req:150 tesseract
 		icon:icons[6,13]  
 		on earn:yield 1 achievementNum
 	*tesseractAch5
-		name:Solid Gold Tesseract Achievement 5
-		desc:Have <b>200</b> Solid Gold Tesseracts.
+		name:World 1-2
+		desc:Have <b>200</b> Solid Gold Tesseracts.<q>”In this dimension there is a bonus room down a pipe full of coins!”</q>
 		req:200 tesseract
 		icon:icons[7,13]  
 		on earn:yield 1 achievementNum
 	*tesseractAch6
-		name:Solid Gold Tesseract Achievement 6
-		desc:Have <b>250</b> Solid Gold Tesseracts.
+		name:We Need to Go Deeper
+		desc:Have <b>250</b> Solid Gold Tesseracts.<q>”Does anyone have a Diamond Pickaxe to pick this thing up with?”</q>
 		req:250 tesseract
 		icon:icons[8,13]  
 		on earn:yield 1 achievementNum
 	*tesseractAch7
-		name:Solid Gold Tesseract Achievement 7
-		desc:Have <b>300</b> Solid Gold Tesseracts.
+		name:Average Relativity
+		desc:Have <b>300</b> Solid Gold Tesseracts.<q>”The bigger ones are called the Hyper-Hypercubes!”</q>
 		req:300 tesseract
 		icon:icons[9,13]  
 		on earn:yield 1 achievementNum
 	*tesseractAch8
-		name:Solid Gold Tesseract Achievement 8
-		desc:Have <b>350</b> Solid Gold Tesseracts.
+		name:Kloin Bottles
+		desc:Have <b>350</b> Solid Gold Tesseracts.<q>”It just goes round and round!”</q>
 		req:350 tesseract
 		icon:icons[10,13]  
 		on earn:yield 1 achievementNum
 	*tesseractAch9
-		name:Solid Gold Tesseract Achievement 9
-		desc:Have <b>400</b> Solid Gold Tesseracts.
+		name:Every Coin at the End of Time
+		desc:Have <b>400</b> Solid Gold Tesseracts.<q>”They were just sitting there!”</q>
 		req:400 tesseract
 		icon:icons[11,13]  
 		on earn:yield 1 achievementNum
 	*tesseractAch10
-		name:Solid Gold Tesseract Achievement 10
-		desc:Have <b>450</b> Solid Gold Tesseracts.
+		name:Out of Dimensions!
+		desc:Have <b>450</b> Solid Gold Tesseracts.<q>”Well looks like we should head back to our own dimension now, all these other ones suck.”</q>
 		req:450 coinCorp
 		icon:icons[12,13]  
 		on earn:yield 1 achievementNum
 //gCUT
 	*gCUTAch1
-		name:Grand Coin Unification Theory Achievement 1
-		desc:Harness the power of Grand Coin Unification Theory <b>1x</b>.
+		name:It's just like Lego™
+		desc:Harness the power of Grand Coin Unification Theory <b>1x</b>.<q>”You'd be surprised what you can do when you make gravity STRONGER the further you are away!”</q>
 		req:1 gCUT
 		icon:icons[3,14] 
 		on earn:yield 1 achievementNum
 	*gCUTAch2
-		name:Grand Coin Unification Theory Achievement 2
-		desc:Harness the power of Grand Coin Unification Theory <b>50x</b>.
+		name:It All Makes Sense Now
+		desc:Harness the power of Grand Coin Unification Theory <b>50x</b>.<q>”Demas likes to edit the config file for our universe when she gets bored.”</q>
 		req:50 gCUT
 		Icon:icons[4,14]
 		on earn:yield 1 achievementNum
 	*gCUTAch3
-		name:Grand Coin Unification Theory Achievement 3
-		desc:Harness the power of Grand Coin Unification Theory <b>100x</b>.
+		name:Reality Bending Coins
+		desc:Harness the power of Grand Coin Unification Theory <b>100x</b>.<q>”This doesn't take place on a timeline so much as it does a time circle.”</q>
 		req:100 gCUT
 		icon:icons[5,14]  
 		on earn:yield 1 achievementNum
 	*gCUTAch4
-		name:Grand Coin Unification Theory Achievement 4
-		desc:Harness the power of Grand Coin Unification Theory <b>150x</b>.
+		name:Subatomic Particoins
+		desc:Harness the power of Grand Coin Unification Theory <b>150x</b>.<q>”Demas' complete control of the universe is just one of her quarks! Get it!”</q>
 		req:150 gCUT
 		icon:icons[6,14]  
-	*gCUTAch5
 		on earn:yield 1 achievementNum
-		name:Grand Coin Unification Theory Achievement 5
-		desc:Harness the power of Grand Coin Unification Theory <b>200x</b>.
+	*gCUTAch5
+		name:Dem's Bozon
+		desc:Harness the power of Grand Coin Unification Theory <b>200x</b>.<q>”If the theory of Higgs Boson is fake, is it just a Faux-ton? [I CAME UP WITH THAT JOKE MYSELF PLEASE DON'T STEAL IT]”</q>
 		req:200 gCUT
 		icon:icons[7,14]  
 		on earn:yield 1 achievementNum
 	*gCUTAch6
-		name:Grand Coin Unification Theory Achievement 6
-		desc:Harness the power of Grand Coin Unification Theory <b>250x</b>.
+		name:Cointum Entanglement
+		desc:Harness the power of Grand Coin Unification Theory <b>250x</b>.<q>”This achievement is actually entangled with you buying 250 buildings, we didn't even script it to be awarded!”</q>
 		req:250 gCUT
 		icon:icons[8,14]  
 		on earn:yield 1 achievementNum
 	*gCUTAch7
-		name:Grand Coin Unification Theory Achievement 7
-		desc:Harness the power of Grand Coin Unification Theory <b>300x</b>.
+		name:Wave Function Coinlapse
+		desc:Harness the power of Grand Coin Unification Theory <b>300x</b>.<q>”You do not want to see a coin that can interfere like a wave, trust me.”</q>
 		req:300 gCUT
 		icon:icons[9,14]  
 		on earn:yield 1 achievementNum
 	*gCUTAch8
-		name:Grand Coin Unification Theory Achievement 8
-		desc:Harness the power of Grand Coin Unification Theory <b>350x</b>.
+		name:Uncertainty Principle
+		desc:Harness the power of Grand Coin Unification Theory <b>350x</b>.<q>”Now where did I leave all those coins?”</q>
 		req:350 gCUT
 		icon:icons[10,14]  
 		on earn:yield 1 achievementNum
 	*gCUTAch9
-		name:Grand Coin Unification Theory Achievement 9
-		desc:Harness the power of Grand Coin Unification Theory <b>400x</b>.
+		name:Schrödinger's Coin Flip
+		desc:Harness the power of Grand Coin Unification Theory <b>400x</b>.<q>”Demas doesn't even like cats.”</q>
 		req:400 gCUT
 		icon:icons[11,14]  
 		on earn:yield 1 achievementNum
 	*gCUTAch10
-		name:Grand Coin Unification Theory Achievement 10
-		desc:Harness the power of Grand Coin Unification Theory <b>450x</b>.
+		name:G.O.A.T.
+		desc:Harness the power of Grand Coin Unification Theory <b>450x</b>.<q>”DEMAS IS THE GOAT GOD OF ALL THINGS! Now, why did she need all these coins...”</q>
 		req:450 coinCorp
 		icon:icons[12,14]  
 		on earn:yield 1 achievementNum
