@@ -3045,7 +3045,7 @@ Achievements
 		on earn:yield 1 achievementNum
 	*galaxyAch6
 		name:4.5 Fundemental Forces
-		desc:Harness the power of NBC 253 <b>250x</b>.<q>”yay you got 250 of [insert building here!]!!”</q>
+		desc:Harness the power of NBC 253 <b>250x</b>.<q>”yay you got 250 of (insert building here!)!!”</q>
 		req:250 galaxy
 		icon:icons[8,12]  
 		on earn:yield 1 achievementNum
