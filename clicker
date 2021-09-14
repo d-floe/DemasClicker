@@ -3045,7 +3045,7 @@ Achievements
 		on earn:yield 1 achievementNum
 	*galaxyAch6
 		name:4.5 Fundemental Forces
-		desc:Harness the power of NBC 253 <b>250x</b>.<q>”yay you got 250 of (insert building here!)!!”</q>
+		desc:Harness the power of NBC 253 <b>250x</b>.<q>”yay you got 250 of *insert building here!*!!”</q>
 		req:250 galaxy
 		icon:icons[8,12]  
 		on earn:yield 1 achievementNum
@@ -3162,7 +3162,7 @@ Achievements
 		on earn:yield 1 achievementNum
 	*gCUTAch5
 		name:Dem's Bozon
-		desc:Harness the power of Grand Coin Unification Theory <b>200x</b>.<q>”If the theory of Higgs Boson is fake, is it just a Faux-ton? (I CAME UP WITH THAT JOKE MYSELF PLEASE DON'T STEAL IT)”</q>
+		desc:Harness the power of Grand Coin Unification Theory <b>200x</b>.<q>”If the theory of Higgs Boson is fake, is it just a Faux-ton? <//>I CAME UP WITH THAT JOKE MYSELF PLEASE DON'T STEAL IT”</q>
 		req:200 gCUT
 		icon:icons[7,14]  
 		on earn:yield 1 achievementNum
