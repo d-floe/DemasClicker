@@ -2142,79 +2142,79 @@ Achievements
 
 *everythingAch1
 		name:Wait, I have to buy how much more??
-		desc:You've bought <b>1%</b> of everything! <//>Demas needs you to buy 100 for her master plan!
+		desc:You've bought <b>1%</b> of everything!<q>”Demas needs you to buy 100 for her master plan!”</q>
 		req:1 everything
 		icon:icons[3,15] 
 		on earn:yield 1 achievementNum
 *everythingAch2
 		name:Lockpicking increased
-		desc:You've bought <b>10%</b> of everything! <//>No sweat!
+		desc:You've bought <b>10%</b> of everything!<q>”No sweat!”</q>
 		req:10 everything
 		icon:icons[4,15] 
 		on earn:yield 1 achievementNum
 *everythingAch3
 		name:Sigma Grindset
-		desc:You've bought <b>20%</b> of everything! <//>There are plenty more to get so keep grinding!
+		desc:You've bought <b>20%</b> of everything!<q>”There are plenty more to get so keep grinding!”</q>
 		req:20 everything
 		icon:icons[5,15] 
 		on earn:yield 1 achievementNum
 *everythingAch4
 		name:Fitness Montage Music
-		desc:You've bought <b>30%</b> of everything! <//>A third done and you're having fun!
+		desc:You've bought <b>30%</b> of everything!<q>”A third done and you're having fun!”</q>
 		req:30 everything
 		icon:icons[6,15] 
 		on earn:yield 1 achievementNum
 *everythingAch5
 		name:Need for Speed
-		desc:You've bought <b>40%</b> of everything! <//>They just keep coming, don't they?
+		desc:You've bought <b>40%</b> of everything!<q>”They just keep coming, don't they?”</q>
 		req:40 everything
 		icon:icons[7,15] 
 		on earn:yield 1 achievementNum
 *everythingAch6
 		name:Living on a Prayer
-		desc:You've bought <b>50%</b> of everything! <//>OOOOOOOOOOOOOOOOOOH YOU'RE HALFWAY THERE!
+		desc:You've bought <b>50%</b> of everything!<q>”OOOOOOOOOOOOOOOOOOH YOU'RE HALFWAY THERE!”</q>
 		req:50 everything
 		icon:icons[8,15] 
 		on earn:yield 1 achievementNum
 *everythingAch7
 		name:Over the Hill
-		desc:You've bought <b>60%</b> of everything! <//>Things might start to seem like they're slowing down but there are plenty more to go!
+		desc:You've bought <b>60%</b> of everything!<q>”Things might start to seem like they're slowing down but there are plenty more to go!”</q>
 		req:60 everything
 		icon:icons[9,15] 
 		on earn:yield 1 achievementNum
 *everythingAch8
 		name:Nice
-		desc:You've bought <b>69%</b> of everything! <//>Nice.
+		desc:You've bought <b>69%</b> of everything!<q>”Nice.”</q>
 		req:69 everything
 		icon:icons[10,15] 
 		on earn:yield 1 achievementNum
 *everythingAch9
 		name:Dont Stop Me Now
-		desc:You've bought <b>70%</b> of everything! <//>Demas is rooting for you!
+		desc:You've bought <b>70%</b> of everything!<q>”Demas is rooting for you!”</q>
 		req:70 everything
 		icon:icons[11,15] 
 		on earn:yield 1 achievementNum
 *everythingAch10
 		name:Acceptable in the 80s
-		desc:You've bought <b>80%</b> of everything! <//>Focus now!
+		desc:You've bought <b>80%</b> of everything!<q>”Focus now!”</q>
 		req:70 everything
 		icon:icons[12,15] 
 		on earn:yield 1 achievementNum
 *everythingAch11
 		name:Pure dedication
-		desc:You've bought <b>90%</b> of everything! <//>This is the home stretch!
+		desc:You've bought <b>90%</b> of everything!<q>”This is the home stretch!”</q>
 		req:70 everything
 		icon:icons[0,15] 
 		on earn:yield 1 achievementNum
 *everythingAch12
 		name:SO CLOSE
-		desc:You've bought <b>99%</b> of everything! Press on! <//>You are so close!
+		desc:You've bought <b>99%</b> of everything! Press on!<q>”You are so close!”</q>
 		req:99 everything
 		icon:icons[0,16] 
 		on earn:yield 1 achievementNum
 *everythingAch13
 		name:Unlock Everything
-		desc:You've bought <b>100%</b> of everything! <//>You've made Demas unbelievably happy! You should screenshot this and go send it in <b>#general</b> chat!
+		desc:You've bought <b>100%</b> of everything!<q>”You've made Demas unbelievably happy! You should screenshot this and go send it in <b>#general</b> chat!”</q>
 		req:100 everything
 		icon:icons[0,17] 
 		on earn:yield 1 achievementNum
