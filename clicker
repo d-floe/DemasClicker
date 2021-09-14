@@ -3083,7 +3083,7 @@ Achievements
 		on earn:yield 1 achievementNum
 	*tesseractAch2
 		name:Parallel Coiniverses
-		desc:Have <b>50</b> Solid Gold Tesseracts.<q>”Scientists are deeply concerned that they may be taking these coins from a Parralel Demas.”</q>
+		desc:Have <b>50</b> Solid Gold Tesseracts.<q>”Scientists are deeply concerned that they may be taking these coins from a Parallel Demas.”</q>
 		req:50 tesseract
 		Icon:icons[4,13]
 		on earn:yield 1 achievementNum
