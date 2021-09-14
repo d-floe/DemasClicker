@@ -281,7 +281,7 @@ Buildings
 		
 	*couchCushions
 		name:Couch Cushions
-		desc:Couch cushions that hide precious coins.<//><b>Effect:</b><.>Produces 1 coin every 10 seconds.<q>”A little effort to shake out the couch cushions is a surefire way to get more coins!”</q>
+		desc:Couch cushions that hide precious coins.<//><b>Effect:</b><.>Produces <b>1</b> coin every 10 seconds.<q>”A little effort to shake out the couch cushions is a surefire way to get more coins!”</q>
 		icon:icons[3,0]
 		cost:15 coins
 		on tick:yield (0.1*((thousandFing*0.01)+1)) coin
@@ -289,7 +289,7 @@ Buildings
 	
 	*tipJar|tipJars
 		name:Tip Jar|Tip Jars
-		desc:Jars that accumulate coins over time.<//><b>Effect:</b><.>Produces 1 coin every second.<q>”Leaving out a Tip Jar for people who like Demas will easily bring in the coins!”</q>
+		desc:Jars that accumulate coins over time.<//><b>Effect:</b><.>Produces <b>1</b> coin every second.<q>”Leaving out a Tip Jar for people who like Demas will easily bring in the coins!”</q>
 		icon:icons[3,1]
 		cost:100 coins
 		on tick:yield 1 coins
@@ -297,7 +297,7 @@ Buildings
 	
 	*piggyBank|piggyBanks
 		name:Piggy Bank|Piggy Banks
-		desc:A small ceramic pig with coins inside.<//><b>Effect:</b><.>Produces 8 coins per second.<q>”Oink!”</q>
+		desc:A small ceramic pig with coins inside.<//><b>Effect:</b><.>Produces <b>8</b> coins per second.<q>”Oink!”</q>
 		icon:icons[3,2]
 		cost:1100 coins
 		on tick:yield 8 coins
@@ -305,7 +305,7 @@ Buildings
 	
 	*safe|safes
 		name:Safe|Safes
-		desc:Gotta keep your coins somewhere, but where are they coming from?<//><b>Effect:</b><.>Produces 47 coins per second.<q>”Contrary to popular belief: around Demas your coins are anything but ‘Safe’”.</q>
+		desc:Gotta keep your coins somewhere, but where are they coming from?<//><b>Effect:</b><.>Produces <b>47</b> coins per second.<q>”Contrary to popular belief: around Demas your coins are anything but ‘Safe’”.</q>
 		icon:icons[3,3]
 		cost:12000 coins
 		on tick:yield 47 coins
@@ -313,7 +313,7 @@ Buildings
 	
 	*coinPusher|coinPushers
 		name:Coin Pusher|Coin Pushers
-		desc:These rigged machines glue down the coins so they never pay out!.<//><b>Effect:</b><.>Produces 260 coins per second.
+		desc:These rigged machines glue down the coins so they never pay out!.<//><b>Effect:</b><.>Produces <b>260</b> coins per second.
 		icon:icons[3,4]
 		cost:1.3e5 coins
 		on tick:yield 260 coins
@@ -321,7 +321,7 @@ Buildings
 	
 	*slotMachine|slotMachines
 		name:Slot Machine|Slot Machines
-		desc:BIG MONEY, BIG PRIZES, I LOVE IT!<//><b>Effect:</b><.>Produces 1,400 coins per second.
+		desc:BIG MONEY, BIG PRIZES, I LOVE IT!<//><b>Effect:</b><.>Produces <b>1,400</b> coins per second.
 		icon:icons[3,5]
 		Cost:1.4e6 coins
 
@@ -330,7 +330,7 @@ Buildings
 		
 	*mintingFactory|mintingFactories
 		name:Minting Factory|Minting Factories
-		desc:Despite the name, these coins don’t actually smell good!<//><b>Effect:</b><.>Produces 7,800 coins per second.
+		desc:Despite the name, these coins don’t actually smell good!<//><b>Effect:</b><.>Produces <b>7,800</b> coins per second.
 		icon:icons[3,6]
 		cost:2e7 coins
 		on tick:yield 7800 coins
@@ -338,7 +338,7 @@ Buildings
 		
 	*coinCorp|coinCorps
 		name:Coin Corporation|Coin Corporations
-		desc:Hire a group of stockbrokers to buy coins low and sell coins high!<//><b>Effect:</b><.>Produces 44,000 coins per second.
+		desc:Hire a group of stockbrokers to buy coins low and sell coins high!<//><b>Effect:</b><.>Produces <b>44,000</b> coins per second.
 		icon:icons[3,7]
 		cost:3.3e8 coins
 		on tick:yield 44000 coins
@@ -346,7 +346,7 @@ Buildings
 
 	*worldCoingress
 		name:World Coingress
-		desc:One world government; use the power of bureaucracy to generate more coins!<//><b>Effect:</b><.>Each member of the World Coingress produces 260,000 coins per second.
+		desc:One world government; use the power of bureaucracy to generate more coins!<//><b>Effect:</b><.>Each member of the World Coingress produces <b>260,000</b> coins per second.
 		icon:icons[3,8]
 		cost:5.1e9 coins
 		on tick:yield 2.6e5 coins
@@ -354,7 +354,7 @@ Buildings
 
 	*lunarMine
 		name:Lunar Mine|Lunar Mines
-		desc:Strip down the moon into coins! It wasn't doing much anyway!<//><b>Effect:</b><.>Produces 1,600,000 coins per second.
+		desc:Strip down the moon into coins! It wasn't doing much anyway!<//><b>Effect:</b><.>Produces <b>1,600,000</b> coins per second.
 		icon:icons[3,9]
 		cost:7.5e10 coins
 		on tick:yield 1.6e6 coins
@@ -362,7 +362,7 @@ Buildings
 
 	*dysonSphere
 		name:Dyson Sphere|Dyson Spheres
-		desc:Harvest the suns energy to fabricate more coins! Who needs sunlight anyway!<//><b>Effect:</b><.>Produces 10,000,000 coins per second.
+		desc:Harvest the sun’s energy to fabricate more coins! Who needs sunlight anyway!<//><b>Effect:</b><.>Produces <b>10,000,000</b> coins per second.
 		icon:icons[3,10]
 		cost:1e12 coins
 		on tick:yield 1e7 coins
@@ -370,7 +370,7 @@ Buildings
 
 	*coinVortex|coinVorticies
 		name:Coin Vortex|Coin Vortices 
-		desc:A singularity made to attract any and all nearby coins. <//><i>DISCLAIMER! DO NOT STAND TOO CLOSE</i> <//><b>Effect:</b><.>Produces 65,000,000 coins per second.
+		desc:A singularity made to attract any and all nearby coins. <//><i>DISCLAIMER! DO NOT STAND TOO CLOSE</i> <//><b>Effect:</b><.>Produces <b>65,000,000</b> coins per second.
 		Icon:icons[3,11]
 		cost:1.4e13 coins
 		on tick:yield 6.5e7 coins
@@ -378,7 +378,7 @@ Buildings
 
 	*galaxy
 		name:NGC 253
-		desc:A galaxy of coins! Channel the energy of a billion stars into making coins!<//><b>Effect:</b><.>Produces 430,000,000 coins per second.
+		desc:A galaxy of coins! Channel the energy of a billion stars into making coins!<//><b>Effect:</b><.>Produces <b>430,000,000</b> coins per second.
 		Icon:icons[3,12]
 		cost:1.7e14 coins
 		on tick:yield 4.3e8 coins
@@ -386,7 +386,7 @@ Buildings
 
 	*tesseract|tesseracts
 		name:Solid Gold Tesseract|Solid Gold Tesseracts
-		desc:Enter the 4th Coin-based dimension to pull 3 dimensional coins from a dimension 90° perpendicular to our own!<//><b>Effect:</b><.>Produces 2,900,000,000 coins per second.
+		desc:Enter the 4th Coin-based dimension to pull 3 dimensional coins from a dimension 90° perpendicular to our own!<//><b>Effect:</b><.>Produces <b>2,900,000,000</b> coins per second.
 		Icon:icons[3,13]
 		cost:2.1e15 coins
 		on tick:yield 2.9e9 coins
@@ -394,7 +394,7 @@ Buildings
 		
 	*gCUT
 		name:Grand Coin Unification Theory
-		desc:Control the four fundemental forces of the universe to make Demas the fifth.<//><b>Effect:</b><.>Produces 21,000,000,000 coins per second.
+		desc:Control the four fundemental forces of the universe to make Demas the fifth.<//><b>Effect:</b><.>Produces <b>21,000,000,000</b> coins per second.
 		Icon:icons[3,14]
 		cost:2.6e16 coins
 		on tick:yield 2.1e10 coins
@@ -840,7 +840,7 @@ Upgrades
 	//couch
 	*couchUpgrade1
 		name:Couch Upgrade 1
-		desc:Couch Cushions and click power are twice as efficient.
+		desc:Couch Cushions and click power are <b>twice</b> as efficient.
 		icon:icons[3,0]
 		cost:1e2 coins
 		passive:multiply yield of couchCushions by 2
@@ -848,7 +848,7 @@ Upgrades
 		req:1 couchCushions
 	*couchUpgrade2
 		name:Couch Upgrade 2
-		desc:Couch Cushions and click power are twice as efficient.
+		desc:Couch Cushions and click power are <b>twice</b> as efficient.
 		icon:icons[4,0]
 		cost:5e2 coins
 		passive:multiply yield of couchCushions by 2
@@ -856,7 +856,7 @@ Upgrades
 		req:1 couchCushions
 	*couchUpgrade3
 		name:Couch Upgrade 3
-		desc:Couch Cushions and click power are twice as efficient.
+		desc:Couch Cushions and click power are <b>twice</b> as efficient.
 		icon:icons[5,0]
 		cost:1e4 coins
 		passive:multiply yield of couchCushions by 2
@@ -920,70 +920,70 @@ Upgrades
 	//tip jar
 *tipUpgrade1
 		name:Tip Upgrade 1
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[3,1]
 		cost:1e3 coins
 		passive:multiply yield of tipJar by 2
 		req:1 tipJar
 *tipUpgrade2
 		name:Tip Upgrade 2
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[4,1]
 		cost:5e3 coins
 		passive:multiply yield of tipJar by 2
 		req:5 tipJar
 *tipUpgrade3
 		name:Tip Upgrade 3
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[5,1]
 		cost:5e4 coins
 		passive:multiply yield of tipJar by 2
 		req:25 tipJar
 *tipUpgrade4
 		name:Tip Upgrade 4
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[6,1]
 		cost:5e6 coins
 		passive:multiply yield of tipJar by 2
 		req:50 tipJar
 *tipUpgrade5
 		name:Tip Upgrade 5
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[7,1]
 		cost:5e8 coins
 		passive:multiply yield of tipJar by 2
 		req:100 tipJar
 *tipUpgrade6
 		name:Tip Upgrade 6
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[8,1]
 		cost:5e10 coins
 		passive:multiply yield of tipJar by 2
 		req:150 tipJar
 *tipUpgrade7
 		name:Tip Upgrade 7
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[9,1]
 		cost:5e13 coins
 		passive:multiply yield of tipJar by 2
 		req:200 tipJar
 *tipUpgrade8
 		name:Tip Upgrade 8
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[10,1]
 		cost:5e16 coins
 		passive:multiply yield of tipJar by 2
 		req:250 tipJar
 *tipUpgrade9
 		name:Tip Upgrade 9
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[11,1]
 		cost:5e19 coins
 		passive:multiply yield of tipJar by 2
 		req:300 tipJar
 *tipUpgrade10
 		name:Tip Upgrade 10
-		desc:Tip Jars are twice as efficient.
+		desc:Tip Jars are <b>twice</b> as efficient.
 		icon:icons[12,1]
 		cost:5e21 coins
 		passive:multiply yield of tipJar by 2
@@ -991,70 +991,70 @@ Upgrades
 	//piggy bank
 *piggyUpgrade1
 		name:Piggy Upgrade 1
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[3,2]
 		cost:1.1e4 coins
 		passive:multiply yield of piggyBank by 2
 		req:1 piggyBank
 *piggyUpgrade2
 		name:Piggy Upgrade 2
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[4,2]
 		cost:5.5e4 coins
 		passive:multiply yield of piggyBank by 2
 		req:5 piggyBank
 *piggyUpgrade3
 		name:Piggy Upgrade 3
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[5,2]
 		cost:5.5e5 coins
 		passive:multiply yield of piggyBank by 2
 		req:25 piggyBank
 *piggyUpgrade4
 		name:Piggy Upgrade 4
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[6,2]
 		cost:5.5e7 coins
 		passive:multiply yield of piggyBank by 2
 		req:50 piggyBank
 *piggyUpgrade5
 		name:Piggy Upgrade 5
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[7,2]
 		cost:5.5e9 coins
 		passive:multiply yield of piggyBank by 2
 		req:100 piggyBank
 *piggyUpgrade6
 		name:Piggy Upgrade 6
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[8,2]
 		cost:5.5e11 coins
 		passive:multiply yield of piggyBank by 2
 		req:150 piggyBank
 *piggyUpgrade7
 		name:Piggy Upgrade 7
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[9,2]
 		cost:5.5e14 coins
 		passive:multiply yield of piggyBank by 2
 		req:200 piggyBank
 *piggyUpgrade8
 		name:Piggy Upgrade 8
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[10,2]
 		cost:5.5e17 coins
 		passive:multiply yield of piggyBank by 2
 		req:250 piggyBank
 *piggyUpgrade9
 		name:Piggy Upgrade 9
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[11,2]
 		cost:5.5e20 coins
 		passive:multiply yield of piggyBank by 2
 		req:300 piggyBank
 *piggyUpgrade10
 		name:Piggy Upgrade 10
-		desc:Piggy Banks are twice as efficient.
+		desc:Piggy Banks are <b>twice</b> as efficient.
 		icon:icons[12,2]
 		cost:5.5e23 coins
 		passive:multiply yield of piggyBank by 2
@@ -1062,70 +1062,70 @@ Upgrades
 	//safe
 *safeUpgrade1
 		name:Safe Upgrade 1
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[3,3]
 		cost:1.2e5 coins
 		passive:multiply yield of safe by 2
 		req:1 safe
 *safeUpgrade2
 		name:Safe Upgrade 2
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[4,3]
 		cost:6e5 coins
 		passive:multiply yield of safe by 2
 		req:5 safe
 *safeUpgrade3
 		name:Safe Upgrade 3
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[5,3]
 		cost:6e6 coins
 		passive:multiply yield of safe by 2
 		req:25 safe
 *safeUpgrade4
 		name:Safe Upgrade 4
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[6,3]
 		cost:6e8 coins
 		passive:multiply yield of safe by 2
 		req:50 safe
 *safeUpgrade5
 		name:Safe Upgrade 5
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[7,3]
 		cost:6e10 coins
 		passive:multiply yield of safe by 2
 		req:100 safe
 *safeUpgrade6
 		name:Safe Upgrade 6
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[8,3]
 		cost:6e12 coins
 		passive:multiply yield of safe by 2
 		req:150 safe
 *safeUpgrade7
 		name:Safe Upgrade 7
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[9,3]
 		cost:6e15 coins
 		passive:multiply yield of safe by 2
 		req:200 safe
 *safeUpgrade8
 		name:Safe Upgrade 8
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[10,3]
 		cost:6e18 coins
 		passive:multiply yield of safe by 2
 		req:250 safe
 *safeUpgrade9
 		name:Safe Upgrade 9
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[11,3]
 		cost:6e21 coins
 		passive:multiply yield of safe by 2
 		req:300 safe
 *safeUpgrade10
 		name:Safe Upgrade 10
-		desc:Safes are twice as efficient.
+		desc:Safes are <b>twice</b> as efficient.
 		icon:icons[12,3]
 		cost:6e24 coins
 		passive:multiply yield of safe by 2
@@ -1133,70 +1133,70 @@ Upgrades
 	//coin pusher
 *coinPusherUpgrade1
 		name:Coin Pusher Upgrade 1
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[3,4]
 		cost:1.3e6 coins
 		passive:multiply yield of coinPusher by 2
 		req:1 coinPusher
 *coinPusherUpgrade2
 		name:Coin Pusher Upgrade 2
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[4,4]
 		cost:6.5e6 coins
 		passive:multiply yield of coinPusher by 2
 		req:5 coinPusher
 *coinPusherUpgrade3
 		name:Coin Pusher Upgrade 3
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[5,4]
 		cost:6.5e7 coins
 		passive:multiply yield of coinPusher by 2
 		req:25 coinPusher
 *coinPusherUpgrade4
 		name:Coin Pusher Upgrade 4
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[6,4]
 		cost:6.5e9 coins
 		passive:multiply yield of coinPusher by 2
 		req:50 coinPusher
 *coinPusherUpgrade5
 		name:Coin Pusher Upgrade 5
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[7,4]
 		cost:6.5e11 coins
 		passive:multiply yield of coinPusher by 2
 		req:100 coinPusher
 *coinPusherUpgrade6
 		name:Coin Pusher Upgrade 6
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[8,4]
 		cost:6.5e13 coins
 		passive:multiply yield of coinPusher by 2
 		req:150 coinPusher
 *coinPusherUpgrade7
 		name:Coin Pusher Upgrade 7
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[9,4]
 		cost:6.5e16 coins
 		passive:multiply yield of coinPusher by 2
 		req:200 coinPusher
 *coinPusherUpgrade8
 		name:Coin Pusher Upgrade 8
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[10,4]
 		cost:6.5e19 coins
 		passive:multiply yield of coinPusher by 2
 		req:250 coinPusher
 *coinPusherUpgrade9
 		name:Coin Pusher Upgrade 9
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[11,4]
 		cost:6.5e22 coins
 		passive:multiply yield of coinPusher by 2
 		req:300 coinPusher
 *coinPusherUpgrade10
 		name:Coin Pusher Upgrade 10
-		desc:Coin Pushers are twice as efficient.
+		desc:Coin Pushers are <b>twice</b> as efficient.
 		icon:icons[12,4]
 		cost:6.5e25 coins
 		passive:multiply yield of coinPusher by 2
@@ -1204,70 +1204,70 @@ Upgrades
 	//slot machine
 *slotMachineUpgrade1
 		name:Slot Machine Upgrade 1
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[3,5]
 		cost:1.4e7 coins
 		passive:multiply yield of slotMachine by 2
 		req:1 slotMachine
 *slotMachineUpgrade2
 		name:Slot Machine Upgrade 2
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[4,5]
 		cost:7e7 coins
 		passive:multiply yield of slotMachine by 2
 		req:5 slotMachine
 *slotMachineUpgrade3
 		name:Slot Machine Upgrade 3
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[5,5]
 		cost:7e8 coins
 		passive:multiply yield of slotMachine by 2
 		req:25 slotMachine
 *slotMachineUpgrade4
 		name:Slot Machine Upgrade 4
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[6,5]
 		cost:7e10 coins
 		passive:multiply yield of slotMachine by 2
 		req:50 slotMachine
 *slotMachineUpgrade5
 		name:Slot Machine Upgrade 5
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[7,5]
 		cost:7e12 coins
 		passive:multiply yield of slotMachine by 2
 		req:100 slotMachine
 *slotMachineUpgrade6
 		name:Slot Machine Upgrade 6
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[8,5]
 		cost:7e14 coins
 		passive:multiply yield of slotMachine by 2
 		req:150 slotMachine
 *slotMachineUpgrade7
 		name:Slot Machine Upgrade 7
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[9,5]
 		cost:7e17 coins
 		passive:multiply yield of slotMachine by 2
 		req:200 slotMachine
 *slotMachineUpgrade8
 		name:Slot Machine Upgrade 8
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[10,5]
 		cost:7e20 coins
 		passive:multiply yield of slotMachine by 2
 		req:250 slotMachine
 *slotMachineUpgrade9
 		name:Slot Machine Upgrade 9
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[11,5]
 		cost:7e23 coins
 		passive:multiply yield of slotMachine by 2
 		req:300 slotMachine
 *slotMachineUpgrade10
 		name:Slot Machine Upgrade 10
-		desc:Slot Machines are twice as efficient.
+		desc:Slot Machines are <b>twice</b> as efficient.
 		icon:icons[12,5]
 		cost:7e26 coins
 		passive:multiply yield of slotMachine by 2
@@ -1275,70 +1275,70 @@ Upgrades
 	//minting factory
 *mintingFactoryUpgr1
 		name:Minting Factory Upgrade 1
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[3,6]
 		cost:2e8 coins
 		passive:multiply yield of mintingFactory by 2
 		req:1 mintingFactory
 *mintingFactoryUpgr2
 		name:Minting Factory Upgrade 2
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[4,6]
 		cost:2e9 coins
 		passive:multiply yield of mintingFactory by 2
 		req:5 mintingFactory
 *mintingFactoryUpgr3
 		name:Minting Factory Upgrade 3
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[5,6]
 		cost:2e10 coins
 		passive:multiply yield of mintingFactory by 2
 		req:25 mintingFactory
 *mintingFactoryUpgr4
 		name:Minting Factory Upgrade 4
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[6,6]
 		cost:2e12 coins
 		passive:multiply yield of mintingFactory by 2
 		req:50 mintingFactory
 *mintingFactoryUpgr5
 		name:Minting Factory Upgrade 5
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[7,6]
 		cost:2e14 coins
 		passive:multiply yield of mintingFactory by 2
 		req:100 mintingFactory
 *mintingFactoryUpgr6
 		name:Minting Factory Upgrade 6
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[8,6]
 		cost:2e16 coins
 		passive:multiply yield of mintingFactory by 2
 		req:150 mintingFactory
 *mintingFactoryUpgr7
 		name:Minting Factory Upgrade 7
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[9,6]
 		cost:2e19 coins
 		passive:multiply yield of mintingFactory by 2
 		req:200 mintingFactory
 *mintingFactoryUpgr8
 		name:Minting Factory Upgrade 8
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[10,6]
 		cost:2e22 coins
 		passive:multiply yield of mintingFactory by 2
 		req:250 mintingFactory
 *mintingFactoryUpgr9
 		name:Minting Factory Upgrade 9
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[11,6]
 		cost:2e25 coins
 		passive:multiply yield of mintingFactory by 2
 		req:300 mintingFactory
 *mintingFactoryUpgr10
 		name:Minting Factory Upgrade 10
-		desc:Minting Factories are twice as efficient.
+		desc:Minting Factories are <b>twice</b> as efficient.
 		icon:icons[12,6]
 		cost:2e28 coins
 		passive:multiply yield of mintingFactory by 2
@@ -1346,70 +1346,70 @@ Upgrades
 	//coin corporation
 *coinCorpUpgr1
 		name:Coin Corporation Upgrade 1
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[3,7]
 		cost:3.3e9 coins //8 
 		passive:multiply yield of coinCorp by 2
 		req:1 coinCorp
 *coinCorpUpgr2
 		name:Coin Corporation Upgrade 2
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[4,7]
 		cost:1.65e10 coins //8 (n5)
 		passive:multiply yield of coinCorp by 2
 		req:5 coinCorp
 *coinCorpUpgr3
 		name:Coin Corporation Upgrade 3
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[5,7]
 		cost:1.65e11 coins //9 (n10)
 		passive:multiply yield of coinCorp by 2
 		req:25 coinCorp
 *coinCorpUpgr4
 		name:Coin Corporation Upgrade 4
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[6,7]
 		cost:1.65e13 coins //11 (n10^2)
 		passive:multiply yield of coinCorp by 2
 		req:50 coinCorp
 *coinCorpUpgr5
 		name:Coin Corporation Upgrade 5
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[7,7]
 		cost:1.65e15 coins //13 (n10^2)
 		passive:multiply yield of coinCorp by 2
 		req:100 coinCorp
 *coinCorpUpgr6
 		name:Coin Corporation Upgrade 6
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[8,7]
 		cost:1.65e17 coins //15 (n10^2)
 		passive:multiply yield of coinCorp by 2
 		req:150 coinCorp
 *coinCorpUpgr7
 		name:Coin Corporation Upgrade 7
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[9,7]
 		cost:1.65e20 coins //18 (n10^3)
 		passive:multiply yield of coinCorp by 2
 		req:200 coinCorp
 *coinCorpUpgr8
 		name:Coin Corporation Upgrade 8
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[10,7]
 		cost:1.65e23 coins //21 (n10^3)
 		passive:multiply yield of coinCorp by 2
 		req:250 coinCorp
 *coinCorpUpgr9
 		name:Coin Corporation Upgrade 9
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[11,7]
 		cost:1.65e26 coins //24 (n10^3)
 		passive:multiply yield of coinCorp by 2
 		req:300 coinCorp
 *coinCorpUpgr10
 		name:Coin Corporation Upgrade 10
-		desc:Coin Corprorations are twice as efficient.
+		desc:Coin Corprorations are <b>twice</b> as efficient.
 		icon:icons[12,7]
 		cost:1.65e29 coins //27 (n10^3)
 		passive:multiply yield of coinCorp by 2
@@ -1417,70 +1417,70 @@ Upgrades
 	//world coingress
 *worldCoinUpgr1
 		name:World Coingress Upgrade 1
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[3,8]
 		cost:5.1e10 coins 
 		passive:multiply yield of worldCoingress by 2
 		req:1 worldCoingress
 *worldCoinUpgr2
 		name:World Coingress Upgrade 2
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[4,8]
 		cost:2.55e11 coins //9 (n5)
 		passive:multiply yield of worldCoingress by 2
 		req:5 worldCoingress
 *worldCoinUpgr3
 		name:World Coingress Upgrade 3
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[5,8]
 		cost:2.55e12 coins //10 (n10)
 		passive:multiply yield of worldCoingress by 2
 		req:25 worldCoingress
 *worldCoinUpgr4
 		name:World Coingress Upgrade 4
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[6,8]
 		cost:2.55e15 coins //12 (n10^2)
 		passive:multiply yield of worldCoingress by 2
 		req:50 worldCoingress
 *worldCoinUpgr5
 		name:World Coingress Upgrade 5
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[7,8]
 		cost:2.55e17 coins //14 (n10^2)
 		passive:multiply yield of worldCoingress by 2
 		req:100 worldCoingress
 *worldCoinUpgr6
 		name:World Coingress Upgrade 6
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[8,8]
 		cost:2.55e19 coins //16 (n10^2)
 		passive:multiply yield of worldCoingress by 2
 		req:150 worldCoingress
 *worldCoinUpgr7
 		name:World Coingress Upgrade 7
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[9,8]
 		cost:2.55e22 coins //19 (n10^3)
 		passive:multiply yield of worldCoingress by 2
 		req:200 worldCoingress
 *worldCoinUpgr8
 		name:World Coingress Upgrade 8
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[10,8]
 		cost:2.55e25 coins //22 (n10^3)
 		passive:multiply yield of worldCoingress by 2
 		req:250 worldCoingress
 *worldCoinUpgr9
 		name:World Coingress Upgrade 9
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[11,8]
 		cost:2.55e27 coins //25 (n10^3)
 		passive:multiply yield of worldCoingress by 2
 		req:300 worldCoingress
 *worldCoinUpgr10
 		name:World Coingress Upgrade 10
-		desc:World Coingress is twice as efficient.
+		desc:World Coingress is <b>twice</b> as efficient.
 		icon:icons[12,8]
 		cost:2.55e29 coins //28 (n10^3)
 		passive:multiply yield of worldCoingress by 2
@@ -1488,70 +1488,70 @@ Upgrades
 //lunar mine
 *lunarMineUpgr1
 		name:Lunar Mine Upgrade 1
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[3,9]
 		cost:7.5e11 coins 
 		passive:multiply yield of lunarMine by 2
 		req:1 lunarMine
 *lunarMineUpgr2
 		name:Lunar Mine Upgrade 2
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[4,9]
 		cost:3.75e12 coins // (n5)
 		passive:multiply yield of lunarMine by 2
 		req:5 lunarMine
 *lunarMineUpgr3
 		name:Lunar Mine Upgrade 3
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[5,9]
 		cost:3.75e13 coins // (n10)
 		passive:multiply yield of lunarMine by 2
 		req:25 lunarMine
 *lunarMineUpgr4
 		name:Lunar Mine Upgrade 4
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[6,9]
 		cost:3.75e15 coins // (n10^2)
 		passive:multiply yield of lunarMine by 2
 		req:50 lunarMine
 *lunarMineUpgr5
 		name:Lunar Mine Upgrade 5
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[7,9]
 		cost:3.75e17 coins // (n10^2)
 		passive:multiply yield of lunarMine by 2
 		req:100 lunarMine
 *lunarMineUpgr6
 		name:Lunar Mine Upgrade 6
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[8,9]
 		cost:3.75e19 coins // (n10^2)
 		passive:multiply yield of lunarMine by 2
 		req:150 lunarMine
 *lunarMineUpgr7
 		name:Lunar Mine Upgrade 7
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[9,9]
 		cost:3.75e22 coins // (n10^3)
 		passive:multiply yield of lunarMine by 2
 		req:200 lunarMine
 *lunarMineUpgr8
 		name:Lunar Mine Upgrade 8
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[10,9]
 		cost:3.75e25 coins // (n10^3)
 		passive:multiply yield of lunarMine by 2
 		req:250 lunarMine
 *lunarMineUpgr9
 		name:Lunar Mine Upgrade 9
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[11,9]
 		cost:3.75e28 coins // (n10^3)
 		passive:multiply yield of lunarMine by 2
 		req:300 lunarMine
 *lunarMineUpgr10
 		name:Lunar Mine Upgrade 10
-		desc:Lunar Mines are twice as efficient.
+		desc:Lunar Mines are <b>twice</b> as efficient.
 		icon:icons[12,9]
 		cost:3.75e31 coins // (n10^3)
 		passive:multiply yield of lunarMine by 2
@@ -1559,70 +1559,70 @@ Upgrades
 //dyson sphere
 *dysonSphereUpgr1
 		name:Dyson Sphere Upgrade 1
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[3,10]
 		cost:1e13 coins 
 		passive:multiply yield of dysonSphere by 2
 		req:1 dysonSphere
 *dysonSphereUpgr2
 		name:Dyson Sphere Upgrade 2
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[4,10]
 		cost:5e13 coins // (n5)
 		passive:multiply yield of dysonSphere by 2
 		req:5 dysonSphere
 *dysonSphereUpgr3
 		name:Dyson Sphere Upgrade 3
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[5,10]
 		cost:5e14 coins // (n10)
 		passive:multiply yield of dysonSphere by 2
 		req:25 dysonSphere
 *dysonSphereUpgr4
 		name:Dyson Sphere Upgrade 4
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[6,10]
 		cost:5e16 coins // (n10^2)
 		passive:multiply yield of dysonSphere by 2
 		req:50 dysonSphere
 *dysonSphereUpgr5
 		name:Dyson Sphere Upgrade 5
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[7,10]
 		cost:5e18 coins // (n10^2)
 		passive:multiply yield of dysonSphere by 2
 		req:100 dysonSphere
 *dysonSphereUpgr6
 		name:Dyson Sphere Upgrade 6
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[8,10]
 		cost:5e20 coins // (n10^2)
 		passive:multiply yield of dysonSphere by 2
 		req:150 dysonSphere
 *dysonSphereUpgr7
 		name:Dyson Sphere Upgrade 7
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[9,10]
 		cost:5e23 coins // (n10^3)
 		passive:multiply yield of dysonSphere by 2
 		req:200 dysonSphere
 *dysonSphereUpgr8
 		name:Dyson Sphere Upgrade 8
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[10,10]
 		cost:5e26 coins // (n10^3)
 		passive:multiply yield of dysonSphere by 2
 		req:250 dysonSphere
 *dysonSphereUpgr9
 		name:Dyson Sphere Upgrade 9
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[11,10]
 		cost:5e29 coins // (n10^3)
 		passive:multiply yield of dysonSphere by 2
 		req:300 dysonSphere
 *dysonSphereUpgr10
 		name:Dyson Sphere Upgrade 10
-		desc:Dyson Spheres are twice as efficient.
+		desc:Dyson Spheres are <b>twice</b> as efficient.
 		icon:icons[12,10]
 		cost:5e32 coins // (n10^3)
 		passive:multiply yield of dysonSphere by 2
@@ -1630,70 +1630,70 @@ Upgrades
 //coin vortex
 *coinVortexUpgr1
 		name:Coin Vortex Upgrade 1
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[3,11]
 		cost:1.4e14 coins 
 		passive:multiply yield of coinVortex by 2
 		req:1 coinVortex
 *coinVortexUpgr2
 		name:Coin Vortex Upgrade 2
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[4,11]
 		cost:7e14 coins // (n5)
 		passive:multiply yield of coinVortex by 2
 		req:5 coinVortex
 *coinVortexUpgr3
 		name:Coin Vortex Upgrade 3
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[5,11]
 		cost:7e15 coins // (n10)
 		passive:multiply yield of coinVortex by 2
 		req:25 coinVortex
 *coinVortexUpgr4
 		name:Coin Vortex Upgrade 4
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[6,11]
 		cost:7e17 coins // (n10^2)
 		passive:multiply yield of coinVortex by 2
 		req:50 coinVortex
 *coinVortexUpgr5
 		name:Coin Vortex Upgrade 5
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[7,11]
 		cost:7e19 coins // (n10^2)
 		passive:multiply yield of coinVortex by 2
 		req:100 coinVortex
 *coinVortexUpgr6
 		name:Coin Vortex Upgrade 6
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[8,11]
 		cost:7e21 coins // (n10^2)
 		passive:multiply yield of coinVortex by 2
 		req:150 coinVortex
 *coinVortexUpgr7
 		name:Coin Vortex Upgrade 7
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[9,11]
 		cost:7e24 coins // (n10^3)
 		passive:multiply yield of coinVortex by 2
 		req:200 coinVortex
 *coinVortexUpgr8
 		name:Coin Vortex Upgrade 8
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[10,11]
 		cost:7e27 coins // (n10^3)
 		passive:multiply yield of coinVortex by 2
 		req:250 coinVortex
 *coinVortexUpgr9
 		name:Coin Vortex Upgrade 9
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[11,11]
 		cost:7e30 coins // (n10^3)
 		passive:multiply yield of coinVortex by 2
 		req:300 coinVortex
 *coinVortexUpgr10
 		name:Coin Vortex Upgrade 10
-		desc:Coin Vortices are twice as efficient.
+		desc:Coin Vortices are <b>twice</b> as efficient.
 		icon:icons[12,11]
 		cost:7e33 coins // (n10^3)
 		passive:multiply yield of coinVortex by 2
@@ -1701,70 +1701,70 @@ Upgrades
 //galaxy
 *galaxyUpgr1
 		name:NGC 253 Upgrade 1
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[3,12]
 		cost:1.7e15 coins 
 		passive:multiply yield of galaxy by 2
 		req:1 galaxy
 *galaxyUpgr2
 		name:NGC 253 Upgrade 2
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[4,12]
 		cost:8.5e15 coins // (n5)
 		passive:multiply yield of galaxy by 2
 		req:5 galaxy
 *galaxyUpgr3
 		name:NGC 253 Upgrade 3
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[5,12]
 		cost:8.5e16 coins // (n10)
 		passive:multiply yield of galaxy by 2
 		req:25 galaxy
 *galaxyUpgr4
 		name:NGC 253 Upgrade 4
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[6,12]
 		cost:8.5e18 coins // (n10^2)
 		passive:multiply yield of galaxy by 2
 		req:50 galaxy
 *galaxyUpgr5
 		name:NGC 253 Upgrade 5
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[7,12]
 		cost:8.5e20 coins // (n10^2)
 		passive:multiply yield of galaxy by 2
 		req:100 galaxy
 *galaxyUpgr6
 		name:NGC 253 Upgrade 6
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[8,12]
 		cost:8.5e22 coins // (n10^2)
 		passive:multiply yield of galaxy by 2
 		req:150 galaxy
 *galaxyUpgr7
 		name:NGC 253 Upgrade 7
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[9,12]
 		cost:8.5e25 coins // (n10^3)
 		passive:multiply yield of galaxy by 2
 		req:200 galaxy
 *galaxyUpgr8
 		name:NGC 253 Upgrade 8
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[10,12]
 		cost:8.5e28 coins // (n10^3)
 		passive:multiply yield of galaxy by 2
 		req:250 galaxy
 *galaxyUpgr9
 		name:NGC 253 Upgrade 9
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[11,12]
 		cost:8.5e31 coins // (n10^3)
 		passive:multiply yield of galaxy by 2
 		req:300 galaxy
 *galaxyUpgr10
 		name:NGC 253 Upgrade 10
-		desc:NGC 253 is twice as efficient.
+		desc:NGC 253 is <b>twice</b> as efficient.
 		icon:icons[12,12]
 		cost:8.5e34 coins // (n10^3)
 		passive:multiply yield of galaxy by 2
@@ -1772,70 +1772,70 @@ Upgrades
 //tesseract
 *tesseractUpgr1
 		name:Solid Gold Tesseract Upgrade 1
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[3,13]
 		cost:2.1e16 coins 
 		passive:multiply yield of tesseract by 2
 		req:1 tesseract
 *tesseractUpgr2
 		name:Solid Gold Tesseract Upgrade 2
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[4,13]
 		cost:1.05e17 coins // (n5)
 		passive:multiply yield of tesseract by 2
 		req:5 tesseract
 *tesseractUpgr3
 		name:Solid Gold Tesseract Upgrade 3
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[5,13]
 		cost:1.05e18 coins // (n10)
 		passive:multiply yield of tesseract by 2
 		req:25 tesseract
 *tesseractUpgr4
 		name:Solid Gold Tesseract Upgrade 4
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[6,13]
 		cost:1.05e20 coins // (n10^2)
 		passive:multiply yield of tesseract by 2
 		req:50 tesseract
 *tesseractUpgr5
 		name:Solid Gold Tesseract Upgrade 5
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[7,13]
 		cost:1.05e22 coins // (n10^2)
 		passive:multiply yield of tesseract by 2
 		req:100 tesseract
 *tesseractUpgr6
 		name:Solid Gold Tesseract Upgrade 6
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[8,13]
 		cost:1.05e24 coins // (n10^2)
 		passive:multiply yield of tesseract by 2
 		req:150 tesseract
 *tesseractUpgr7
 		name:Solid Gold Tesseract Upgrade 7
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[9,13]
 		cost:1.05e27 coins // (n10^3)
 		passive:multiply yield of tesseract by 2
 		req:200 tesseract
 *tesseractUpgr8
 		name:Solid Gold Tesseract Upgrade 8
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[10,13]
 		cost:1.05e30 coins // (n10^3)
 		passive:multiply yield of tesseract by 2
 		req:250 tesseract
 *tesseractUpgr9
 		name:Solid Gold Tesseract Upgrade 9
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[11,13]
 		cost:1.05e33 coins // (n10^3)
 		passive:multiply yield of tesseract by 2
 		req:300 tesseract
 *tesseractUpgr10
 		name:Solid Gold Tesseract Upgrade 10
-		desc:Solid Gold Tesseracts are twice as efficient.
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.
 		icon:icons[12,13]
 		cost:1.05e36 coins // (n10^3)
 		passive:multiply yield of tesseract by 2
@@ -1843,70 +1843,70 @@ Upgrades
 //gCUT
 *gCUTUpgr1
 		name:Grand Coin Unification Theory Upgrade 1
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[3,14]
 		cost:2.06e17 coins 
 		passive:multiply yield of gCUT by 2
 		req:1 gCUT
 *gCUTUpgr2
 		name:Grand Coin Unification Theory Upgrade 2
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[4,14]
 		cost:1.5e18 coins // (n5)
 		passive:multiply yield of gCUT by 2
 		req:5 gCUT
 *gCUTUpgr3
 		name:Grand Coin Unification Theory Upgrade 3
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[5,14]
 		cost:1.5e19 coins // (n10)
 		passive:multiply yield of gCUT by 2
 		req:25 gCUT
 *gCUTUpgr4
 		name:Grand Coin Unification Theory Upgrade 4
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[6,14]
 		cost:1.5e21 coins // (n10^2)
 		passive:multiply yield of gCUT by 2
 		req:50 gCUT
 *gCUTUpgr5
 		name:Grand Coin Unification Theory Upgrade 5
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[7,14]
 		cost:1.5e23 coins // (n10^2)
 		passive:multiply yield of gCUT by 2
 		req:100 gCUT
 *gCUTUpgr6
 		name:Grand Coin Unification Theory Upgrade 6
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[8,14]
 		cost:1.5e25 coins // (n10^2)
 		passive:multiply yield of gCUT by 2
 		req:150 gCUT
 *gCUTUpgr7
 		name:Grand Coin Unification Theory Upgrade 7
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[9,14]
 		cost:1.5e28 coins // (n10^3)
 		passive:multiply yield of gCUT by 2
 		req:200 gCUT
 *gCUTUpgr8
 		name:Grand Coin Unification Theory Upgrade 8
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[10,14]
 		cost:1.5e31 coins // (n10^3)
 		passive:multiply yield of gCUT by 2
 		req:250 gCUT
 *gCUTUpgr9
 		name:Grand Coin Unification Theory Upgrade 9
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[11,14]
 		cost:1.5e34 coins // (n10^3)
 		passive:multiply yield of gCUT by 2
 		req:300 gCUT
 *gCUTUpgr10
 		name:Grand Coin Unification Theory Upgrade 10
-		desc:Grand Coin Unification Theory is twice as efficient.
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.
 		icon:icons[12,14]
 		cost:1.5e37 coins // (n10^3)
 		passive:multiply yield of gCUT by 2
