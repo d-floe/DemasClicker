@@ -403,7 +403,7 @@ Buildings
 	*everything
 		name:Everything
 		text:Everything ([this]%)
-		desc:This is it. Buy everything that is, was, and ever will be. <//><b>Completion progress: [this]%</b><q>”Everything is coins. The world itself breaks down before us, all becomes one thing; coins. Worship coins, hail us; we are the world breakers, the ones who understand the truth. We have become gods.”</q>
+		desc:This is it. Buy everything that is, was, and ever will be. <//><b>Completion progress: [this]%</b><q>”Omne est denarios. Ipse mundus ante nos frangitur, unum fit omnia; denarios. Adorate nummos, ave nos; nos sumus mundi praevaricatores, qui verum intelligunt. Facti sumus deos..”</q>
 		Icon:icons[3,15]
 		cost:1.2773420922e29 coins
 		req:2.6e16 coins:earned
