@@ -1537,7 +1537,7 @@ Upgrades
 		req:200 lunarMine
 *lunarMineUpgr8
 		name:Giant Mining Lasers
-		desc:Lunar Mines are <b>twice</b> as efficient.<q>”<b>[ENERGY WEAPONS 100/100]</b>”</q>
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”<b>ENERGY WEAPONS 100/100</b>”</q>
 		icon:icons[10,9]
 		cost:3.75e25 coins // (n10^3)
 		passive:multiply yield of lunarMine by 2
@@ -1750,7 +1750,7 @@ Upgrades
 		req:200 galaxy
 *galaxyUpgr8
 		name:No HitchHikers!
-		desc:NGC 253 is <b>twice</b> as efficient.<q>”Oh freddled gruntbuggly,</>Thy micturations are to me, (with big yawning)</>As plurdled gabbleblotchits, in midsummer morning</>On a lurgid bee,</>That mordiously hath blurted out,</>Its earted jurtles, grumbling</>Into a rancid festering confectious organ squealer. [drowned out by moaning and screaming]</>Now the jurpling slayjid agrocrustles,</>Are slurping hagrilly up the axlegrurts,</>And living glupules frart and stipulate,</>Like jowling meated liverslime,</>Groop, I implore thee, my foonting turlingdromes,</>And hooptiously drangle me,</>With crinkly bindlewurdles,mashurbitries.</>Or else I shall rend thee in the gobberwarts with my blurglecruncheon,</>See if I don't!”</q>
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Oh freddled gruntbuggly,</>Thy micturations are to me, (with big yawning)</>As plurdled gabbleblotchits, in midsummer morning</>On a lurgid bee,</>That mordiously hath blurted out,</>Its earted jurtles, grumbling</>Into a rancid festering confectious organ squealer.</>Now the jurpling slayjid agrocrustles,</>Are slurping hagrilly up the axlegrurts,</>And living glupules frart and stipulate,</>Like jowling meated liverslime,</>Groop, I implore thee, my foonting turlingdromes,</>And hooptiously drangle me,</>With crinkly bindlewurdles,mashurbitries.</>Or else I shall rend thee in the gobberwarts with my blurglecruncheon,</>See if I don't!”</q>
 		icon:icons[10,12]
 		cost:8.5e28 coins // (n10^3)
 		passive:multiply yield of galaxy by 2
