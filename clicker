@@ -403,7 +403,7 @@ Buildings
 	*everything
 		name:Everything
 		text:Everything ([this]%)
-		desc:Buy 100 of these to complete Demas's plan for total domination! <//><b>Completion progress: [this]%</b><q>”Omne est denarios. Ipse mundus ante nos frangitur, unum fit omnia; denarios. Adorate nummos, ave nos; nos sumus mundi praevaricatores, qui verum intelligunt. Facti sumus deos..”</q>
+		desc:Buy 100 of these to complete Demas's plan for total domination! <//><b>Completion progress: [this]%</b><q>”Omne est denarios. Ipse mundus ante nos frangitur, unum fit omnia; denarios. Adorate nummos, ave nos; nos sumus mundi praevaricatores, qui verum intelligunt. Facti sumus deos...”</q>
 		Icon:icons[3,15]
 		cost:1.2773420922e29 coins
 		req:2.6e16 coins:earned
@@ -574,14 +574,14 @@ Upgrades
 		req:2.5e15 coins:earned
 	*Joy
 		name:Joy
-		desc:Coin production multiplier <b>+2%</b><q>”You got a Soda?”</q>
+		desc:Coin production multiplier <b>+2%</b><q>”You got a soda?”</q>
 		icon:icons[1,10]
 		cost:5e8 coins
 		on earn:yield 2 prodMultiplier
 		req:2.5e7 coins:earned
 	*gJoy
 		name:Gold Joy
-		desc:Coin production multiplier <b>+4%</b><q>”Wow I can buy a lot of Soda with this!”</q>
+		desc:Coin production multiplier <b>+4%</b><q>”Wow I can buy a lot of soda with this!”</q>
 		icon:icons[2,10]
 		cost:5e16 coins
 		on earn:yield 4 prodMultiplier
@@ -651,7 +651,7 @@ Upgrades
 		req:5e9 coins:earned
 	*gThorn
 		name:Gold Tetra
-		desc:Coin production multiplier <b>+4%</b><q>”____”</q>
+		desc:Coin production multiplier <b>+4%</b><q>”syntax error”</q>
 		icon:icons[2,15]
 		cost:1e19 coins
 		on earn:yield 4 prodMultiplier
@@ -848,7 +848,7 @@ Upgrades
 		req:1 couchCushions
 	*couchUpgrade2
 		name:Cup Holders
-		desc:Couch Cushions and click power are <b>twice</b> as efficient.<q>”Its got Cup Holders!”</q>
+		desc:Couch Cushions and click power are <b>twice</b> as efficient.<q>”Its got cup holders!”</q>
 		icon:icons[4,0]
 		cost:5e2 coins
 		passive:multiply yield of couchCushions by 2
@@ -1054,7 +1054,7 @@ Upgrades
 		req:300 piggyBank
 *piggyUpgrade10
 		name:Unobtanium Pigs
-		desc:Piggy Banks are <b>twice</b> as efficient.<q>”This piggy can hold the inifinity stones!”</q>
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”This piggy can hold the infinity stones!”</q>
 		icon:icons[12,2]
 		cost:5.5e23 coins
 		passive:multiply yield of piggyBank by 2
@@ -1083,7 +1083,7 @@ Upgrades
 		req:25 safe
 *safeUpgrade4
 		name:Gun Closet
-		desc:Safes are <b>twice</b> as efficient.<q>”WE DO NOT KNOW HOW THESE GUNS WILL GET US EXTRA COINS AND WE ARE TOO AFRAID TOO ASK!”</q>
+		desc:Safes are <b>twice</b> as efficient.<q>”WE DO NOT KNOW HOW THESE GUNS WILL GET US EXTRA COINS AND WE ARE TOO AFRAID TO ASK!”</q>
 		icon:icons[6,3]
 		cost:6e8 coins
 		passive:multiply yield of safe by 2
@@ -1097,7 +1097,7 @@ Upgrades
 		req:100 safe
 *safeUpgrade6
 		name:Biometric Scanners
-		desc:Safes are <b>twice</b> as efficient.<q>”This Vault's eye scanner looks only for Goat Eyes, sorry!”</q>
+		desc:Safes are <b>twice</b> as efficient.<q>”This Vault's eye scanner looks only for goat eyes, sorry!”</q>
 		icon:icons[8,3]
 		cost:6e12 coins
 		passive:multiply yield of safe by 2
@@ -1133,7 +1133,7 @@ Upgrades
 	//coin pusher
 *coinPusherUpgrade1
 		name:Full Arcade Experience
-		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Coin Pushers have Arcade Cabinets placed nearby!”</q>
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Coin Pushers have arcade cabinets placed nearby!”</q>
 		icon:icons[3,4]
 		cost:1.3e6 coins
 		passive:multiply yield of coinPusher by 2
@@ -1147,7 +1147,7 @@ Upgrades
 		req:5 coinPusher
 *coinPusherUpgrade3
 		name:Gonna Need More Pills!
-		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Pac-Man cabinets to have 15 Ghosts!”</q>
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Pac-Man cabinets to have 15 ghosts!”</q>
 		icon:icons[5,4]
 		cost:6.5e7 coins
 		passive:multiply yield of coinPusher by 2
@@ -1189,14 +1189,14 @@ Upgrades
 		req:250 coinPusher
 *coinPusherUpgrade9
 		name:Mortal Coin-bat
-		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Mortal Kombat Cabinets to force you to spend Coins for Fatalities!”</q>
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Mortal Kombat cabinets to force you to spend coins for fatalities!”</q>
 		icon:icons[11,4]
 		cost:6.5e22 coins
 		passive:multiply yield of coinPusher by 2
 		req:300 coinPusher
 *coinPusherUpgrade10
 		name:Donkey Coing
-		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas left the Donkey Kong cabinets completely unedited... to make extra money, she's positioned a Referee nearby people can pay for a World Record!”</q>
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas left the Donkey Kong cabinets completely unedited... to make extra money, she's positioned a referee nearby people can pay for a world record!”</q>
 		icon:icons[12,4]
 		cost:6.5e25 coins
 		passive:multiply yield of coinPusher by 2
@@ -1267,7 +1267,7 @@ Upgrades
 		req:300 slotMachine
 *slotMachineUpgrade10
 		name:Lucky Number 7
-		desc:Slot Machines are <b>twice</b> as efficient.<q>”If you or someone you know struggles with Gambling Addiction, there are resources available at https://www.begambleaware.org/”</q>
+		desc:Slot Machines are <b>twice</b> as efficient.<q>”If you or someone you know struggles with gambling addiction, there are resources available at https://www.begambleaware.org/”</q>
 		icon:icons[12,5]
 		cost:7e26 coins
 		passive:multiply yield of slotMachine by 2
@@ -1317,7 +1317,7 @@ Upgrades
 		req:150 mintingFactory
 *mintingFactoryUpgr7
 		name:Catalytic Coinverters
-		desc:Minting Factories are <b>twice</b> as efficient.<q>”This mint is now CO2 Neutral and rich!”</q>
+		desc:Minting Factories are <b>twice</b> as efficient.<q>”This mint is now CO2 neutral and rich!”</q>
 		icon:icons[9,6]
 		cost:2e19 coins
 		passive:multiply yield of mintingFactory by 2
@@ -1360,7 +1360,7 @@ Upgrades
 		req:5 coinCorp
 *coinCorpUpgr3
 		name:Board of Directors
-		desc:Coin Corporations are <b>twice</b> as efficient.<q>”They are actually made out of Balsa Wood!”</q>
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”They are actually made out of balsa wood!”</q>
 		icon:icons[5,7]
 		cost:1.65e11 coins //9 (n10)
 		passive:multiply yield of coinCorp by 2
@@ -1381,7 +1381,7 @@ Upgrades
 		req:100 coinCorp
 *coinCorpUpgr6
 		name:Non-'Non-Profit' Corporation
-		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Demas has simply decided we will not be paying taxes. Ever.”</q>
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Demas has simply decided we will not be paying taxes. <b>Ever.</b>”</q>
 		icon:icons[8,7]
 		cost:1.65e17 coins //15 (n10^2)
 		passive:multiply yield of coinCorp by 2
@@ -1402,7 +1402,7 @@ Upgrades
 		req:250 coinCorp
 *coinCorpUpgr9
 		name:Corporate Slacktivism
-		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Less work! More Coins!”</q>
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Less work! More coins!”</q>
 		icon:icons[11,7]
 		cost:1.65e26 coins //24 (n10^3)
 		passive:multiply yield of coinCorp by 2
@@ -1488,14 +1488,14 @@ Upgrades
 //lunar mine
 *lunarMineUpgr1
 		name:Lunar Lander
-		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Everyone got real tired of hearing "One Small Step for Man" get said every time anyone steps on the moon.”</q>
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Everyone got real tired of hearing ‘One Small Step for Man’ get said every time anyone steps on the moon.”</q>
 		icon:icons[3,9]
 		cost:7.5e11 coins 
 		passive:multiply yield of lunarMine by 2
 		req:1 lunarMine
 *lunarMineUpgr2
 		name:Space Elevator
-		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Top Floor Please!”</q>
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Top floor please!”</q>
 		icon:icons[4,9]
 		cost:3.75e12 coins // (n5)
 		passive:multiply yield of lunarMine by 2
@@ -1630,7 +1630,7 @@ Upgrades
 //coin vortex
 *coinVortexUpgr1
 		name:Divide By Zero
-		desc:Coin Vortices are <b>twice</b> as efficient.<q>Wait, no don’t-”</q>
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>Wait no, don’t-”</q>
 		icon:icons[3,11]
 		cost:1.4e14 coins 
 		passive:multiply yield of coinVortex by 2
@@ -1679,7 +1679,7 @@ Upgrades
 		req:200 coinVortex
 *coinVortexUpgr8
 		name:Gravitational Lensing
-		desc:Coin Vortices are <b>twice</b> as efficient.<q>”Are you telling me the Black holes need glasses?!”</q>
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”Are you telling me the black holes need glasses?!”</q>
 		icon:icons[10,11]
 		cost:7e27 coins // (n10^3)
 		passive:multiply yield of coinVortex by 2
@@ -1701,7 +1701,7 @@ Upgrades
 //galaxy
 *galaxyUpgr1
 		name:Space Age
-		desc:NGC 253 is <b>twice</b> as efficient.<q>”Getting to this Galaxy is half the work, making it profitable is the rest!”</q>
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Getting to this galaxy is half the work, making it profitable is the rest!”</q>
 		icon:icons[3,12]
 		cost:1.7e15 coins 
 		passive:multiply yield of galaxy by 2
@@ -1764,7 +1764,7 @@ Upgrades
 		req:300 galaxy
 *galaxyUpgr10
 		name:The Ruler of Everything
-		desc:NGC 253 is <b>twice</b> as efficient.<q>”Do you like how she walks? Do you like how she talks?</>Do you like how your assets liquidate into Stocks?”</q>
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Do you like how she walks? Do you like how she talks?</>Do you like how your assets liquidate into stocks?”</q>
 		icon:icons[12,12]
 		cost:8.5e34 coins // (n10^3)
 		passive:multiply yield of galaxy by 2
@@ -2471,7 +2471,7 @@ Achievements
 		icon:icons[3,3] 
 		on earn:yield 1 achievementNum
 	*safeAch2
-		name:Vault Tech Calling
+		name:Vault Tec Calling
 		desc:Have <b>50</b> Safes.<q>”We used to have Demas ram into these to open them but when she started talking to the floor we got worried.”</q>
 		req:50 safe
 		Icon:icons[4,3]
