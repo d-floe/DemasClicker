@@ -1537,7 +1537,7 @@ Upgrades
 		req:200 lunarMine
 *lunarMineUpgr8
 		name:Giant Mining Lasers
-		desc:Lunar Mines are <b>twice</b> as efficient.<q>”<b>ENERGY WEAPONS 100/100</b>”</q>
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”<b>ENERGY WEAPONS 100%</b>”</q>
 		icon:icons[10,9]
 		cost:3.75e25 coins // (n10^3)
 		passive:multiply yield of lunarMine by 2
