@@ -189,15 +189,19 @@
 }
 #topBar>div
 {
-	display:none!important
-
+	display:none!important;
+}
+#topBar
+{
+background-image:none;
+}
 #ad
 {
-	display:none!important
-	background-image:none!important
+	display:none!important;
+	background-image:none!important;
 }
 
 .outFrame #game
 {
-	position:none!important
+	position:none!important;
 }
