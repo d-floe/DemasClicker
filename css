@@ -175,13 +175,14 @@
 
 #toasts {margin-bottom: 20px;}
 
-.title {padding-bottom: 6px;}
+.title {padding-bottom: 4px;}
 
 .desc>div
 {
 	text-indent:0px;
 	margin-left:8px;
 	margin-right:8px;
+	padding-top: 2px;
 }
 #tooltip 
 {
