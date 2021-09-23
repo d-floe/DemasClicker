@@ -187,3 +187,17 @@
 	width:auto;
 	max-width:400px;
 }
+#topBar>div
+{
+	display:none!important
+
+#ad
+{
+	display:none!important
+	background-image:none!important
+}
+
+.outFrame #game
+{
+	position:none!important
+}
