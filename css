@@ -187,21 +187,4 @@
 	width:auto;
 	max-width:400px;
 }
-#topBar>div
-{
-	display:none!important;
-}
-#topBar
-{
-background-image:none;
-}
-#ad
-{
-	display:none!important;
-	background-image:none!important;
-}
 
-#game
-{
-	position:none!important;
-}
