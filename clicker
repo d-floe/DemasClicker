@@ -39,8 +39,9 @@ Buttons
 		name:Make some coins
 		desc:Click Demas to get more coins!
 		on click:anim icon wobble
-		on click:yield (1+(coin:ps*((thousandFing*0.01)+(thousandFing>0)))*clickMultiplier*nickMultiplier) coin
-		on click:yield (1+(coin:ps*((thousandFing*0.01)+(thousandFing>0)))*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
+		on click:yield (1*((thousandFing*0.01)+1)*clickMultiplier*nickMultiplier) coin
+		on click:yield (1*((thousandFing*0.01)+1)*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
+
 		icon:https://i.imgur.com/muhbH3g.png
 		no text
 		class:bigButton hasFlares
