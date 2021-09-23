@@ -1,190 +1,3198 @@
-#game
-{
-	font-family:'Roboto',sans-serif;
-	font-size:14px;
-}
-.box
-{
-	text-align:center;
-	padding:0px;
-	box-shadow:none;
-}
+﻿Let's make a game!
+	name:Demas Clicker
+	by:ShaMed
+	desc:Help Demas achieve her dreams of owning everything! Click on Demas to earn coins, and spend them to get coins faster!.<//>From couch cushions to casinos: get those coins!
+	created:2/9/2021
+	updated:2/9/2021
+	version:1
 
-.thing,.box-header,.box-footer,.box-bit
-{
-	background:#39f;
-	box-shadow:0px 0px 0px rgba(0,0,0,0.2),0px 0px 0px rgba(0,0,0,0.5),0px 0px 0px rgba(255,255,255,0.5) inset;
-}
-.box-bit{border-radius:1px;}
+Settings
+	background:https://i.imgur.com/jdZ3GMl.png 
+	building cost increase:115%
+	building cost refund:25%
+	spritesheet:icons, 48 by 48, https://i.imgur.com/Fb8e4yD.png 
+	stylesheet:https://raw.githubusercontent.com/d-floe/DemasClicker/main/css
 
-.box-header
-{
-	border-bottom-left-radius:1px;
-	border-bottom-right-radius:1px;
-	margin-bottom:4px;
-	font-weight:bold;
-	font-size:14px;
-}
-.box-footer
-{
-	border-top-left-radius:1px;
-	border-top-right-radius:1px;
-	margin-top:4px;
-}
+Layout
+	*main
+		contains:res, buttons
+	*res
+		contains:Resources
+		class:fullWidth
+	*buttons
+		contains:Buttons
+	*store
+		contains:buildings, upgrades
+	*buildings
+		contains:BulkDisplay, Buildings
+			header:Buildings
+			tooltip origin:left
+			ps:show
+	*upgrades
+		contains:Upgrades
+		header:Upgrades
+		costs:hide
+		names:hide
+
+Buttons
+	*coinButton
+		name:Make some coins
+		desc:Click Demas to get more coins!
+		on click:anim icon wobble
+		on click:yield (1+(coin:ps*((thousandFing*0.01)+(thousandFing>0)))*clickMultiplier*nickMultiplier) coin
+		on click:yield (1+(coin:ps*((thousandFing*0.01)+(thousandFing>0)))*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
+		icon:https://i.imgur.com/muhbH3g.png
+		no text
+		class:bigButton hasFlares
+		icon class:shadowed
+		tooltip origin:bottom
+		tooltip class:red
+		
+	*debugButton
+		Name:Debug
+		desc:Used for debugging <//> Gives a lot of Coins
+		on click:yield 1e50 coins
+		class:noBackground
+		tooltip origin:bottom
+		tooltip class:red
+
+	*showStats
+		Name:Show Stats
+		on click:
+show coinMultiplier 
+show clickMultiplier 
+show timeCl 
+show timeCo 
+show prodMultiplier 
+show achievementNum 
+show nonCouch 
+show thousandFingCount 
+show thousandFing 
+show achievementUpBonus 
+show achievMultiplier 
+show clickUpgrade
+show hideStats
+hide showStats
+end
+		class:noBackground
+		tooltip origin:bottom
+		tooltip class:red
+
+	*hideStats
+		Name:Hide Stats
+		on click:
+hide coinMultiplier 
+hide clickMultiplier 
+hide timeCl 
+hide timeCo 
+hide prodMultiplier 
+hide achievementNum 
+hide nonCouch 
+hide thousandFingCount 
+hide thousandFing 
+hide achievementUpBonus 
+hide achievMultiplier 
+hide clickUpgrade
+show showStats
+hide hideStats
+end
+		class:noBackground
+		tooltip origin:bottom
+		tooltip class:red
+		hidden
+
+	*spawnShiny	
+		Name:Spawn Shiny
+		on click:spawn luckyCoin
+class:noBackground
+tooltip origin:bottom
+
+	*spawnNick	
+		Name:Spawn Nick
+		on click:spawn nick
+class:noBackground
+tooltip origin:bottom
+Resources
+	*coin|coins
+		name:Coin|Coins
+		desc:These are your coins. You can use them to purchase things. Your goal is to help Demas get as many as possible!
+		icon:icons[0,0]
+		class:noBackground
+		show earned
+		on tick:multiply yield of this by coinMultiplier
+*coinMultiplier
+		name:Coin Multiplier
+		class:noBackground
+		on start:yield 1 this
+		hidden
+
+*clickMultiplier
+		name:Click Multiplier
+		class:noBackground
+		on start:yield 1 this
+		hidden
+*nickMultiplier
+		name:Nick Multiplier
+		class:noBackground
+		on start:yield 1 this
+		hidden
+	*coinsFromClicks
+		name:Coins from Clicks
+		class:noBackground
+		Icon:icons[19,12]
+		hidden
+	*timeNick
+		name:Time (Click Power x7777)
+		class:noBackground
+		on tick:lose this
+		passive:if (timeNick<1) nickMultiplier is 1
+		Icon:icons[0,7]
+		hidden when 0
+	*timeCl
+		name:Time (Click Power x777)
+		class:noBackground
+		on tick:lose this
+		passive:if (timeCl<1) clickMultiplier is 1
+		Icon:icons[0,7]
+		hidden when 0
+
+	*timeCo
+		name:Time (Production x7)
+		class:noBackground
+		on tick:lose this
+		passive:if (timeCo<1) coinMultiplier is 1
+		Icon:icons[0,7]
+		hidden when 0
+
+	*prodMultiplier
+		name:Production Multiplier %
+		class:noBackground
+		on start:yield 100 prodMultiplier
+		Passive:multiply yield of coins by (this/100)
+		Passive:multiply coinsFromClicks yield of coinButton by (this/100)
+		always hidden
+
+	*achievementNum
+		name:Achievements
+		class:noBackground
+		hidden
+
+	*shinyNum
+		name:Gold Coins Clicked
+		class:noBackground
+		hidden
+
+	*nickNum
+		name:Nicks Clicked
+		class:noBackground
+		hidden
+	*nonCouch
+		name:Non-Couch Buildings
+		class:noBackground
+		Passive:this is (tipJar+piggyBank+safe+coinPusher+slotMachine+mintingFactory+coinCorp+worldCoingress+lunarMine+dysonSphere+coinVortex+galaxy+tesseract+gCUT)
+		hidden
 
 
-#box-main
-{
-	left:0px;
-	top:0px;
-	bottom:0px;
-	overflow:hidden;
-	width:60%;
-	position:absolute;
-}
-#box-res.fullWidth
-{
-	width:100%;
-	top:5%;
-	height:5%;
-	min-height:32px;
-	z-index:100;
-	position:absolute;
-}
-#box-buttons
-{
-	top:0px;
-	right:0px;
-	bottom:0px;
-	left:0px;
-	position:absolute;
-}
-#box-store
-{
-	right:0px;
-	top:0px;
-	bottom:0px;
-	width:40%;
-	position:absolute;
-	font-size:14px;
-}
-#box-buildings,#box-upgrades
-{
-	top:0px;
-	bottom:0px;
-	width:50%;
-	right:0%;
-	overflow-x:hidden;
-	overflow-y:scroll;
-	padding-bottom:48px;/* this is to accommodate the info and settings buttons */
-	position:absolute;
-}
-#box-buildings
-{right:50%;}
-
-#box-buildings{background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 20%);}
-#box-upgrades{background:rgba(0,0,0,0.3);}
-
-#bulkDisplay{margin:-4px 0px 4px 0px;font-size:12px;}
+	*thousandFingCount
+		name:Thousand Finger Count
+		class:noBackground
+		Passive:if (have couchUpgrade4) thousandFing is (this*nonCouch)
+		hidden
 
 
-.thing
-{
-	display:inline-block;
-	padding:0px;
-	margin:2px;
-	cursor:pointer;
-}
-.thing:hover,.thing.lit
-{
-	background:#6cf;
-}
-.thing.cantAfford
-{
-	opacity:0.45;
-}
-.upgrade.cantAfford
-{
-	box-shadow:0px 0px 4px #39f;
-	border-radius:1px;
-}
-.upgrade.cantAfford:hover
-{
-	box-shadow:0px 0px 4px #6cf;
-}
-.upgrade.owned,.achiev.owned
-{
-	background:#ad8b16;
-}
-.thing-text,.thing-costs{font-weight:bold;}
+	*thousandFing
+		name:Thousand Finger
+		class:noBackground
+		hidden
 
-.building
-{
-	border-top-left-radius:1px;
-	border-bottom-left-radius:1px;
-	display:block;
-	margin-right:0px;
-	font-size:14px;
-}
+	*achievementUpBonus
+		name:Bonus from Upgrade
+		class:noBackground
+		Passive:achievMultiplier is (this*(achievementNum/100)+100)
+		hidden
 
-.fullWidth
-{
-	display:block;
-	margin-left:0px;
-	margin-right:0px;
-	z-index:10;
-}
-#game .fullWidth
-{
-	height:auto;
-	min-height:auto;
-}
-.fullWidth,.fullWidth:hover
-{
-	/*background:rgba(0,0,0,0.5);
-	background:linear-gradient(to bottom,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0.5) 100%);*/
-	background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 50%,rgba(0,0,0,0) 100%);
-	box-shadow:none;
-}
-.fullWidth:before,.fullWidth:after
-{
-	content:'';
-	height:1px;
-	background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 50%,rgba(255,255,255,0) 100%);
-	position:absolute;
-	left:0px;
-	right:0px;
-	z-index:-1;
-}
-.fullWidth:before{top:-1px;}
-.fullWidth:after{bottom:-1px;}
 
-.fullWidth .thing-icon
-{
-	margin-top:-14px;
-	margin-bottom:-14px;
-}
-.fullWidth .thing-text
-{
-	margin-top:-4px;
-	margin-bottom:-4px;
-}
+	*achievMultiplier
+		Name:Achievement Multiplier %
+		class:noBackground
+		Passive:multiply yield of coins by (this/100)
+		Passive:multiply coinsFromClicks yield of coinButton by (this/100)
+		hidden
 
-#game.filtersOn .thing-icon{filter:drop-shadow(3px 3px 1px rgba(0,0,0,0.5));}
 
-#toasts {margin-bottom: 20px;}
+	*clickUpgrade
+		Name:Click Upgrade %
+		class:noBackground
+		Passive:multiply coin yield of coinButton by ((this+100)/100)
+		Passive:multiply coinsFromClicks yield of coinButton by ((this+100)/100)
+		hidden
 
-.title {padding-bottom: 4px;}
 
-.desc>div
-{
-	text-indent:0px;
-	margin-left:8px;
-	margin-right:8px;
-}
-#tooltip 
-{
-	width:auto;
-	max-width:400px;
-}
 
+
+		
+Shinies
+	*luckyCoin
+		on click:log Woop
+		Movement:growShrink anywhere fade wiggle:0.01
+		frequency:60
+		frequency variation:30
+		icon:https://i.imgur.com/hryPXzA.png
+		class:bigButton
+		on click:
+			yield 1 shinyNum
+			if (chance(37.1%))
+				//get at least 7, or between 1 and 3 minutes of our coin production
+				$amount=min((coins*0.15+13),(coins:ps*60*15+13))
+				toast Demas grants you<//><b>[$amount] coins</b>.
+				yield $amount coin
+				
+			else if (chance(70.1%))
+				yield 77 timeCo
+				show timeCo
+				yield 6 coinMultiplier
+				toast Production multiplied by <b>7x</b> for <b>77 seconds</b>.
+			else
+				yield 13 timeCl
+				show timeCl
+				yield 776 clickMultiplier
+				toast Click Power multiplied by <b>777x</b> for <b>13 seconds</b>.	
+				end
+			end
+
+	*nick
+		on click:log Woop
+		Movement:growShrink anywhere fade wiggle:0.01
+		frequency:5000
+		frequency variation:1000
+		icon:https://i.imgur.com/lEcbQik.png
+		class:bigButton
+		on click:
+			yield 1 nickNum
+			yield 13 timeNick
+			show timeNick
+			yield 7776 nickMultiplier
+			toast You found Nick!<//>Click Power multiplied by <b>7777x</b> for <b>13 seconds</b>.	
+			end
+
+Buildings
+	*TEMPLATE
+		on click:anim glow
+		
+	*couchCushions
+		name:Couch Cushions
+		desc:Couch cushions that hide precious coins.<//><b>Effect:</b><.>Produces <b>1</b> coin every 10 seconds.<q>”A little effort to shake out the couch cushions is a surefire way to get more coins!”</q>
+		icon:icons[3,0]
+		cost:15 coins
+		on tick:yield (0.1*((thousandFing*0.01)+1)) coin
+		unlocked
+	
+	*tipJar|tipJars
+		name:Tip Jar|Tip Jars
+		desc:Jars that accumulate coins over time.<//><b>Effect:</b><.>Produces <b>1</b> coin every second.<q>”Leaving out a Tip Jar for people who like Demas will easily bring in the coins!”</q>
+		icon:icons[3,1]
+		cost:100 coins
+		on tick:yield 1 coins
+		req:100 coins:earned
+	
+	*piggyBank|piggyBanks
+		name:Piggy Bank|Piggy Banks
+		desc:A small ceramic pig with coins inside.<//><b>Effect:</b><.>Produces <b>8</b> coins per second.<q>”Oink!”</q>
+		icon:icons[3,2]
+		cost:1100 coins
+		on tick:yield 8 coins
+		req:1100 coins:earned
+	
+	*safe|safes
+		name:Safe|Safes
+		desc:Gotta keep your coins somewhere, but where are they coming from?<//><b>Effect:</b><.>Produces <b>47</b> coins per second.<q>”Contrary to popular belief: around Demas your coins are anything but ‘Safe’”.</q>
+		icon:icons[3,3]
+		cost:12000 coins
+		on tick:yield 47 coins
+		req:12000 coins:earned
+	
+	*coinPusher|coinPushers
+		name:Coin Pusher|Coin Pushers
+		desc:These rigged machines glue down the coins so they never pay out!.<//><b>Effect:</b><.>Produces <b>260</b> coins per second.
+		icon:icons[3,4]
+		cost:1.3e5 coins
+		on tick:yield 260 coins
+		req:1.3e5 coins:earned
+	
+	*slotMachine|slotMachines
+		name:Slot Machine|Slot Machines
+		desc:BIG MONEY, BIG PRIZES, I LOVE IT!<//><b>Effect:</b><.>Produces <b>1,400</b> coins per second.
+		icon:icons[3,5]
+		Cost:1.4e6 coins
+
+		on tick:yield 1400 coins
+		req:1.4e6 coins:earned
+		
+	*mintingFactory|mintingFactories
+		name:Minting Factory|Minting Factories
+		desc:Despite the name, these coins don’t actually smell good!<//><b>Effect:</b><.>Produces <b>7,800</b> coins per second.
+		icon:icons[3,6]
+		cost:2e7 coins
+		on tick:yield 7800 coins
+		req:2e7 coins:earned
+		
+	*coinCorp|coinCorps
+		name:Coin Corporation|Coin Corporations
+		desc:Hire a group of stockbrokers to buy coins low and sell coins high!<//><b>Effect:</b><.>Produces <b>44,000</b> coins per second.
+		icon:icons[3,7]
+		cost:3.3e8 coins
+		on tick:yield 44000 coins
+		req:3.3e8 coins:earned
+
+	*worldCoingress
+		name:World Coingress
+		desc:One world government; use the power of bureaucracy to generate more coins!<//><b>Effect:</b><.>Each member of the World Coingress produces <b>260,000</b> coins per second.
+		icon:icons[3,8]
+		cost:5.1e9 coins
+		on tick:yield 2.6e5 coins
+		Req:5.1e9 coins:earned
+
+	*lunarMine
+		name:Lunar Mine|Lunar Mines
+		desc:Strip down the moon into coins! It wasn't doing much anyway!<//><b>Effect:</b><.>Produces <b>1,600,000</b> coins per second.
+		icon:icons[3,9]
+		cost:7.5e10 coins
+		on tick:yield 1.6e6 coins
+		req:7.5e10 coins:earned
+
+	*dysonSphere
+		name:Dyson Sphere|Dyson Spheres
+		desc:Harvest the sun’s energy to fabricate more coins! Who needs sunlight anyway!<//><b>Effect:</b><.>Produces <b>10,000,000</b> coins per second.
+		icon:icons[3,10]
+		cost:1e12 coins
+		on tick:yield 1e7 coins
+		req:1e12 coins:earned
+
+	*coinVortex|coinVorticies
+		name:Coin Vortex|Coin Vortices 
+		desc:A singularity made to attract any and all nearby coins. <//><i>DISCLAIMER! DO NOT STAND TOO CLOSE</i> <//><b>Effect:</b><.>Produces <b>65,000,000</b> coins per second.
+		Icon:icons[3,11]
+		cost:1.4e13 coins
+		on tick:yield 6.5e7 coins
+		req:1.4e13 coins:earned
+
+	*galaxy
+		name:NGC 253
+		desc:A galaxy of coins! Channel the energy of a billion stars into making coins!<//><b>Effect:</b><.>Produces <b>430,000,000</b> coins per second.
+		Icon:icons[3,12]
+		cost:1.7e14 coins
+		on tick:yield 4.3e8 coins
+		req:1.7e14 coins:earned
+
+	*tesseract|tesseracts
+		name:Solid Gold Tesseract|Solid Gold Tesseracts
+		desc:Enter the 4th Coin-based dimension to pull 3 dimensional coins from a dimension 90° perpendicular to our own!<//><b>Effect:</b><.>Produces <b>2,900,000,000</b> coins per second.
+		Icon:icons[3,13]
+		cost:2.1e15 coins
+		on tick:yield 2.9e9 coins
+		req:2.1e15 coins:earned
+		
+	*gCUT
+		name:Grand Coin Unification Theory
+		desc:Control the four fundemental forces of the universe to make Demas the fifth.<//><b>Effect:</b><.>Produces <b>21,000,000,000</b> coins per second.
+		Icon:icons[3,14]
+		cost:2.6e16 coins
+		on tick:yield 2.1e10 coins
+		req:2.6e16 coins:earned
+
+	*everything
+		name:Everything
+		text:Everything ([this]%)
+		desc:Buy 100 of these to complete Demas's plan for total domination! <//><b>Completion progress: [this]%</b><q>”Omne est denarios. Ipse mundus ante nos frangitur, unum fit omnia; denarios. Adorate nummos, ave nos; nos sumus mundi praevaricatores, qui verum intelligunt. Facti sumus deos...”</q>
+		Icon:icons[3,15]
+		cost:1.2773420922e29 coins
+		req:2.6e16 coins:earned
+		limit:100
+
+Upgrades
+	*TEMPLATE
+		on click:anim glow
+	
+	//food upgrades
+	//inspiration : http://rabbit.org/suggested-vegetables-and-fruits-for-a-rabbit-diet/
+	
+
+//oc upgrades
+	*Demas
+		name:Demas
+		desc:Coin production multiplier <b>+1%</b><q>”Hey it's me!”</q>
+		icon:icons[1,18]
+		cost:99999 coins
+		on earn:yield 1 prodMultiplier
+		req:10000 coins:earned
+	*gDemas
+		name: Gold Demas
+		desc:Coin production multiplier <b>+2%</b><q>”Wow! Do you think I am made out of Chocolate?”</q>
+		icon:icons[2,18]
+		cost:1e12 coins
+		on earn:yield 2 prodMultiplier
+		req:5e10 coins:earned
+	*Apricot
+		name:Apricot
+		desc:Coin production multiplier <b>+1%</b><q>”So you promised me fish?”</q>
+		icon:icons[1,0]
+		cost:999999 coins
+		on earn:yield 1 prodMultiplier
+		req:50000 coins:earned
+	*gApricot
+		name:Gold Apricot
+		desc:Coin production multiplier <b>+2%</b><q>”Heh... I'm gold fishe..”</q>
+		icon:icons[2,0]
+		cost:5e12 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e11 coins:earned
+	*Beep
+		name:Beep
+		desc:Coin production multiplier <b>+1%</b><q>”Beep”</q>
+		icon:icons[1,1]
+		cost:5e6 coins
+		on earn:yield 1 prodMultiplier
+		req:2.5e5 coins:earned
+	*gBeep
+		name:Gold Beep
+		desc:Coin production multiplier <b>+2%</b><q>”Beep Beep”</q>
+		icon:icons[2,1]
+		cost:1e13 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e12 coins:earned
+	*Katelyn
+		name:Katelyn
+		desc:Coin production multiplier <b>+1%</b>
+		icon:icons[1,2]
+		cost:1e7 coins
+		on earn:yield 1 prodMultiplier
+		req:5e5 coins:earned
+	*gKatelyn
+		name:Gold Katelyn
+		desc:Coin production multiplier <b>+2%</b>
+		icon:icons[2,2]
+		cost:5e13 coins
+		on earn:yield 2 prodMultiplier
+		req:5e12 coins:earned
+	*Chorp
+		name:Chorp
+		desc:Coin production multiplier <b>+2%</b><q>”I will get Seed for this right...?”</q>
+		icon:icons[1,3]
+		cost:5e7 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e6 coins:earned
+	*gChorp
+		name:Gold Chorp
+		desc:Coin production multiplier <b>+4%</b><q>”BAWK”</q>
+		icon:icons[2,3]
+		cost:1e14 coins
+		on earn:yield 4 prodMultiplier
+		req:2.5e13 coins:earned
+	*Alose
+		name:Alose
+		desc:Coin production multiplier <b>+2%</b><q>”Mmmm... gold coins...”</q>
+		icon:icons[1,4]
+		cost:1e8 coins
+		on earn:yield 2 prodMultiplier
+		req:5e6 coins:earned
+	*gAlose
+		name:Gold Alose
+		desc:Coin production multiplier <b>+4%</b><q>”Mmmm... gold Alose...”</q>
+		icon:icons[2,4]
+		cost:5e14 coins
+		on earn:yield 4 prodMultiplier
+		req:2.5e13 coins:earned
+	*Alex
+		name:Alex
+		desc:Coin production multiplier <b>+2%</b>
+		icon:icons[1,5]
+		cost:1e8 coins
+		on earn:yield 2 prodMultiplier
+		req:5e6 coins:earned
+	*gAlex
+		name:Gold Alex
+		desc:Coin production multiplier <b>+4%</b>
+		icon:icons[2,5]
+		cost:1e15 coins
+		on earn:yield 4 prodMultiplier
+		req:5e13 coins:earned
+	*DeMarco
+		name:DeMarco
+		desc:Coin production multiplier <b>+2%</b>
+		icon:icons[1,6]
+		cost:1e8 coins
+		on earn:yield 2 prodMultiplier
+		req:5e6 coins:earned
+	*gDeMarco
+		name:Gold DeMarco
+		desc:Coin production multiplier <b>+4%</b>
+		icon:icons[2,6]
+		cost:1e15 coins
+		on earn:yield 4 prodMultiplier
+		req:5e13 coins:earned
+	*James
+		name:James
+		desc:Coin production multiplier <b>+2%</b><q>”I loaned some coins to a plumber...”</q>
+		icon:icons[1,7]
+		cost:1e8 coins
+		on earn:yield 2 prodMultiplier
+		req:5e6 coins:earned
+	*gJames
+		name:Gold James
+		desc:Coin production multiplier <b>+4%</b><q>”...And lets just say, his 99 lives are up!”</q>
+		icon:icons[2,7]
+		cost:1e16 coins
+		on earn:yield 4 prodMultiplier
+		req:5e14 coins:earned
+	*Goat
+		name:Goat
+		desc:Coin production multiplier <b>+2%</b><q>”Haha!”</q>
+		icon:icons[1,8]
+		cost:1e8 coins
+		on earn:yield 2 prodMultiplier
+		req:5e6 coins:earned
+	*gGoat
+		name:Gold Goat
+		desc:Coin production multiplier <b>+4%</b><q>”OMEGALUL”</q>
+		icon:icons[2,8]
+		cost:1e16 coins
+		on earn:yield 4 prodMultiplier
+		req:5e14 coins:earned
+	*Blue
+		name:Blue
+		desc:Coin production multiplier <b>+2%</b>
+		icon:icons[1,9]
+		cost:5e8 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e7 coins:earned
+	*gBlue
+		name:Gold Blue
+		desc:Coin production multiplier <b>+4%</b>
+		icon:icons[2,9]
+		cost:5e16 coins
+		on earn:yield 4 prodMultiplier
+		req:2.5e15 coins:earned
+	*Joy
+		name:Joy
+		desc:Coin production multiplier <b>+2%</b><q>”You got a soda?”</q>
+		icon:icons[1,10]
+		cost:5e8 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e7 coins:earned
+	*gJoy
+		name:Gold Joy
+		desc:Coin production multiplier <b>+4%</b><q>”Wow I can buy a lot of soda with this!”</q>
+		icon:icons[2,10]
+		cost:5e16 coins
+		on earn:yield 4 prodMultiplier
+		req:2.5e15 coins:earned
+	*Akane
+		name:Akane
+		desc:Coin production multiplier <b>+2%</b><q>”I could buy at least 3 ciabatta rolls with this!”</q>
+		icon:icons[1,11]
+		cost:1e9 coins
+		on earn:yield 2 prodMultiplier
+		req:5e7 coins:earned 
+	*gAkane
+		name:Gold Akane
+		desc:Coin production multiplier <b>+4%</b><q>”Bake until a nice golden brown.”</q>
+		icon:icons[2,11]
+		cost:1e17 coins
+		on earn:yield 4 prodMultiplier
+		req:5e15 coins:earned 
+	*Grimsby
+		name:Grimsby
+		desc:Coin production multiplier <b>+2%</b><q>”...”</q>
+		icon:icons[1,12]
+		cost:5e9 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e8 coins:earned
+	*gGrimsby
+		name:Gold Grimsby
+		desc:Coin production multiplier <b>+4%</b><q>”...!”</q>
+		icon:icons[2,12]
+		cost:5e17 coins
+		on earn:yield 4 prodMultiplier
+		req:2.5e16 coins:earned
+	*Violett
+		name:Violett
+		desc:Coin production multiplier <b>+2%</b>
+		icon:icons[1,13]
+		cost:1e10 coins
+		on earn:yield 2 prodMultiplier
+		req:5e8 coins:earned
+	*gViolett
+		name:Gold Violett
+		desc:Coin production multiplier <b>+4%</b>
+		icon:icons[2,13]
+		cost:1e18 coins
+		on earn:yield 4 prodMultiplier
+		req:5e16 coins:earned
+	*Faust
+		name:Faust
+		desc:Coin production multiplier <b>+2%</b>
+		icon:icons[1,14]
+		cost:5e10 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e9 coins:earned
+	*gFaust
+		name:Gold Faust
+		desc:Coin production multiplier <b>+4%</b>
+		icon:icons[2,14]
+		cost:5e18 coins
+		on earn:yield 4 prodMultiplier
+		req:2.5e18 coins:earned
+	*Thorn
+		name:Tetra
+		desc:Coin production multiplier <b>+2%</b><q>”01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001”</q>
+		icon:icons[1,15]
+		cost:1e11 coins
+		on earn:yield 2 prodMultiplier
+		req:5e9 coins:earned
+	*gThorn
+		name:Gold Tetra
+		desc:Coin production multiplier <b>+4%</b><q>”syntax error”</q>
+		icon:icons[2,15]
+		cost:1e19 coins
+		on earn:yield 4 prodMultiplier
+		req:5e18 coins:earned
+	*Brai
+		name:Brai
+		desc:Coin production multiplier <b>+2%</b><q>”This eyepatch is itchy”</q>
+		icon:icons[1,16]
+		cost:1e11 coins
+		on earn:yield 2 prodMultiplier
+		req:5e9 coins:earned
+	*gBrai
+		name:Gold Brai
+		desc:Coin production multiplier <b>+4%</b>
+		icon:icons[2,16]
+		cost:5e19 coins
+		on earn:yield 4 prodMultiplier
+		req:2.5e19 coins:earned
+	*Ross
+		name:Ross
+		desc:Coin production multiplier <b>+2%</b><q>”I ain't getting paid enough for this...”</q>
+		icon:icons[1,17]
+		cost:5e11 coins
+		on earn:yield 2 prodMultiplier
+		req:2.5e10 coins:earned
+	*gRoss
+		name:Gold Ross
+		desc:Coin production multiplier <b>+4%</b><q>”Oh heeeeeey, I'm suddenly liking this middle man shabang!”</q>
+		icon:icons[2,17]
+		cost:1e20 coins
+		on earn:yield 4 prodMultiplier
+		req:5e19 coins:earned
+ 	//clicking upgrades
+	*clickUpgrade1
+		name:Fantasclick!
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”You got a lot more coins when you realized you should avoid the horns!”</q>
+		Icon:icons[3,17]
+		req:1e3 coinsFromClicks
+		cost:5e4 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade2
+		name:Click magnet
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Demas actually is 3% coins by volume.”</q>
+		Icon:icons[4,17]
+		req:1e5 coinsFromClicks
+		cost:5e6 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade3
+		name:Click Fury
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”The wise goat simply waits for the coins to come to her.”</q>
+		Icon:icons[5,17]
+		req:1e7 coinsFromClicks
+		cost:5e8 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade4
+		name:Another click in the wall
+		desc:Clicking gains +1%</b> of your Coin Production.<q>”Demas, leave them coins alone!</>Hey! Demas! Leave them coins alone!”</q>
+		Icon:icons[6,17]
+		req:1e9 coinsFromClicks
+		cost:5e10 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade5
+		name:Click or treat
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Demas' favorite candy is Kit Kats!”</q>
+		Icon:icons[7,17]
+		req:1e11 coinsFromClicks
+		cost:5e12 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade6
+		name:Diamond Click
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”If Demas loses her coins is this a Fallen Kingdom?”</q>
+		Icon:icons[8,17]
+		req:1e13 coinsFromClicks
+		cost:5e14 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade7
+		name:Down with the clickness
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Looking at my own reflection,</>When suddenly it changes,</>Violently it changes (oh no),</>There is no turning back now,</>You've woken up the demon in her!”</q>
+		Icon:icons[9,17]
+		req:1e15 coinsFromClicks
+		cost:5e16 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade8
+		name:Clickzkreig
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Eventually you click so fast that no one can keep up with you!”</q>
+		Icon:icons[10,17]
+		req:1e17 coinsFromClicks
+		cost:5e18 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade9
+		name:Yellow click road
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”You do NOT want to know who the witch is.”</q>
+		Icon:icons[11,17]
+		req:1e19 coinsFromClicks
+		cost:5e20 coins
+		on earn:yield 1 clickUpgrade
+	*clickUpgrade10
+		name:The click of destiny
+		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”When the dust settles there will be 30 billion coins, and one goat.”</q>
+		Icon:icons[12,17]
+		req:1e21 coinsFromClicks
+		cost:5e22 coins
+		on earn:yield 1 clickUpgrade
+ 	//achievement upgrades
+	*achievUpgrade1
+		name:Coin Intern
+		desc:Get more coins the more achievements you have!<q>”I got a bachelors for this?!”</q>
+		Icon:icons[3,16]
+		cost:9e6 coins
+		req:13 achievementNum
+		on earn:yield 15 achievementUpBonus
+
+	*achievUpgrade2
+		name:Coin Specialist
+		desc:Get more coins the more achievements you have!<q>”Sure this job doesn't offer a retirement plan, but working for Demas is its own reward!”</q>
+		Icon:icons[4,16]
+		cost:9e9 coins
+		req:25 achievementNum
+		on earn:yield 15 achievementUpBonus
+
+	*achievUpgrade3
+		name:Coin Detective
+		desc:Get more coins the more achievements you have!<q>”Look for coins by day, horde them by night!”</q>
+		Icon:icons[5,16]
+		cost:9e13 coins
+		req:50 achievementNum
+		on earn:yield 20 achievementUpBonus
+
+	*achievUpgrade4
+		name:Coin Detective
+		desc:Get more coins the more achievements you have!<q>”It's nice to have a 401k even if it is coin based!”</q>
+		Icon:icons[6,16]
+		cost:9e16 coins
+		req:75 achievementNum
+		on earn:yield 25 achievementUpBonus
+
+	*achievUpgrade5
+		name:Coin Magistrate
+		desc:Get more coins the more achievements you have!<q>”Arbitration contracts have always seemed to go well for Demas ever since you became judge!”</q>
+		Icon:icons[7,16]
+		cost:9e20 coins
+		req:100 achievementNum
+		on earn:yield 30 achievementUpBonus
+
+	*achievUpgrade6
+		name:Coin Mayor
+		desc:Get more coins the more achievements you have!<q>”Is it considered bribery if your campaign promise was to give everyone coins anyway?”</q>
+		Icon:icons[8,16]
+		cost:9e24 coins
+		req:125 achievementNum
+		on earn:yield 35 achievementUpBonus
+
+	*achievUpgrade7
+		name:Coin Monarch
+		desc:Get more coins the more achievements you have!<q>”You'd be surprised how quickly democracy falls in the face of coins!”</q>
+		Icon:icons[9,16]
+		cost:9e27 coins
+		req:150 achievementNum
+		on earn:yield 40 achievementUpBonus
+
+	*achievUpgrade8
+		name:Coin Master
+		desc:Get more coins the more achievements you have!<q>”You have begun to rule coins themselves, they vibrate at your touch. You have started to hear them whisper to you, you ignore them.”</q>
+		Icon:icons[10,16]
+		cost:9e30 coins
+		req:175 achievementNum
+		on earn:yield 50 achievementUpBonus
+
+	*achievUpgrade9
+		name:Coin Overlord
+		desc:Get more coins the more achievements you have!<q>”Coins bend at your will. Your thoughts are constructed of the components of coins. They shout at you and you shout back.”</q>
+		Icon:icons[11,16]
+		cost:9e33 coins
+		req:200 achievementNum
+		on earn:yield 60 achievementUpBonus
+
+	*achievUpgrade10
+		name:Coin God
+		desc:Get more coins the more achievements you have!<q>”Coins ENTER the CRACKS of reality. Your skin is loose. You have seen colors of coins no other has seen. Demas has finally decided to give you Medical benefits.”</q>
+		Icon:icons[12,16]
+		cost:9e36 coins
+		req:225 achievementNum
+		on earn:yield 70 achievementUpBonus
+
+ 	//building upgrades
+	//couch
+	*couchUpgrade1
+		name:Comfier Cushions
+		desc:Couch Cushions and click power are <b>twice</b> as efficient.<q>”So comfy, they won't want to stop sitting!”</q>
+		icon:icons[3,0]
+		cost:1e2 coins
+		passive:multiply yield of couchCushions by 2
+		passive:multiply yield of coinButton by 2
+		req:1 couchCushions
+	*couchUpgrade2
+		name:Cup Holders
+		desc:Couch Cushions and click power are <b>twice</b> as efficient.<q>”Its got cup holders!”</q>
+		icon:icons[4,0]
+		cost:5e2 coins
+		passive:multiply yield of couchCushions by 2
+		passive:multiply yield of coinButton by 2
+		req:1 couchCushions
+	*couchUpgrade3
+		name:Heated Pillows
+		desc:Couch Cushions and click power are <b>twice</b> as efficient.
+		icon:icons[5,0]
+		cost:1e4 coins
+		passive:multiply yield of couchCushions by 2
+		passive:multiply yield of coinButton by 2
+		req:10 couchCushions
+	*couchUpgrade4
+		name:Reclining Footrest
+		desc:The clicking and couches gain <b>+0.1</b> coins for each non-couch object owned.<q>”Why didn't we think of that sooner?”</q>
+		icon:icons[6,0]
+		cost:1e5 coins
+		on earn:yield 1 thousandFingCount
+		req:25 couchCushions
+	*couchUpgrade5
+		name:Trundle
+		desc:Multiplies the gain from Couch Upgrade 4 by <b>5</b>.
+		icon:icons[7,0]
+		cost:1e7 coins
+		on earn:yield (thousandFingCount*5-thousandFingCount) thousandFingCount
+		req:50 couchCushions
+		req:couchUpgrade4
+	*couchUpgrade6
+		name:Hidden Magnets
+		desc:Multiplies the gain from Couch Upgrade 4 by <b>10</b>.
+		icon:icons[8,0]
+		cost:1e9 coins
+		on earn:yield (thousandFingCount*10-thousandFingCount) thousandFingCount
+		req:100 couchCushions
+		req:couchUpgrade4
+	*couchUpgrade7
+		name:Couch Coin Goblin
+		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.<q>”He bites!”</q>
+		icon:icons[9,0]
+		cost:1e10 coins
+		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
+		req:150 couchCushions
+		req:couchUpgrade4
+	*couchUpgrade8
+		name:Mechanical Pickpocket
+		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.
+		icon:icons[10,0]
+		cost:1e13 coins
+		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
+		req:200 couchCushions
+		req:couchUpgrade4
+	*couchUpgrade9
+		name:Parking Meter
+		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.<q>”You do not want to be impounded sitting in this thing!”</q>
+		icon:icons[11,0]
+		cost:1e16 coins
+		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
+		req:250 couchCushions
+		req:couchUpgrade4
+	*couchUpgrade10
+		name:Shaking Couches!
+		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.<q>”The coins fly right out!”</q>
+		icon:icons[12,0]
+		cost:1e19 coins
+		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
+		req:300 couchCushions
+		req:couchUpgrade4
+	//tip jar
+*tipUpgrade1
+		name:Jam Jars
+		desc:Tip Jars are <b>twice</b> as efficient.<q>”It's so sticky the coins fit right in!”</q>
+		icon:icons[3,1]
+		cost:1e3 coins
+		passive:multiply yield of tipJar by 2
+		req:1 tipJar
+*tipUpgrade2
+		name:Party Cups
+		desc:Tip Jars are <b>twice</b> as efficient.<q>”Coin pong has actually been pretty successful!”</q>
+		icon:icons[4,1]
+		cost:5e3 coins
+		passive:multiply yield of tipJar by 2
+		req:5 tipJar
+*tipUpgrade3
+		name:Ornate Containers
+		desc:Tip Jars are <b>twice</b> as efficient.
+		icon:icons[5,1]
+		cost:5e4 coins
+		passive:multiply yield of tipJar by 2
+		req:25 tipJar
+*tipUpgrade4
+		name:Gold Trimmed China
+		desc:Tip Jars are <b>twice</b> as efficient.
+		icon:icons[6,1]
+		cost:5e6 coins
+		passive:multiply yield of tipJar by 2
+		req:50 tipJar
+*tipUpgrade5
+		name:Big Buckets
+		desc:Tip Jars are <b>twice</b> as efficient.
+		icon:icons[7,1]
+		cost:5e8 coins
+		passive:multiply yield of tipJar by 2
+		req:100 tipJar
+*tipUpgrade6
+		name:Massive Barrels
+		desc:Tip Jars are <b>twice</b> as efficient.
+		icon:icons[8,1]
+		cost:5e10 coins
+		passive:multiply yield of tipJar by 2
+		req:150 tipJar
+*tipUpgrade7
+		name:Coin Tubs
+		desc:Tip Jars are <b>twice</b> as efficient.<q>”If you bathe in this it will hurt.”</q>
+		icon:icons[9,1]
+		cost:5e13 coins
+		passive:multiply yield of tipJar by 2
+		req:200 tipJar
+*tipUpgrade8
+		name:Swimming Pools
+		desc:Tip Jars are <b>twice</b> as efficient.
+		icon:icons[10,1]
+		cost:5e16 coins
+		passive:multiply yield of tipJar by 2
+		req:250 tipJar
+*tipUpgrade9
+		name:Coin Colosseum
+		desc:Tip Jars are <b>twice</b> as efficient.<q>”Thumbs up or thumbs down, Demas still gets the coin!”</q>
+		icon:icons[11,1]
+		cost:5e19 coins
+		passive:multiply yield of tipJar by 2
+		req:300 tipJar
+*tipUpgrade10
+		name:Grand Coinyon
+		desc:Tip Jars are <b>twice</b> as efficient.
+		icon:icons[12,1]
+		cost:5e21 coins
+		passive:multiply yield of tipJar by 2
+		req:350 tipJar
+	//piggy bank
+*piggyUpgrade1
+		name:Baby's First Bank
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”Like taking coins from a baby!”</q>
+		icon:icons[3,2]
+		cost:1.1e4 coins
+		passive:multiply yield of piggyBank by 2
+		req:1 piggyBank
+*piggyUpgrade2
+		name:Iron Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”This little piggy went to the market,”</q>
+		icon:icons[4,2]
+		cost:5.5e4 coins
+		passive:multiply yield of piggyBank by 2
+		req:5 piggyBank
+*piggyUpgrade3
+		name:Gold Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”This little piggy stayed home,”</q>
+		icon:icons[5,2]
+		cost:5.5e5 coins
+		passive:multiply yield of piggyBank by 2
+		req:25 piggyBank
+*piggyUpgrade4
+		name:Diamond Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”This little piggy had roast beef,”</q>
+		icon:icons[6,2]
+		cost:5.5e7 coins
+		passive:multiply yield of piggyBank by 2
+		req:50 piggyBank
+*piggyUpgrade5
+		name:Platinum Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”This little piggy went 'wee, wee, wee', all the way home!”</q>
+		icon:icons[7,2]
+		cost:5.5e9 coins
+		passive:multiply yield of piggyBank by 2
+		req:100 piggyBank
+*piggyUpgrade6
+		name:Iridium Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.
+		icon:icons[8,2]
+		cost:5.5e11 coins
+		passive:multiply yield of piggyBank by 2
+		req:150 piggyBank
+*piggyUpgrade7
+		name:Uranium Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”Okay I am 100% certain the sound it makes is not the clanging of coins, but the clicking of a Gieger Counter...”</q>
+		icon:icons[9,2]
+		cost:5.5e14 coins
+		passive:multiply yield of piggyBank by 2
+		req:200 piggyBank
+*piggyUpgrade8
+		name:Vibranium Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.
+		icon:icons[10,2]
+		cost:5.5e17 coins
+		passive:multiply yield of piggyBank by 2
+		req:250 piggyBank
+*piggyUpgrade9
+		name:Neutronium Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.
+		icon:icons[11,2]
+		cost:5.5e20 coins
+		passive:multiply yield of piggyBank by 2
+		req:300 piggyBank
+*piggyUpgrade10
+		name:Unobtanium Pigs
+		desc:Piggy Banks are <b>twice</b> as efficient.<q>”This piggy can hold the infinity stones!”</q>
+		icon:icons[12,2]
+		cost:5.5e23 coins
+		passive:multiply yield of piggyBank by 2
+		req:350 piggyBank
+	//safe
+*safeUpgrade1
+		name:School Locker
+		desc:Safes are <b>twice</b> as efficient.<q>”Lunch money is still money!”</q>
+		icon:icons[3,3]
+		cost:1.2e5 coins
+		passive:multiply yield of safe by 2
+		req:1 safe
+*safeUpgrade2
+		name:Lock Box
+		desc:Safes are <b>twice</b> as efficient.
+		icon:icons[4,3]
+		cost:6e5 coins
+		passive:multiply yield of safe by 2
+		req:5 safe
+*safeUpgrade3
+		name:Keypad Secured Safe
+		desc:Safes are <b>twice</b> as efficient.
+		icon:icons[5,3]
+		cost:6e6 coins
+		passive:multiply yield of safe by 2
+		req:25 safe
+*safeUpgrade4
+		name:Gun Closet
+		desc:Safes are <b>twice</b> as efficient.<q>”WE DO NOT KNOW HOW THESE GUNS WILL GET US EXTRA COINS AND WE ARE TOO AFRAID TO ASK!”</q>
+		icon:icons[6,3]
+		cost:6e8 coins
+		passive:multiply yield of safe by 2
+		req:50 safe
+*safeUpgrade5
+		name:Personal Vault
+		desc:Safes are <b>twice</b> as efficient.
+		icon:icons[7,3]
+		cost:6e10 coins
+		passive:multiply yield of safe by 2
+		req:100 safe
+*safeUpgrade6
+		name:Biometric Scanners
+		desc:Safes are <b>twice</b> as efficient.<q>”This Vault's eye scanner looks only for goat eyes, sorry!”</q>
+		icon:icons[8,3]
+		cost:6e12 coins
+		passive:multiply yield of safe by 2
+		req:150 safe
+*safeUpgrade7
+		name:Federal Reserve Vaults
+		desc:Safes are <b>twice</b> as efficient.
+		icon:icons[9,3]
+		cost:6e15 coins
+		passive:multiply yield of safe by 2
+		req:200 safe
+*safeUpgrade8
+		name:Mountain-Side Security Base
+		desc:Safes are <b>twice</b> as efficient.
+		icon:icons[10,3]
+		cost:6e18 coins
+		passive:multiply yield of safe by 2
+		req:250 safe
+*safeUpgrade9
+		name:Fort Knox
+		desc:Safes are <b>twice</b> as efficient.
+		icon:icons[11,3]
+		cost:6e21 coins
+		passive:multiply yield of safe by 2
+		req:300 safe
+*safeUpgrade10
+		name:Sierra Madre
+		desc:Safes are <b>twice</b> as efficient.<q>”You think you were the first one to unlock the safe door? No, I did it... with other hands, other bodies. After that, the safe wouldn't let go.”</q>
+		icon:icons[12,3]
+		cost:6e24 coins
+		passive:multiply yield of safe by 2
+		req:350 safe
+	//coin pusher
+*coinPusherUpgrade1
+		name:Full Arcade Experience
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Coin Pushers have arcade cabinets placed nearby!”</q>
+		icon:icons[3,4]
+		cost:1.3e6 coins
+		passive:multiply yield of coinPusher by 2
+		req:1 coinPusher
+*coinPusherUpgrade2
+		name:Coin Invaders
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Space Invaders cabinets include cosmetic microtransactions!”</q>
+		icon:icons[4,4]
+		cost:6.5e6 coins
+		passive:multiply yield of coinPusher by 2
+		req:5 coinPusher
+*coinPusherUpgrade3
+		name:Gonna Need More Pills!
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Pac-Man cabinets to have 15 ghosts!”</q>
+		icon:icons[5,4]
+		cost:6.5e7 coins
+		passive:multiply yield of coinPusher by 2
+		req:25 coinPusher
+*coinPusherUpgrade4
+		name:Gala-gone
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Galaga cabinets to tie every bullet to a coin!”</q>
+		icon:icons[6,4]
+		cost:6.5e9 coins
+		passive:multiply yield of coinPusher by 2
+		req:50 coinPusher
+*coinPusherUpgrade5
+		name:Cointra 3
+		desc:Coin Pushers are <b>twice</b> as efficient.
+		icon:icons[7,4]
+		cost:6.5e11 coins
+		passive:multiply yield of coinPusher by 2
+		req:100 coinPusher
+*coinPusherUpgrade6
+		name:Faked High Scores
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”They will never top these, but they can sure try!”</q>
+		icon:icons[8,4]
+		cost:6.5e13 coins
+		passive:multiply yield of coinPusher by 2
+		req:150 coinPusher
+*coinPusherUpgrade7
+		name:INSERT 25c TO READ THIS UPGRADE TITLE
+		desc:Coin Pushers are <b>twice</b> as efficient.
+		icon:icons[9,4]
+		cost:6.5e16 coins
+		passive:multiply yield of coinPusher by 2
+		req:200 coinPusher
+*coinPusherUpgrade8
+		name:A Sucker is Born Every Second
+		desc:Coin Pushers are <b>twice</b> as efficient.
+		icon:icons[10,4]
+		cost:6.5e19 coins
+		passive:multiply yield of coinPusher by 2
+		req:250 coinPusher
+*coinPusherUpgrade9
+		name:Mortal Coin-bat
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas has edited the Mortal Kombat cabinets to force you to spend coins for fatalities!”</q>
+		icon:icons[11,4]
+		cost:6.5e22 coins
+		passive:multiply yield of coinPusher by 2
+		req:300 coinPusher
+*coinPusherUpgrade10
+		name:Donkey Coing
+		desc:Coin Pushers are <b>twice</b> as efficient.<q>”Demas left the Donkey Kong cabinets completely unedited... to make extra money, she's positioned a referee nearby people can pay for a world record!”</q>
+		icon:icons[12,4]
+		cost:6.5e25 coins
+		passive:multiply yield of coinPusher by 2
+		req:350 coinPusher
+	//slot machine
+*slotMachineUpgrade1
+		name:Just One Spin
+		desc:Slot Machines are <b>twice</b> as efficient.<q>”Go on, give the ol' one armed bandit a try!”</q>
+		icon:icons[3,5]
+		cost:1.4e7 coins
+		passive:multiply yield of slotMachine by 2
+		req:1 slotMachine
+*slotMachineUpgrade2
+		name:Bar
+		desc:Slot Machines are <b>twice</b> as efficient.<q>”Funnily enough, the only Bar as this casino is on the slot machine's wheels!”</q>
+		icon:icons[4,5]
+		cost:7e7 coins
+		passive:multiply yield of slotMachine by 2
+		req:5 slotMachine
+*slotMachineUpgrade3
+		name:Double Bar
+		desc:Slot Machines are <b>twice</b> as efficient.
+		icon:icons[5,5]
+		cost:7e8 coins
+		passive:multiply yield of slotMachine by 2
+		req:25 slotMachine
+*slotMachineUpgrade4
+		name:Triple Bar
+		desc:Slot Machines are <b>twice</b> as efficient.
+		icon:icons[6,5]
+		cost:7e10 coins
+		passive:multiply yield of slotMachine by 2
+		req:50 slotMachine
+*slotMachineUpgrade5
+		name:Fruit
+		desc:Slot Machines are <b>twice</b> as efficient.<q>”Cherry's actually lose you money!”</q>
+		icon:icons[7,5]
+		cost:7e12 coins
+		passive:multiply yield of slotMachine by 2
+		req:100 slotMachine
+*slotMachineUpgrade6
+		name:Spades
+		desc:Slot Machines are <b>twice</b> as efficient.
+		icon:icons[8,5]
+		cost:7e14 coins
+		passive:multiply yield of slotMachine by 2
+		req:150 slotMachine
+*slotMachineUpgrade7
+		name:Bells
+		desc:Slot Machines are <b>twice</b> as efficient.
+		icon:icons[9,5]
+		cost:7e17 coins
+		passive:multiply yield of slotMachine by 2
+		req:200 slotMachine
+*slotMachineUpgrade8
+		name:Horse Shoes
+		desc:Slot Machines are <b>twice</b> as efficient.<q>”Demas would like to apologize to all of the horses for using their shoes as a gambling accessory!”</q>
+		icon:icons[10,5]
+		cost:7e20 coins
+		passive:multiply yield of slotMachine by 2
+		req:250 slotMachine
+*slotMachineUpgrade9
+		name:Diamonds
+		desc:Slot Machines are <b>twice</b> as efficient.
+		icon:icons[11,5]
+		cost:7e23 coins
+		passive:multiply yield of slotMachine by 2
+		req:300 slotMachine
+*slotMachineUpgrade10
+		name:Lucky Number 7
+		desc:Slot Machines are <b>twice</b> as efficient.<q>”If you or someone you know struggles with gambling addiction, there are resources available at https://www.begambleaware.org/”</q>
+		icon:icons[12,5]
+		cost:7e26 coins
+		passive:multiply yield of slotMachine by 2
+		req:350 slotMachine
+	//minting factory
+*mintingFactoryUpgr1
+		name:Start-Up Manufacturer
+		desc:Minting Factories are <b>twice</b> as efficient.<q>”A cookie cutter with a sheet of solid gold is all you need to get started!”</q>
+		icon:icons[3,6]
+		cost:2e8 coins
+		passive:multiply yield of mintingFactory by 2
+		req:1 mintingFactory
+*mintingFactoryUpgr2
+		name:Gold Recycling
+		desc:Minting Factories are <b>twice</b> as efficient.<q>”Demas is excited to make coins with her face on them!”</q>
+		icon:icons[4,6]
+		cost:2e9 coins
+		passive:multiply yield of mintingFactory by 2
+		req:5 mintingFactory
+*mintingFactoryUpgr3
+		name:No Breaks!
+		desc:Minting Factories are <b>twice</b> as efficient.
+		icon:icons[5,6]
+		cost:2e10 coins
+		passive:multiply yield of mintingFactory by 2
+		req:25 mintingFactory
+*mintingFactoryUpgr4
+		name:Longer Production Lines
+		desc:Minting Factories are <b>twice</b> as efficient.
+		icon:icons[6,6]
+		cost:2e12 coins
+		passive:multiply yield of mintingFactory by 2
+		req:50 mintingFactory
+*mintingFactoryUpgr5
+		name:Auto-Automation
+		desc:Minting Factories are <b>twice</b> as efficient.
+		icon:icons[7,6]
+		cost:2e14 coins
+		passive:multiply yield of mintingFactory by 2
+		req:100 mintingFactory
+*mintingFactoryUpgr6
+		name:No more Manufacturing Overhead!
+		desc:Minting Factories are <b>twice</b> as efficient.
+		icon:icons[8,6]
+		cost:2e16 coins
+		passive:multiply yield of mintingFactory by 2
+		req:150 mintingFactory
+*mintingFactoryUpgr7
+		name:Catalytic Coinverters
+		desc:Minting Factories are <b>twice</b> as efficient.<q>”This mint is now CO2 neutral and rich!”</q>
+		icon:icons[9,6]
+		cost:2e19 coins
+		passive:multiply yield of mintingFactory by 2
+		req:200 mintingFactory
+*mintingFactoryUpgr8
+		name:Bigger Batches
+		desc:Minting Factories are <b>twice</b> as efficient.
+		icon:icons[10,6]
+		cost:2e22 coins
+		passive:multiply yield of mintingFactory by 2
+		req:250 mintingFactory
+*mintingFactoryUpgr9
+		name:Inside-Outsourcing
+		desc:Minting Factories are <b>twice</b> as efficient.<q>”They have the coins print themselves!”</q>
+		icon:icons[11,6]
+		cost:2e25 coins
+		passive:multiply yield of mintingFactory by 2
+		req:300 mintingFactory
+*mintingFactoryUpgr10
+		name:THE GOAT ONE
+		desc:Minting Factories are <b>twice</b> as efficient.<q>”Demas wanted to one up Australia's Kangaroo One!”</q>
+		icon:icons[12,6]
+		cost:2e28 coins
+		passive:multiply yield of mintingFactory by 2
+		req:350 mintingFactory
+	//coin corporation
+*coinCorpUpgr1
+		name:Tech-Startup
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Everyone has to start somewhere!”</q>
+		icon:icons[3,7]
+		cost:3.3e9 coins //8 
+		passive:multiply yield of coinCorp by 2
+		req:1 coinCorp
+*coinCorpUpgr2
+		name:Sole-Proprietorship
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Demas keeps everything we make.”</q>
+		icon:icons[4,7]
+		cost:1.65e10 coins //8 (n5)
+		passive:multiply yield of coinCorp by 2
+		req:5 coinCorp
+*coinCorpUpgr3
+		name:Board of Directors
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”They are actually made out of balsa wood!”</q>
+		icon:icons[5,7]
+		cost:1.65e11 coins //9 (n10)
+		passive:multiply yield of coinCorp by 2
+		req:25 coinCorp
+*coinCorpUpgr4
+		name:Stalker Market
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Demas hunts down our competitors... literally.”</q>
+		icon:icons[6,7]
+		cost:1.65e13 coins //11 (n10^2)
+		passive:multiply yield of coinCorp by 2
+		req:50 coinCorp
+*coinCorpUpgr5
+		name:Coin Operated Water Cooler
+		desc:Coin Corporations are <b>twice</b> as efficient.
+		icon:icons[7,7]
+		cost:1.65e15 coins //13 (n10^2)
+		passive:multiply yield of coinCorp by 2
+		req:100 coinCorp
+*coinCorpUpgr6
+		name:Non-'Non-Profit' Corporation
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Demas has simply decided we will not be paying taxes. <b>Ever.</b>”</q>
+		icon:icons[8,7]
+		cost:1.65e17 coins //15 (n10^2)
+		passive:multiply yield of coinCorp by 2
+		req:150 coinCorp
+*coinCorpUpgr7
+		name:MegaCorp
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”In 2077 Demas can do anything she wants!”</q>
+		icon:icons[9,7]
+		cost:1.65e20 coins //18 (n10^3)
+		passive:multiply yield of coinCorp by 2
+		req:200 coinCorp
+*coinCorpUpgr8
+		name:Mega Merger!
+		desc:Coin Corporations are <b>twice</b> as efficient.
+		icon:icons[10,7]
+		cost:1.65e23 coins //21 (n10^3)
+		passive:multiply yield of coinCorp by 2
+		req:250 coinCorp
+*coinCorpUpgr9
+		name:Corporate Slacktivism
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”Less work! More coins!”</q>
+		icon:icons[11,7]
+		cost:1.65e26 coins //24 (n10^3)
+		passive:multiply yield of coinCorp by 2
+		req:300 coinCorp
+*coinCorpUpgr10
+		name:Lobbying
+		desc:Coin Corporations are <b>twice</b> as efficient.<q>”The politicians fit nicely in Demas's pocket next to all the coins!”</q>
+		icon:icons[12,7]
+		cost:1.65e29 coins //27 (n10^3)
+		passive:multiply yield of coinCorp by 2
+		req:350 coinCorp
+	//world coingress
+*worldCoinUpgr1
+		name:A Friendly Delegate
+		desc:World Coingress is <b>twice</b> as efficient.<q>”This one will make sure Demas's will is done!”</q>
+		icon:icons[3,8]
+		cost:5.1e10 coins 
+		passive:multiply yield of worldCoingress by 2
+		req:1 worldCoingress
+*worldCoinUpgr2
+		name:Coin Coalition
+		desc:World Coingress is <b>twice</b> as efficient.<q>”Together they will work together to institute the right currency!”</q>
+		icon:icons[4,8]
+		cost:2.55e11 coins //9 (n5)
+		passive:multiply yield of worldCoingress by 2
+		req:5 worldCoingress
+*worldCoinUpgr3
+		name:International Court of "Just Us"
+		desc:World Coingress is <b>twice</b> as efficient.<q>”Now we decide who gets the coins!”</q>
+		icon:icons[5,8]
+		cost:2.55e12 coins //10 (n10)
+		passive:multiply yield of worldCoingress by 2
+		req:25 worldCoingress
+*worldCoinUpgr4
+		name:NGO NO GO!
+		desc:World Coingress is <b>twice</b> as efficient.<q>”Non-Governmental Organizations got to go!”</q>
+		icon:icons[6,8]
+		cost:2.55e15 coins //12 (n10^2)
+		passive:multiply yield of worldCoingress by 2
+		req:50 worldCoingress
+*worldCoinUpgr5
+		name:Bigger General Assembly
+		desc:World Coingress is <b>twice</b> as efficient.
+		icon:icons[7,8]
+		cost:2.55e17 coins //14 (n10^2)
+		passive:multiply yield of worldCoingress by 2
+		req:100 worldCoingress
+*worldCoinUpgr6
+		name:World Coingress Security Council
+		desc:World Coingress is <b>twice</b> as efficient.<q>”The U.N. wasn't using those nukes anyway!”</q>
+		icon:icons[8,8]
+		cost:2.55e19 coins //16 (n10^2)
+		passive:multiply yield of worldCoingress by 2
+		req:150 worldCoingress
+*worldCoinUpgr7
+		name:New Secretary General
+		desc:World Coingress is <b>twice</b> as efficient.
+		icon:icons[9,8]
+		cost:2.55e22 coins //19 (n10^3)
+		passive:multiply yield of worldCoingress by 2
+		req:200 worldCoingress
+*worldCoinUpgr8
+		name:United Coin Globalization
+		desc:World Coingress is <b>twice</b> as efficient.<q>”One currency to rule them all!”</q>
+		icon:icons[10,8]
+		cost:2.55e25 coins //22 (n10^3)
+		passive:multiply yield of worldCoingress by 2
+		req:250 worldCoingress
+*worldCoinUpgr9
+		name:Demas-Veto
+		desc:World Coingress is <b>twice</b> as efficient.
+		icon:icons[11,8]
+		cost:2.55e27 coins //25 (n10^3)
+		passive:multiply yield of worldCoingress by 2
+		req:300 worldCoingress
+*worldCoinUpgr10
+		name:UNESCO? Never heard of them!
+		desc:World Coingress is <b>twice</b> as efficient.<q>”The U.N. has been dissolved! The World Coingress rules all!”</q>
+		icon:icons[12,8]
+		cost:2.55e29 coins //28 (n10^3)
+		passive:multiply yield of worldCoingress by 2
+		req:350 worldCoingress
+//lunar mine
+*lunarMineUpgr1
+		name:Lunar Lander
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Everyone got real tired of hearing ‘One Small Step for Man’ get said every time anyone steps on the moon.”</q>
+		icon:icons[3,9]
+		cost:7.5e11 coins 
+		passive:multiply yield of lunarMine by 2
+		req:1 lunarMine
+*lunarMineUpgr2
+		name:Space Elevator
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Top floor please!”</q>
+		icon:icons[4,9]
+		cost:3.75e12 coins // (n5)
+		passive:multiply yield of lunarMine by 2
+		req:5 lunarMine
+*lunarMineUpgr3
+		name:Mine in the Moon
+		desc:Lunar Mines are <b>twice</b> as efficient.
+		icon:icons[5,9]
+		cost:3.75e13 coins // (n10)
+		passive:multiply yield of lunarMine by 2
+		req:25 lunarMine
+*lunarMineUpgr4
+		name:Netherite Pickaxes
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Jeez the new updates added a lot...”</q>
+		icon:icons[6,9]
+		cost:3.75e15 coins // (n10^2)
+		passive:multiply yield of lunarMine by 2
+		req:50 lunarMine
+*lunarMineUpgr5
+		name:Galacticraft
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Hey wait a minute........ Did you delete the METAINF folder?”</q>
+		icon:icons[7,9]
+		cost:3.75e17 coins // (n10^2)
+		passive:multiply yield of lunarMine by 2
+		req:100 lunarMine
+*lunarMineUpgr6
+		name:Apollo 777
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”Fun Fact: Apollo 7 was not a lunar mission, but would pave the way for ones a year later!”</q>
+		icon:icons[8,9]
+		cost:3.75e19 coins // (n10^2)
+		passive:multiply yield of lunarMine by 2
+		req:150 lunarMine
+*lunarMineUpgr7
+		name:Super Lunar Excavators
+		desc:Lunar Mines are <b>twice</b> as efficient.
+		icon:icons[9,9]
+		cost:3.75e22 coins // (n10^3)
+		passive:multiply yield of lunarMine by 2
+		req:200 lunarMine
+*lunarMineUpgr8
+		name:Giant Mining Lasers
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”<b>ENERGY WEAPONS 100%</b>”</q>
+		icon:icons[10,9]
+		cost:3.75e25 coins // (n10^3)
+		passive:multiply yield of lunarMine by 2
+		req:250 lunarMine
+*lunarMineUpgr9
+		name:Moon Nukes
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”I am fairly certain I saw a video that told me this is a bad idea!”</q>
+		icon:icons[11,9]
+		cost:3.75e28 coins // (n10^3)
+		passive:multiply yield of lunarMine by 2
+		req:300 lunarMine
+*lunarMineUpgr10
+		name:Lunar Super Quarries
+		desc:Lunar Mines are <b>twice</b> as efficient.<q>”After a while, you start to imagine the Earth is like the Moon's Moon!”</q>
+		icon:icons[12,9]
+		cost:3.75e31 coins // (n10^3)
+		passive:multiply yield of lunarMine by 2
+		req:350 lunarMine
+//dyson sphere
+*dysonSphereUpgr1
+		name:Seal the Cracks
+		desc:Dyson Spheres are <b>twice</b> as efficient.<q>”Who turned out the lights?”</q>
+		icon:icons[3,10]
+		cost:1e13 coins 
+		passive:multiply yield of dysonSphere by 2
+		req:1 dysonSphere
+*dysonSphereUpgr2
+		name:Quantum Solar Panels
+		desc:Dyson Spheres are <b>twice</b> as efficient.
+		icon:icons[4,10]
+		cost:5e13 coins // (n5)
+		passive:multiply yield of dysonSphere by 2
+		req:5 dysonSphere
+*dysonSphereUpgr3
+		name:A really big magnifying glass
+		desc:Dyson Spheres are <b>twice</b> as efficient.<q>”<b>EDITOR'S NOTE:</b> Did you even think about this one for more than two seconds?”</q>
+		icon:icons[5,10]
+		cost:5e14 coins // (n10)
+		passive:multiply yield of dysonSphere by 2
+		req:25 dysonSphere
+*dysonSphereUpgr4
+		name:Alien Hotel
+		desc:Dyson Spheres are <b>twice</b> as efficient.<q>”They can check in but can never leave! (Mostly due to the immense gravity of the structure.)”</q>
+		icon:icons[6,10]
+		cost:5e16 coins // (n10^2)
+		passive:multiply yield of dysonSphere by 2
+		req:50 dysonSphere
+*dysonSphereUpgr5
+		name:Stellar Diesel Engine
+		desc:Dyson Spheres are <b>twice</b> as efficient.
+		icon:icons[7,10]
+		cost:5e18 coins // (n10^2)
+		passive:multiply yield of dysonSphere by 2
+		req:100 dysonSphere
+*dysonSphereUpgr6
+		name:Photon Net
+		desc:Dyson Spheres are <b>twice</b> as efficient.<q>”It catches the... urm.. light?”</q>
+		icon:icons[8,10]
+		cost:5e20 coins // (n10^2)
+		passive:multiply yield of dysonSphere by 2
+		req:150 dysonSphere
+*dysonSphereUpgr7
+		name:Extra L.E.D.s
+		desc:Dyson Spheres are <b>twice</b> as efficient.<q>”L.E.D. stands for Light Emitting Demas!”</q>
+		icon:icons[9,10]
+		cost:5e23 coins // (n10^3)
+		passive:multiply yield of dysonSphere by 2
+		req:200 dysonSphere
+*dysonSphereUpgr8
+		name:Sphere within a Sphere
+		desc:Dyson Spheres are <b>twice</b> as efficient.
+		icon:icons[10,10]
+		cost:5e26 coins // (n10^3)
+		passive:multiply yield of dysonSphere by 2
+		req:250 dysonSphere
+*dysonSphereUpgr9
+		name:Extra Suns
+		desc:Dyson Spheres are <b>twice</b> as efficient.<q>”Hey, it's not like the Type I civilizations were using it!”</q>
+		icon:icons[11,10]
+		cost:5e29 coins // (n10^3)
+		passive:multiply yield of dysonSphere by 2
+		req:300 dysonSphere
+*dysonSphereUpgr10
+		name:Matrioshka Brain
+		desc:Dyson Spheres are <b>twice</b> as efficient.<q>”Kardashev ain't got nothing on this!”</q>
+		icon:icons[12,10]
+		cost:5e32 coins // (n10^3)
+		passive:multiply yield of dysonSphere by 2
+		req:350 dysonSphere
+//coin vortex
+*coinVortexUpgr1
+		name:Divide By Zero
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”Wait no, don’t-”</q>
+		icon:icons[3,11]
+		cost:1.4e14 coins 
+		passive:multiply yield of coinVortex by 2
+		req:1 coinVortex
+*coinVortexUpgr2
+		name:Bigger Schwarzschild Radius
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”Great now where are we supposed to live!”</q>
+		icon:icons[4,11]
+		cost:7e14 coins // (n5)
+		passive:multiply yield of coinVortex by 2
+		req:5 coinVortex
+*coinVortexUpgr3
+		name:Coin Accretion Disks
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”A constant stream of coins is collected with a REALLY big net!”</q>
+		icon:icons[5,11]
+		cost:7e15 coins // (n10)
+		passive:multiply yield of coinVortex by 2
+		req:25 coinVortex
+*coinVortexUpgr4
+		name:Filling in the holes with dirt blocks
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”It's the right thing to do.”</q>
+		icon:icons[6,11]
+		cost:7e17 coins // (n10^2)
+		passive:multiply yield of coinVortex by 2
+		req:50 coinVortex
+*coinVortexUpgr5
+		name:New Black Hole Shapes!
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”A cube would be easy to store!”</q>
+		icon:icons[7,11]
+		cost:7e19 coins // (n10^2)
+		passive:multiply yield of coinVortex by 2
+		req:100 coinVortex
+*coinVortexUpgr6
+		name:EgoSphere
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”Utilize Demas's self confidence to start a new singularity!”</q>
+		icon:icons[8,11]
+		cost:7e21 coins // (n10^2)
+		passive:multiply yield of coinVortex by 2
+		req:150 coinVortex
+*coinVortexUpgr7
+		name:White Holes
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”Oh so that's how we get them back!”</q>
+		icon:icons[9,11]
+		cost:7e24 coins // (n10^3)
+		passive:multiply yield of coinVortex by 2
+		req:200 coinVortex
+*coinVortexUpgr8
+		name:Gravitational Lensing
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”Are you telling me the black holes need glasses?!”</q>
+		icon:icons[10,11]
+		cost:7e27 coins // (n10^3)
+		passive:multiply yield of coinVortex by 2
+		req:250 coinVortex
+*coinVortexUpgr9
+		name:SUPERMASSIVE BLACK HOLE
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”THE TEXT HAS TO BE IN ALL CAPS, THATS HOW BIG IT IS!”</q>
+		icon:icons[11,11]
+		cost:7e30 coins // (n10^3)
+		passive:multiply yield of coinVortex by 2
+		req:300 coinVortex
+*coinVortexUpgr10
+		name:hear me out... an even bigger hole!
+		desc:Coin Vortices are <b>twice</b> as efficient.<q>”NO WAY”</q>
+		icon:icons[12,11]
+		cost:7e33 coins // (n10^3)
+		passive:multiply yield of coinVortex by 2
+		req:350 coinVortex
+//galaxy
+*galaxyUpgr1
+		name:Space Age
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Getting to this galaxy is half the work, making it profitable is the rest!”</q>
+		icon:icons[3,12]
+		cost:1.7e15 coins 
+		passive:multiply yield of galaxy by 2
+		req:1 galaxy
+*galaxyUpgr2
+		name:Spore Simulations
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”The best way to know plan out the coin species that will evolve is through rigorous testing!”</q>
+		icon:icons[4,12]
+		cost:8.5e15 coins // (n5)
+		passive:multiply yield of galaxy by 2
+		req:5 galaxy
+*galaxyUpgr3
+		name:Stars of Gold
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Surprising that no one bothered to mine these!”</q>
+		icon:icons[5,12]
+		cost:8.5e16 coins // (n10)
+		passive:multiply yield of galaxy by 2
+		req:25 galaxy
+*galaxyUpgr4
+		name:Warp Drive
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”A lot easier to get around when you are not 90 as you reach your destination!”</q>
+		icon:icons[6,12]
+		cost:8.5e18 coins // (n10^2)
+		passive:multiply yield of galaxy by 2
+		req:50 galaxy
+*galaxyUpgr5
+		name:Ansible Email
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”It is a lot easier to give commands when you can communicate instantly!”</q>
+		icon:icons[7,12]
+		cost:8.5e20 coins // (n10^2)
+		passive:multiply yield of galaxy by 2
+		req:100 galaxy
+*galaxyUpgr6
+		name:Intergalactic Bypass
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Even if space travel takes place in relativistic time, there is still a rush hour!”</q>
+		icon:icons[8,12]
+		cost:8.5e22 coins // (n10^2)
+		passive:multiply yield of galaxy by 2
+		req:150 galaxy
+*galaxyUpgr7
+		name:Self Replicating Nano Machines
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”There is no way this could go wrong!”</q>
+		icon:icons[9,12]
+		cost:8.5e25 coins // (n10^3)
+		passive:multiply yield of galaxy by 2
+		req:200 galaxy
+*galaxyUpgr8
+		name:No HitchHikers!
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Oh freddled gruntbuggly,</>Thy micturations are to me,</>As plurdled gabbleblotchits, in midsummer morning</>On a lurgid bee,</>That mordiously hath blurted out,</>Its earted jurtles, grumbling</>Into a rancid festering confectious organ squealer.</>Now the jurpling slayjid agrocrustles,</>Are slurping hagrilly up the axlegrurts,</>And living glupules frart and stipulate,</>Like jowling meated liverslime,</>Groop, I implore thee, my foonting turlingdromes,</>And hooptiously drangle me,</>With crinkly bindlewurdles,mashurbitries.</>Or else I shall rend thee in the gobberwarts with my blurglecruncheon,</>See if I don't!”</q>
+		icon:icons[10,12]
+		cost:8.5e28 coins // (n10^3)
+		passive:multiply yield of galaxy by 2
+		req:250 galaxy
+*galaxyUpgr9
+		name:Galactic Federation
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Zaphod Beeblebrox for Galactic President!”</q>
+		icon:icons[11,12]
+		cost:8.5e31 coins // (n10^3)
+		passive:multiply yield of galaxy by 2
+		req:300 galaxy
+*galaxyUpgr10
+		name:The Ruler of Everything
+		desc:NGC 253 is <b>twice</b> as efficient.<q>”Do you like how she walks? Do you like how she talks?</>Do you like how your assets liquidate into stocks?”</q>
+		icon:icons[12,12]
+		cost:8.5e34 coins // (n10^3)
+		passive:multiply yield of galaxy by 2
+		req:350 galaxy
+//tesseract
+*tesseractUpgr1
+		name:Extra Storage Space
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”Oh easy! There is plenty of room for building an addition on the...seventh side?”</q>
+		icon:icons[3,13]
+		cost:2.1e16 coins 
+		passive:multiply yield of tesseract by 2
+		req:1 tesseract
+*tesseractUpgr2
+		name:Parallel Universe Cataloger
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”<b>#2837327: A universe of all cookies!</b></>Well that sounds boring.”</q>
+		icon:icons[4,13]
+		cost:1.05e17 coins // (n5)
+		passive:multiply yield of tesseract by 2
+		req:5 tesseract
+*tesseractUpgr3
+		name:Universal Translator
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”It is a heck of a lot easier to take coins from higher dimensional beings if you can talk to them!”</q>
+		icon:icons[5,13]
+		cost:1.05e18 coins // (n10)
+		passive:multiply yield of tesseract by 2
+		req:25 tesseract
+*tesseractUpgr4
+		name:5th Dimensional Edits
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”Do not worry about edits to the timeline, we can just retcon them later!”</q>
+		icon:icons[6,13]
+		cost:1.05e20 coins // (n10^2)
+		passive:multiply yield of tesseract by 2
+		req:50 tesseract
+*tesseractUpgr5
+		name:Liminal Space Finder
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”You’ve got the feeling that you’ve been here before...”</q>
+		icon:icons[7,13]
+		cost:1.05e22 coins // (n10^2)
+		passive:multiply yield of tesseract by 2
+		req:100 tesseract
+*tesseractUpgr6
+		name:Non-Euclidean Coin Detector
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”This coin is just like a normal 3D coin...except that it has another set of vertices 90° from every other one!”</q>
+		icon:icons[8,13]
+		cost:1.05e24 coins // (n10^2)
+		passive:multiply yield of tesseract by 2
+		req:150 tesseract
+*tesseractUpgr7
+		name:Extra Coordinates
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”Yeah we left that coin at 3487,4857,0812,9837,8273,4194, yesterday!”</q>
+		icon:icons[9,13]
+		cost:1.05e27 coins // (n10^3)
+		passive:multiply yield of tesseract by 2
+		req:200 tesseract
+*tesseractUpgr8
+		name:Hyper-Hypercube
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”Don't ask.”</q>
+		icon:icons[10,13]
+		cost:1.05e30 coins // (n10^3)
+		passive:multiply yield of tesseract by 2
+		req:250 tesseract
+*tesseractUpgr9
+		name:Myriagon Sides
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”That's at least 1 more than we had before!”</q>
+		icon:icons[11,13]
+		cost:1.05e33 coins // (n10^3)
+		passive:multiply yield of tesseract by 2
+		req:300 tesseract
+*tesseractUpgr10
+		name:Strung Out Theory
+		desc:Solid Gold Tesseracts are <b>twice</b> as efficient.<q>”Demas would much prefer to work less and earn more!”</q>
+		icon:icons[12,13]
+		cost:1.05e36 coins // (n10^3)
+		passive:multiply yield of tesseract by 2
+		req:350 tesseract
+//gCUT
+*gCUTUpgr1
+		name:More Fundamental Interactions!
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”Demas puts the FUN in Fundamental Forces!”</q>
+		icon:icons[3,14]
+		cost:2.06e17 coins 
+		passive:multiply yield of gCUT by 2
+		req:1 gCUT
+*gCUTUpgr2
+		name:Extra Sticky Gluons
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”The coins tend to stay attached to elementary particles.”</q>
+		icon:icons[4,14]
+		cost:1.5e18 coins // (n5)
+		passive:multiply yield of gCUT by 2
+		req:5 gCUT
+*gCUTUpgr3
+		name:The Quintessential Quintessence
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”I recommend just keeping a tab open to look up these puns.”</q>
+		icon:icons[5,14]
+		cost:1.5e19 coins // (n10)
+		passive:multiply yield of gCUT by 2
+		req:25 gCUT
+*gCUTUpgr4
+		name:Big Bang 2: Coin Boogaloo
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”Now with more coins!”</q>
+		icon:icons[6,14]
+		cost:1.5e21 coins // (n10^2)
+		passive:multiply yield of gCUT by 2
+		req:50 gCUT
+*gCUTUpgr5
+		name:Darker Matter
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”This stuff makes the coins REALLY shiny by comparison!”</q>
+		icon:icons[7,14]
+		cost:1.5e23 coins // (n10^2)
+		passive:multiply yield of gCUT by 2
+		req:100 gCUT
+*gCUTUpgr6
+		name:Scalar Field Model
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”All these physics puns got you stressed? I bet you aren't have as anxious as a Tens-or Field!”</q>
+		icon:icons[8,14]
+		cost:1.5e25 coins // (n10^2)
+		passive:multiply yield of gCUT by 2
+		req:150 gCUT
+*gCUTUpgr7
+		name:Light Cylinder
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”A light cone was too boring, Demas wanted something Minkowski would blush at. Now the light will always have been here yesterday!”</q>
+		icon:icons[9,14]
+		cost:1.5e28 coins // (n10^3)
+		passive:multiply yield of gCUT by 2
+		req:200 gCUT
+*gCUTUpgr8
+		name:Causality Terms and Conditions
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”Demas is casual AND non-totally vicious!”</q>
+		icon:icons[10,14]
+		cost:1.5e31 coins // (n10^3)
+		passive:multiply yield of gCUT by 2
+		req:250 gCUT
+*gCUTUpgr9
+		name:No More CPT Symmetry!
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”You can spin in 360 Degrees and the Bosons and Fermions do not care!”</q>
+		icon:icons[11,14]
+		cost:1.5e34 coins // (n10^3)
+		passive:multiply yield of gCUT by 2
+		req:300 gCUT
+*gCUTUpgr10
+		name:Globally Hyperbolic Manifold
+		desc:Grand Coin Unification Theory is <b>twice</b> as efficient.<q>”<b>Fun Fact #528764:</b> Despite being the richest thing in all possible spacetimes Demas and Apricot still rent an apartment together.”</q>
+		icon:icons[12,14]
+		cost:1.5e37 coins // (n10^3)
+		passive:multiply yield of gCUT by 2
+		req:350 gCUT
+
+Achievements
+	*TEMPLATE
+		on click:anim glow
+		
+	// COINS
+
+*coinAch1
+	name:It all starts with a single click
+	desc:Get <b>1</b> coin.<q>”This is a good start!”</q>
+	req:1 coin:earned
+	Icon:icons[1,18]
+	on earn:yield 1 achievementNum
+
+*coinAch2
+	name:Money money money
+	desc:Earn <b>1,000</b> total coins. 
+	req:1000 coin:earned
+	Icon:icons[1,0]
+	on earn:yield 1 achievementNum
+
+*coinAch3
+	name:Bringing home the bacon
+	desc:Earn <b>100,000</b> total coins.
+	req:1e5 coin:earned
+	Icon:icons[1,1]
+	on earn:yield 1 achievementNum
+
+*coinAch4
+	name:Millionare
+	desc:Earn <b>1,000,000</b> total coins.
+	req:1e6 coin:earned
+	Icon:icons[1,2]
+	on earn:yield 1 achievementNum
+
+*coinAch5
+	name:Winner Winner Chicken Dinner
+	desc:Earn <b>100,000,000</b> total coins.
+	req:1e8 coin:earned
+	Icon:icons[1,3]
+	on earn:yield 1 achievementNum
+
+*coinAch6
+	name:Billionaire
+	desc:Earn <b>1,000,000,000</b>  total coins.
+	req:1e9 coin:earned
+	Icon:icons[1,4]
+	on earn:yield 1 achievementNum
+
+*coinAch7
+	name:Entrepreneur
+	desc:Earn <b>100,000,000,000</b> total coins.
+	req:1e11 coin:earned
+	Icon:icons[1,5]
+	on earn:yield 1 achievementNum
+	
+*coinAch8
+	name:CEO of Demas Inc.
+	desc:Earn <b>500,000,000,000</b> total coins.
+	req:5e11 coin:earned
+	Icon:icons[1,6]
+	on earn:yield 1 achievementNum
+
+*coinAch9
+	name:Trillionaire
+	desc:Earn <b>1,000,000,000,000</b> total coins.
+	req:1e12 coin:earned
+	Icon:icons[1,7]
+	on earn:yield 1 achievementNum
+
+*coinAch10
+	name:Sigma Goat Grindset
+	desc:Earn <b>500,000,000,000,000</b> total coins.
+	req:5e14 coin:earned
+	Icon:icons[1,8]
+	on earn:yield 1 achievementNum
+
+*coinAch11
+	name:Quadrillionaire
+	desc:Earn <b>1,000,000,000,000,000</b> total coins.
+	req:1e15 coin:earned
+	Icon:icons[1,9]
+	on earn:yield 1 achievementNum
+
+*coinAch12
+	name:Spend Coins to Make Coins
+	desc:Earn <b>500,000,000,000,000,000</b> total coins.
+	req:5e15 coin:earned
+	Icon:icons[1,10]
+	on earn:yield 1 achievementNum
+
+*coinAch13
+	name:Quintillionaire
+	desc:Earn <b>1,000,000,000,000,000,000</b> total coins.
+	req:1e18 coin:earned
+	Icon:icons[1,11]
+	on earn:yield 1 achievementNum
+
+*coinAch14
+	name:A Real Goat-Getter
+	desc:Earn <b>500,000,000,000,000,000,000</b> total coins.
+	req:5e20 coin:earned
+	Icon:icons[1,12]
+	on earn:yield 1 achievementNum
+	
+*coinAch15
+	Name:Sextillionaire
+	desc:Earn <b>1,000,000,000,000,000,000,000</b> total coins.
+	req:1e21 coin:earned
+	Icon:icons[1,13]
+	on earn:yield 1 achievementNum
+	
+*coinAch16
+	Name:Clickle Down Economics
+	desc:Earn <b>500,000,000,000,000,000,000,000</b> total coins.
+	req:5e23 coin:earned
+	Icon:icons[1,14]
+	on earn:yield 1 achievementNum
+	
+*coinAch17
+	name:Demas's Number #1 Fan
+	desc:Earn <b>1,000,000,000,000,000,000,000,000</b> total coins.<q>”I think Demas might like you!”</q>
+	req:1e24 coin:earned
+	Icon:icons[1,15]
+	on earn:yield 1 achievementNum
+
+// CPS
+*coinPsAch1
+		name:Makin' gains
+		desc:Produce <b>1</b> coin per second.
+		req:1 coins per second
+		icon:icons[3,18]
+		on earn:yield 1 achievementNum
+		
+*coinPsAch2
+		name:Coins for days
+		desc:Produce <b>10</b> coins per second.
+		req:10 coins per second
+		icon:icons[4,18]
+		on earn:yield 1 achievementNum
+		
+*coinPsAch3
+		name:Look ma, no hands!
+		desc:Produce <b>100</b> coins per second.
+		req:100 coins per second
+		icon:icons[5,18]
+		on earn:yield 1 achievementNum
+		
+*coinPsAch4
+		name:Money printer
+		desc:Produce <b>1,000</b> coins per second.
+		req:1000 coins per second
+		icon:icons[6,18]
+		on earn:yield 1 achievementNum
+		
+*coinPsAch5
+		name:Fiona Coin
+		desc:Produce <b>10,000</b> coins per second.<q>”Oh darling, wont you believe me”</q>
+		req:1e4 coins per second
+		icon:icons[7,18]
+		on earn:yield 1 achievementNum
+
+*coinPsAch6
+		name:Blood Money
+		desc:Produce <b>1,000,000</b> coins per second.<q>”But at what cost?”</q>
+		req:1e6 coins per second
+		icon:icons[8,18]
+		on earn:yield 1 achievementNum
+
+*coinPsAch7
+		name:Big Business
+		desc:Produce <b>500,000,000</b> coins per second.
+		req:1e8 coins per second
+		icon:icons[9,18]
+		on earn:yield 1 achievementNum
+
+*coinPsAch8
+		name:COINS BABY
+		desc:Produce <b>1,000,000,000</b> coins per second.
+		req:1e9 coins per second
+		icon:icons[10,18]
+		on earn:yield 1 achievementNum
+
+*coinPsAch9
+		name:.bf allin h
+		desc:Produce <b>500,000,000,000</b> coins per second.
+		req:5e11 coins per second
+		icon:icons[11,18]
+		on earn:yield 1 achievementNum
+		
+*coinPsAch10
+		name:NOT WHEN I SHIFT INTO MAXIMUM OVERDRIVE
+		desc:Produce <b>1,000,000,000,000</b> coins per second.
+		req:1e12 coins per second
+		icon:icons[12,18]
+		on earn:yield 1 achievementNum
+
+// GOLDEN COINS
+
+*goldenAch1
+		name:Ooh Shiny!
+		desc:Find <b>1</b> golden coin.
+		req:1 shinyNum
+		Icon:icons[0,0]
+		on earn:yield 1 achievementNum
+
+*goldenAch2
+		name:Cover me in coins
+		desc:Find <b>7</b> golden coins.<q>”Demas is gonna be happy about this!”</q>
+		req:7 shinyNum
+		Icon:icons[0,2]
+		on earn:yield 1 achievementNum
+
+*goldenAch3
+		name:Coin sniper
+		desc:Find <b>77</b> golden coins.<q>”Demas is impressed with your commitment!”</q>
+		req:77 shinyNum
+		Icon:icons[0,3]
+		on earn:yield 1 achievementNum
+		
+*goldenAch4
+		name:Fortune favors the gold
+		desc:Find <b>777</b> golden coins.<q>”Demas is kinda worried for you.”</q> 
+		req:777 shinyNum
+		Icon:icons[0,4]
+		on earn:yield 1 achievementNum
+
+// EVERYTHING
+
+*everythingAch1
+		name:Wait, I have to buy how much more??
+		desc:You've bought <b>1%</b> of everything!<q>”Demas needs you to buy 100 for her master plan!”</q>
+		req:1 everything
+		icon:icons[3,15] 
+		on earn:yield 1 achievementNum
+*everythingAch2
+		name:Lockpicking increased
+		desc:You've bought <b>10%</b> of everything!<q>”No sweat!”</q>
+		req:10 everything
+		icon:icons[4,15] 
+		on earn:yield 1 achievementNum
+*everythingAch3
+		name:Sigma Grindset
+		desc:You've bought <b>20%</b> of everything!<q>”There are plenty more to get so keep grinding!”</q>
+		req:20 everything
+		icon:icons[5,15] 
+		on earn:yield 1 achievementNum
+*everythingAch4
+		name:Fitness Montage Music
+		desc:You've bought <b>30%</b> of everything!<q>”A third done and you're having fun!”</q>
+		req:30 everything
+		icon:icons[6,15] 
+		on earn:yield 1 achievementNum
+*everythingAch5
+		name:Need for Speed
+		desc:You've bought <b>40%</b> of everything!<q>”They just keep coming, don't they?”</q>
+		req:40 everything
+		icon:icons[7,15] 
+		on earn:yield 1 achievementNum
+*everythingAch6
+		name:Living on a Prayer
+		desc:You've bought <b>50%</b> of everything!<q>”OOOOOOOOOOOOOOOOOOH YOU'RE HALFWAY THERE!”</q>
+		req:50 everything
+		icon:icons[8,15] 
+		on earn:yield 1 achievementNum
+*everythingAch7
+		name:Over the Hill
+		desc:You've bought <b>60%</b> of everything!<q>”Things might start to seem like they're slowing down but there are plenty more to go!”</q>
+		req:60 everything
+		icon:icons[9,15] 
+		on earn:yield 1 achievementNum
+*everythingAch8
+		name:Nice
+		desc:You've bought <b>69%</b> of everything!<q>”Nice.”</q>
+		req:69 everything
+		icon:icons[10,15] 
+		on earn:yield 1 achievementNum
+*everythingAch9
+		name:Dont Stop Me Now
+		desc:You've bought <b>70%</b> of everything!<q>”Demas is rooting for you!”</q>
+		req:70 everything
+		icon:icons[11,15] 
+		on earn:yield 1 achievementNum
+*everythingAch10
+		name:Acceptable in the 80s
+		desc:You've bought <b>80%</b> of everything!<q>”Focus now!”</q>
+		req:70 everything
+		icon:icons[12,15] 
+		on earn:yield 1 achievementNum
+*everythingAch11
+		name:Pure dedication
+		desc:You've bought <b>90%</b> of everything!<q>”This is the home stretch!”</q>
+		req:70 everything
+		icon:icons[0,15] 
+		on earn:yield 1 achievementNum
+*everythingAch12
+		name:SO CLOSE
+		desc:You've bought <b>99%</b> of everything! Press on!<q>”You are so close!”</q>
+		req:99 everything
+		icon:icons[0,16] 
+		on earn:yield 1 achievementNum
+*everythingAch13
+		name:Unlock Everything
+		desc:You've bought <b>100%</b> of everything!<q>”You've made Demas unbelievably happy! You should screenshot this and go send it in <b>#general</b> chat!”</q>
+		req:100 everything
+		icon:icons[0,17] 
+		on earn:yield 1 achievementNum
+
+		
+//Clicks
+
+*clickAch1
+		name:You did it!
+		desc:Click Demas <b>1</b> time. <q>”You might think this would hurt but Demas' has quite strong horns!”</q>
+		req:1 coinButton clicks
+		icon:icons[0,8]
+		on earn:yield 1 achievementNum
+
+*clickAch2
+		name:Haha that tickles!
+		desc:Click Demas <b>10</b> times. <q>”At this point you probably have noticed that the horns are sharper than they look!”</q>
+		req:10 coinButton clicks
+		icon:icons[0,9]
+		on earn:yield 1 achievementNum
+
+*clickAch3
+		name:Iron Clicker
+		desc:Click Demas <b>100</b> times.<q>”You should feel lucky you don't have to click Apricot, you could easily lose your hand!”</q>
+		req:100 coinButton clicks
+		icon:icons[0,10]
+		on earn:yield 1 achievementNum
+
+*clickAch4
+		name:I will click 500 more
+		desc:Click Demas <b>500</b> times.<q>”<b>NOTE:</b> Clicking on goats in real life may or may not yield different results.”</q>
+		req:500 coinButton clicks
+		icon:icons[0,11]
+		on earn:yield 1 achievementNum
+
+*clickAch5
+		name:Coin Addiction
+		desc:Click Demas <b>1,000</b> times.<q>”Sometimes when you are not looking Demas clicks herself...”</q>
+		req:1e3 coinButton clicks
+		icon:icons[0,12]
+		on earn:yield 1 achievementNum
+
+*clickAch6
+		name:Aint that a click in the head?
+		desc:Click Demas <b>5,000</b> times.<q>”Dennis would like you to know he is most proud of this achievement name.”</q>
+		req:5e3 coinButton clicks
+		icon:icons[0,13]
+		on earn:yield 1 achievementNum
+
+*clickAch7
+		name:Big Click Energy
+		desc:Click Demas <b>10,000</b> times.<q>”Shamus would like you to know he is most proud of this achievement name.”</q>
+		req:1e4 coinButton clicks
+		icon:icons[0,14]
+		on earn:yield 1 achievementNum
+
+	//100% achievements
+
+*lastAch
+		name:Completionist
+		desc:You got every single achievement! Demas would like to thank you so much for enjoying this game!
+		Req:201 achievementNum
+		icon:icons[0,18]
+		on earn:yield 1 achievementNum
+//Building Achievements
+	//couch
+	*couchCushionsAch1
+		name:Just a nap
+		desc:Have <b>1</b> set of couch cushions.<q>”A little rest now and then is okay!”</q>
+		req:1 couchCushions
+		icon:icons[3,0] 
+		on earn:yield 1 achievementNum
+	*couchCushionsAch2
+		name:Couch Potato
+		desc:Have <b>50</b> couch cushions.<q>”You bought 50 couches! There are a buncha achievments for buying every building all the way to 450!”</q>
+		req:50 couchCushions
+		Icon:icons[4,0]
+		on earn:yield 1 achievementNum
+	*couchCushionsAch3
+		name:Really Comfy
+		desc:Have <b>100</b> couch cushions.<q>”Get up, this isn't what we meant by "get a Lazy Boy".”</q>
+		req:100 couchCushions
+		icon:icons[5,0]  
+		on earn:yield 1 achievementNum
+	*couchCushionsAch4
+		name:Sofa King
+		desc:Have <b>150</b> couch cushions.<q>”You know sitting around all day is actually pretty unhealthy! You should get up and stretch!”</q>
+		req:150 couchCushions
+		icon:icons[6,0]  
+		on earn:yield 1 achievementNum
+	*couchCushionsAch5
+		name:Maximum Comf
+		desc:Have <b>200</b> couch cushions.<q>”You know, one of these couches actually has a bed in it! (There are still coins in the mattress).”</q>
+		req:200 couchCushions
+		icon:icons[7,0]  
+		on earn:yield 1 achievementNum
+	*couchCushionsAch6
+		name:Got a blanket?
+		desc:Have <b>250</b> couch cushions.<q>”Did you find Apricot's car keys yet?”</q>
+		req:250 couchCushions
+		icon:icons[8,0]  
+		on earn:yield 1 achievementNum
+	*couchCushionsAch7
+		name:Netflix and chill
+		desc:Have <b>300</b> couch cushions.<q>”You would not believe how many dust bunnies are in these things, and they are NOT as cute as they sound!”</q>
+		req:300 couchCushions
+		icon:icons[9,0]  
+		on earn:yield 1 achievementNum
+	*couchCushionsAch8
+		name:Sleepin' makes me feel good
+		desc:Have <b>350</b> couch cushions.<q>”It's actually surprising you bought so many of the first building.”</q>
+		req:350 couchCushions
+		icon:icons[10,0]
+		on earn:yield 1 achievementNum  
+	*couchCushionsAch9
+		name:To sit or not to sit
+		desc:Have <b>400</b> couch cushions.<q>”You'd actually be surprised by how much gets lost in these things, maybe you should start selling the remotes!”</q>
+		req:400 couchCushions
+		icon:icons[11,0]  
+		on earn:yield 1 achievementNum
+	*couchCushionsAchie10
+		name:I am become sleepy, the go-er to bed
+		desc:Have <b>450</b> couch cushions.<q>”<b>EDITOR'S NOTE:</b> Why does this look like the Simpson's couch? </> <b>ARTIST'S NOTE:</b> SHUT UP”</q>
+		req:450 couchCushions
+		icon:icons[12,0]  
+		on earn:yield 1 achievementNum
+	//tip jar
+	*tipJarAch1
+		name:Take a penny, leave a penny
+		desc:Have <b>1</b> Tip Jar.<q>”Demas's idea was to leave this at the counter of a local bank!”</q>
+		req:1 tipJar
+		icon:icons[3,1] 
+		on earn:yield 1 achievementNum
+	*tipJarAch2
+		name:Lemonade stand
+		desc:Have <b>50</b> Tip Jars.<q>”The kids running the lemonade stand sure did not appreciate using their pitcher as a tip jar, but the coins taste great!”</q>
+		req:50 tipJar
+		Icon:icons[4,1]
+		on earn:yield 1 achievementNum
+	*tipJarAch3
+		name:Your local diner
+		desc:Have <b>100</b> Tip Jars.<q>”Can you believe these tip jars accept BitCoin™?!?”</q>
+		req:100 tipJar
+		icon:icons[5,1]  
+		on earn:yield 1 achievementNum
+	*tipJarAch4
+		name:Government mandated tipping
+		desc:Have <b>150</b> Tip Jars.<q>”Leaving a tip jar in the Oval Office sure sends a message!”</q>
+		req:150 tipJar
+		icon:icons[6,1]  
+		on earn:yield 1 achievementNum
+	*tipJarAch5
+		name:Money maker
+		desc:Have <b>200</b> Tip Jars.<q>”The reason these things are so expensive is they are not made of glass, but rather solid diamond!”</q>
+		req:200 tipJar
+		icon:icons[7,1]  
+		on earn:yield 1 achievementNum
+	*tipJarAch6
+		name:Hot tip
+		desc:Have <b>250</b> Tip Jars.<q>”There is a very embarassing photo of Demas getting her fist stuck in one of these....”</q>
+		req:250 tipJar
+		icon:icons[8,1]  
+		on earn:yield 1 achievementNum
+	*tipJarAch7
+		name:Just the tip of the iceberg
+		desc:Have <b>300</b> Tip Jars.<q>”You'd be shocked how many people try to keep the change. Unbelievable!”</q>
+		req:300 tipJar
+		icon:icons[9,1]  
+		on earn:yield 1 achievementNum
+	*tipJarAch8
+		name:Pay day
+		desc:Have <b>350</b> Tip Jars.<q>”Fun Fact: The most profitable tip jar is the one they bring out with the bread at Olive Garden™”</q>
+		req:350 tipJar
+		icon:icons[10,1]  
+		on earn:yield 1 achievementNum
+	*tipJarAch9
+		name:Pizza delivery man
+		desc:Have <b>400</b> Tip Jars.<q>”<b>PLEASE INSERT ONE COIN TO READ THIS ACHIEVEMENT</b>”</q>
+		req:400 tipJar
+		icon:icons[11,1]  
+		on earn:yield 1 achievementNum
+	*tipJarAch10
+		name:Take-a-Penny, Take-a-Penny
+		desc:Have <b>450</b> Tip Jars.<q>”Demas's best tip for being a self made millionaire? Everytime you see one of those Take-a-Penny, Leave-a-Penny bowls at a store: just take a penny!”</q>
+		req:450 tipJar
+		icon:icons[12,1]  
+		on earn:yield 1 achievementNum
+	//piggy bank
+	*piggyBankAch1
+		name:Oink
+		desc:Have <b>1</b> Piggy Bank.<q>”Demas wants you to know that she takes no joy in smashing a poor defenseless piggy bank open.”</q>
+		req:1 piggyBank
+		icon:icons[3,2] 
+		on earn:yield 1 achievementNum
+	*piggyBankAch2
+		name:Oink oink
+		desc:Have <b>50</b> Piggy Banks.<q>”Every 100th pig has a truffle in it!”</q>
+		req:50 piggyBank
+		Icon:icons[4,2]
+		on earn:yield 1 achievementNum
+	*piggyBankAch3
+		name:Buu buu
+		desc:Have <b>100</b> Piggy Banks.<q>”They actually store these in a porcelain pig pen. (You have to break the gate to get in).”</q>
+		req:100 piggyBank
+		icon:icons[5,2]  
+		on earn:yield 1 achievementNum
+	*piggyBankAch4
+		name:Grunz grunz
+		desc:Have <b>150</b> Piggy Banks.<q>”Oink”</q>
+		req:150 piggyBank
+		icon:icons[6,2]  
+		on earn:yield 1 achievementNum
+	*piggyBankAch5
+		name:Hunk hunk
+		desc:Have <b>200</b> Piggy Banks.<q>”That pig you just smashed was going to be an actor... his name was Mark Truffalo.”</q>
+		req:200 piggyBank
+		icon:icons[7,2]  
+		on earn:yield 1 achievementNum
+	*piggyBankAch6
+		name:Knor knor
+		desc:Have <b>250</b> Piggy Banks.<q>”I think he found something!”</q>
+		req:250 piggyBank
+		icon:icons[8,2]  
+		on earn:yield 1 achievementNum
+	*piggyBankAch7
+		name:Groin groin
+		desc:Have <b>300</b> Piggy Banks.<q>”Do piggy banks dream of electric goats?”</q>
+		req:300 piggyBank
+		icon:icons[9,2]  
+		on earn:yield 1 achievementNum
+	*piggyBankAch8
+		name:Hrgu hrgu
+		desc:Have <b>350</b> Piggy Banks.<q>”Hey that one bit me!”</q>
+		req:350 piggyBank
+		icon:icons[10,2]  
+		on earn:yield 1 achievementNum
+	*piggyBankAch9
+		name:Noff noff
+		desc:Have <b>400</b> Piggy Banks.<q>”Did you know the curlier the tail, the more coins inside!”</q>
+		req:400 piggyBank
+		icon:icons[11,2]  
+		on earn:yield 1 achievementNum
+	*piggyBankAch10
+		name:What do you want, man?
+		desc:Have <b>450</b> Piggy Banks.<q>”Okay remember when I said Demas doesn't enjoy smashing these things open? I lied.”</q>
+		req:450 piggyBank
+		icon:icons[12,2]  
+		on earn:yield 1 achievementNum
+	//safe
+	*safeAch1
+		name:Safe and sound
+		desc:Have <b>1</b> Safe.<q>”Demas needs you to lock pick this thing open (please)!”</q>
+		req:1 safe
+		icon:icons[3,3] 
+		on earn:yield 1 achievementNum
+	*safeAch2
+		name:Vault Tec Calling
+		desc:Have <b>50</b> Safes.<q>”We used to have Demas ram into these to open them but when she started talking to the floor we got worried.”</q>
+		req:50 safe
+		Icon:icons[4,3]
+		on earn:yield 1 achievementNum
+	*safeAch3
+		name:The North Safe
+		desc:Have <b>100</b> Safes.<q>”Anyone got a Daedric Artifact to get this thing open?”</q>
+		req:100 safe
+		icon:icons[5,3]  
+		on earn:yield 1 achievementNum
+	*safeAch4
+		name:An apple a day keeps the locker away
+		desc:Have <b>150</b> Safes.<q>”You might think getting stuffed into a locker sucks, but have you ever got stuck in a bank vault?”</q>
+		req:150 safe
+		icon:icons[6,3]  
+		on earn:yield 1 achievementNum
+	*safeAch5
+		name:Show me your secrets
+		desc:Have <b>200</b> Safes.<q>”Fort Knox is nothing, get in there champ!”</q>
+		req:200 safe
+		icon:icons[7,3]  
+		on earn:yield 1 achievementNum
+	*safeAch6
+		name:Lock Blocked
+		desc:Have <b>250</b> Safes.<q>”THIS JUST IN: ALL SAFES HAVE "SECRET" BACK DOOR, MORE AT 5!”</q>
+		req:250 safe
+		icon:icons[8,3]  
+		on earn:yield 1 achievementNum
+	*safeAch7
+		name:Nobody's breaking in, dude
+		desc:Have <b>300</b> Safes.<q>”Okay some of these have keypads..... try 1-1-1... uh... 1?”</q>
+		req:300 safe
+		icon:icons[9,3]  
+		on earn:yield 1 achievementNum
+	*safeAch8
+		name:Leave the money, take the safe
+		desc:Have <b>350</b> Safes.<q>”You actually could just sell the Safes for scrap metal.”</q>
+		req:350 safe
+		icon:icons[10,3]  
+		on earn:yield 1 achievementNum
+	*safeAch9
+		name:Vault in the wound
+		desc:Have <b>400</b> Safes.<q>”THERE IS ANOTHER SAFE INSIDE THIS ONE?!?!”</q>
+		req:400 safe
+		icon:icons[11,3]  
+		on earn:yield 1 achievementNum
+	*safeAch10
+		name:Protection II
+		desc:Have <b>450</b> Safes.<q>”<b>This Achievement flavor text is sealed until 2050.</b>”</q>
+		req:450 safe
+		icon:icons[12,3]  
+		on earn:yield 1 achievementNum
+	//coin pusher
+	*coinPusherAch1
+		name:The old arcade
+		desc:Have <b>1</b> Coin Pusher.<q>”Every 100th pig has a truffle in it!
+		req:1 coinPusher
+		icon:icons[3,4] 
+		on earn:yield 1 achievementNum
+	*coinPusherAch2
+		name:Pushin' coins
+		desc:Have <b>50</b> Coin Pushers.<q>”Demas has taken to selling refreshments outside the Arcade for everyone waiting in line!”</q>
+		req:50 coinPusher
+		Icon:icons[4,4]
+		on earn:yield 1 achievementNum
+	*coinPusherAch3
+		name:Gonna Need More Glue
+		desc:Have <b>100</b> Coin Pushers.<q>”There is a GIANT magnet under the arcade to ensure coins don't go very far.”</q>
+		req:100 coinPusher
+		icon:icons[5,4]  
+		on earn:yield 1 achievementNum
+	*coinPusherAch4
+		name:Give and Tak-Give
+		desc:Have <b>150</b> Coin Pushers.<q>”No Refunds' is actually the slogan of the Arcade!”</q>
+		req:150 coinPusher
+		icon:icons[6,4]  
+		on earn:yield 1 achievementNum
+	*coinPusherAch5
+		name:They all fall down
+		desc:Have <b>200</b> Coin Pushers.<q>”Surprisingly, the coin pusher is only the 2nd most profitable machine at the arcade behind the Mortal Kombat cabinet!”</q>
+		req:200 coinPusher
+		icon:icons[7,4]  
+		on earn:yield 1 achievementNum
+	*coinPusherAch6
+		name:Coin Fall Flat
+		desc:Have <b>250</b> Coin Pushers.<q>”Every 100th pig has a truffle in it!”</q>
+		req:250 coinPusher
+		icon:icons[8,4]  
+		on earn:yield 1 achievementNum
+	*coinPusherAch7
+		name:Centrifugal Coin Pusher
+		desc:Have <b>300</b> Coin Pushers.<q>”No one has noticed yet but the coins at the front that do fall down are chocolate!”</q>
+		req:300 coinPusher
+		icon:icons[9,4]  
+		on earn:yield 1 achievementNum
+	*coinPusherAch8
+		name:Like Dominos
+		desc:Have <b>350</b> Coin Pushers.<q>”You may wonder why people are still putting coins into a machine that hasn't paid out in 5 months! We don't know either!”</q>
+		req:350 coinPusher
+		icon:icons[10,4]  
+		on earn:yield 1 achievementNum
+	*coinPusherAch9
+		name:A Sticky Situation
+		desc:Have <b>400</b> Coin Pushers.<q>”<b>PURSUANT TO MUNICPAL SAFTEY CODE SECTION 4 § 75 WE ARE OBLIGATED TO INFORM YOU THAT THE ANTIVANDAL SYSTEM THAT PROTECTS THE MACHINES FROM UNAUTHORIZED MOVEMENT IS A LAVA PIT.</b>”</q>
+		req:400 coinPusher
+		icon:icons[11,4]  
+		on earn:yield 1 achievementNum
+	*coinPusherAch10
+		name:The Final Push
+		desc:Have <b>450</b> Coin Pushers.<q>”Somebody actually left the arcade with more coins than they entered with. Demas is heartbroken!!”</q>
+		req:450 coinPusher
+		icon:icons[12,4]  
+		on earn:yield 1 achievementNum
+	//slot machine
+	*slotMachineAch1
+		name:Lucky Number 7
+		desc:Have <b>1</b> Slot Machine.<q>”If you think 3 Seven's are lucky: try to take a coin from Demas and live. That is a real test of luck.”</q>
+		req:1 slotMachine
+		icon:icons[3,5] 
+		on earn:yield 1 achievementNum
+	*slotMachineAch2
+		name:Definitely not rigged
+		desc:Have <b>50</b> Slot Machines.<q>”There is actually a Negative symbol in front of the jackpot! Man has that brought in a lot of coins!”</q>
+		req:50 slotMachine
+		Icon:icons[4,5]
+		on earn:yield 1 achievementNum
+	*slotMachineAch3
+		name:Just a little more
+		desc:Have <b>100</b> Slot Machines.<q>”Demas's Casino actually allows you to cash IN coins for chips, not out.”</q>
+		req:100 slotMachine
+		icon:icons[5,5]  
+		on earn:yield 1 achievementNum
+	*slotMachineAch4
+		name:The house always wins
+		desc:Have <b>150</b> Slot Machines.<q>”If you focus reeeeeally hard you can see that some machines have a fourth wheel!”</q>
+		req:150 slotMachine
+		icon:icons[6,5]  
+		on earn:yield 1 achievementNum
+	*slotMachineAch5
+		name:... except when it doesnt
+		desc:Have <b>200</b> Slot Machines.<q>”Some lucky mail man walked in with a .357 on his belt. We gave him a lot of bottle caps and he left, thankfully.”</q>
+		req:200 slotMachine
+		icon:icons[7,5]  
+		on earn:yield 1 achievementNum
+	*slotMachineAch6
+		name:Vegas, baby!
+		desc:Have <b>250</b> Slot Machines.<q>”The meat at this casino tastes kinda funny. Is this how chicken is supposed to taste?”</q>
+		req:250 slotMachine
+		icon:icons[8,5]  
+		on earn:yield 1 achievementNum
+	*slotMachineAch7
+		name:Double or nothing
+		desc:Have <b>300</b> Slot Machines.<q>”Local ordinance requires the casino to post the winning odds somewhere in the casino. Sadly the only open wall space was in one of the bathroom stalls.”</q>
+		req:300 slotMachine
+		icon:icons[9,5]  
+		on earn:yield 1 achievementNum
+	*slotMachineAch8
+		name:It's time for you to go
+		desc:Have <b>350</b> Slot Machines.<q>”The all-you-can-eat buffet used to offer sea food. There was an incident with Apricot that led to management reevaluating the meaning of "all-you-can-eat".”</q>
+		req:350 slotMachine
+		icon:icons[10,5]  
+		on earn:yield 1 achievementNum
+	*slotMachineAch9
+		name:Mega Casino Royale
+		desc:Have <b>400</b> Slot Machines.<q>”All the coins are kept in a vault deep underneath the Casino!”</q>
+		req:400 slotMachine
+		icon:icons[11,5]  
+		on earn:yield 1 achievementNum
+	*slotMachineAch10
+		name:I don't have a problem, YOU have a problem
+		desc:Have <b>450</b> Slot Machines.<q>”Hey, just thought we should take the time to remind you that Gambling is a very risky venture, and you should probably not do it in real life!”</q>
+		req:450 slotMachine
+		icon:icons[12,5] 
+		on earn:yield 1 achievementNum
+	//minting factory
+	*mintingFactoryAch1
+		name:Industrial Revolution
+		desc:Have <b>1</b> Minting Factory.<q>”Steam powered coins? Valve will not be happy...”</q>
+		req:1 mintingFactory
+		icon:icons[3,6] 
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch2
+		name:3D Minting
+		desc:Have <b>50</b> Minting Factories.<q>”We tried to put BitCoins™ in this thing but it just started making CD's!”</q>
+		req:50 mintingFactory
+		Icon:icons[4,6]
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch3
+		name:Federal Reserve
+		desc:Have <b>100</b> Minting Factories.<q>”The Reserve has gone from the Gold Standard to the Coin Standard.”</q>
+		req:100 mintingFactory
+		icon:icons[5,6]  
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch4
+		name:Actual Money Printer
+		desc:Have <b>150</b> Minting Factories.<q>”RDM RDM RDM RDM RDM!”</q>
+		req:150 mintingFactory
+		icon:icons[6,6]  
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch5
+		name:Blue-Dollar Workers
+		desc:Have <b>200</b> Minting Factories.<q>”Demas makes a Coin, I make a click, world domination is quite the simple trick!”</q>
+		req:200 mintingFactory
+		icon:icons[7,6]  
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch6
+		name:Over Production
+		desc:Have <b>250</b> Minting Factories.<q>”Do you actually know where you are gonna store any of these coins?”</q>
+		req:250 mintingFactory
+		icon:icons[8,6]  
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch7
+		name:Coin Powered Machinery
+		desc:Have <b>300</b> Minting Factories.<q>”These coins are printed with Depleted Uranium!”</q>
+		req:300 mintingFactory
+		icon:icons[9,6]  
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch8
+		name:Golden Gears
+		desc:Have <b>350</b> Minting Factories.<q>”Even the machines themselves are made of coins!”</q>
+		req:350 mintingFactory
+		icon:icons[10,6]  
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch9
+		name:Minting Lasers
+		desc:Have <b>400</b> Minting Factories.<q>”Demas has picked up a habit of signing the coins!”</q>
+		req:400 mintingFactory
+		icon:icons[11,6]  
+		on earn:yield 1 achievementNum
+	*mintingFactoryAch10
+		name:Zero Lunch Breaks
+		desc:Have <b>450</b> Minting Factories.<q>”To the workers, no lunch breaks wasn't even half as big a problem as the no bathroom breaks policy from last quarter...”</q>
+		req:450 mintingFactory
+		icon:icons[12,6] 
+		on earn:yield 1 achievementNum
+	//coin corporation
+	*coinCorpAch1
+		name:Small Business Venture
+		desc:Have <b>1</b> Coin Corporation.<q>”Demas L.L.C.; The L.L.C. stands for Lotsa Lotsa Coins!”</q>
+		req:1 coinCorp
+		icon:icons[3,7] 
+		on earn:yield 1 achievementNum
+	*coinCorpAch2
+		name:Initial Public Offering
+		desc:Have <b>50</b> Coin Corporations.<q>”When Demas said the competion would see the stocks I didn't know she meant a Pillory!”</q>
+		req:50 coinCorp
+		Icon:icons[4,7]
+		on earn:yield 1 achievementNum
+	*coinCorpAch3
+		name:Market Manipulation
+		desc:Have <b>100</b> Coin Corporations.<q>”They said this market was so volatile it would flip like a coin, boy were they not kidding!”</q>
+		req:100 coinCorp
+		icon:icons[5,7]  
+		on earn:yield 1 achievementNum
+	*coinCorpAch4
+		name:Coinporate Synergy
+		desc:Have <b>150</b> Coin Corporations.<q>”R&D has come out with a new strategy: Buy High, Sell Higher!”</q>
+		req:150 coinCorp
+		icon:icons[6,7]  
+		on earn:yield 1 achievementNum
+	*coinCorpAch5
+		name:Grand Board of Directors
+		desc:Have <b>200</b> Coin Corporations.<q>”The Board is actually comprised of 10% Balsa, 89% Pine, and 1% Goat!”</q>
+		req:200 coinCorp
+		icon:icons[7,7]  
+		on earn:yield 1 achievementNum
+	*coinCorpAch6
+		name:Mega Corp
+		desc:Have <b>250</b> Coin Corporations.<q>”Putting the "Can" in 'Mercantalism!”</q>
+		req:250 coinCorp
+		icon:icons[8,7]  
+		on earn:yield 1 achievementNum
+	*coinCorpAch7
+		name:Corporate Militarization
+		desc:Have <b>300</b> Coin Corporations.<q>”La-Li-Lu-Le-Lo”</q>
+		req:300 coinCorp
+		icon:icons[9,7]  
+		on earn:yield 1 achievementNum
+	*coinCorpAch8
+		name:Coin Lobbying
+		desc:Have <b>350</b> Coin Corporations.<q>”You would not believe how effective bribes are!”</q>
+		req:350 coinCorp
+		icon:icons[10,7]  
+		on earn:yield 1 achievementNum
+	*coinCorpAch9
+		name:Questionable Ethics
+		desc:Have <b>400</b> Coin Corporations.<q>”I mean seriously! Who is actually living on this wildlife preserve!”</q>
+		req:400 coinCorp
+		icon:icons[11,7]
+		on earn:yield 1 achievementNum  
+	*coinCorpAch10
+		name:Too Big to Fail
+		desc:Have <b>450</b> Coin Corporations.<q>”Even the coins have little golden parachutes!”</q>
+		req:450 coinCorp
+		icon:icons[12,7]  
+		on earn:yield 1 achievementNum
+	//world coingress
+	*worldCoinAch1
+		name:First Coin Summit
+		desc:Have <b>1</b> member in World Coingress.<q>”The crowd was hushed as delegates from every major nation agreed: Coins are the way of the future!”</q>
+		req:1 worldCoingress
+		icon:icons[3,8] 
+		on earn:yield 1 achievementNum
+	*worldCoinAch2
+		name:North Atlantic Coin Organization
+		desc:Have <b>50</b> members in World Coingress.<q>”Read my lips: More Coins More Fasterer!”</q>
+		req:50 worldCoingress
+		Icon:icons[4,8]
+		on earn:yield 1 achievementNum
+	*worldCoinAch3
+		name:Coin Mandated Law
+		desc:Have <b>100</b> members in World Coingress.<q>”Ich Bin Ein Coin!”</q>
+		req:100 worldCoingress
+		icon:icons[5,8]  
+		on earn:yield 1 achievementNum
+	*worldCoinAch4
+		name:Global Coin Superpower
+		desc:Have <b>150</b> members in World Coingress.<q>”Those who control the coins control the future.”</q>
+		req:150 worldCoingress
+		icon:icons[6,8]  
+		on earn:yield 1 achievementNum
+	*worldCoinAch5
+		name:Neocoinolonialism
+		desc:Have <b>200</b> members in World Coingress.<q>”New Delegates to World Coingress must first pass polygraph question: ‘Do you like coins?’”</q>
+		req:200 worldCoingress
+		icon:icons[7,8]  
+		on earn:yield 1 achievementNum
+	*worldCoinAch6
+		name:Illuminati Overlords
+		desc:Have <b>250</b> members in World Coingress.<q>”Despite the name, no coins are actually allowed on the premises, for fear of an international incident.”</q>
+		req:250 worldCoingress
+		icon:icons[8,8]  
+		on earn:yield 1 achievementNum
+	*worldCoinAch7
+		name:Grand Global Coinspiracy
+		desc:Have <b>300</b> members in World Coingress.<q>”Even the shadow world government is forced to attend the World Coingress!”</q>
+		req:300 worldCoingress
+		icon:icons[9,8]  
+		on earn:yield 1 achievementNum
+	*worldCoinAch8
+		name:Big Sister
+		desc:Have <b>350</b> members in World Coingress.<q>”The Coin War brews as the USSR and U.S. jockey for control of the world's precious metal supplies!”</q>
+		req:350 worldCoingress
+		icon:icons[10,8]  
+		on earn:yield 1 achievementNum
+	*worldCoinAch9
+		name:1984 Coins
+		desc:Have <b>400</b> members in World Coingress.<q>”THIS JUST IN: WORLD COINGRESS DECLARES MORE COINS: DOUBLE PLUS GOOD!”</q>
+		req:400 worldCoingress
+		icon:icons[11,8]  
+		on earn:yield 1 achievementNum
+	*worldCoinAch10
+		name:Orwellian Nightmare
+		desc:Have <b>450</b> members in World Coingress.<q>”The masses never revolt of their own accord, and they never revolt merely because they are oppressed. Indeed, so long as they are not permitted to have standards of comparison, they never even become aware that they are oppressed.”</q>
+		req:450 worldCoingress
+		icon:icons[12,8]  
+		on earn:yield 1 achievementNum
+	//lunar mine
+	*lunarMineAch1
+		name:To the Moon!
+		desc:Have <b>1</b> Lunar Mine.<q>”Landable Rocket technology being where it is, Demas settled on two catapults to get the job done.”</q>
+		req:1 lunarMine
+		icon:icons[3,9] 
+		on earn:yield 1 achievementNum
+	*lunarMineAch2
+		name:One Small Step
+		desc:Have <b>50</b> Lunar Mines.<q>”The prehistoric ruins on the moon have put up little resistance to the mining drills.”</q>
+		req:50 lunarMine
+		Icon:icons[4,9]
+		on earn:yield 1 achievementNum
+	*lunarMineAch3
+		name:The Dark Side
+		desc:Have <b>100</b> Lunar Mines.<q>”Demas is too ashamed to admit it, but she did taste the moon just to be sure it wasn't cheese.”</q>
+		req:100 lunarMine
+		icon:icons[5,9]  
+		on earn:yield 1 achievementNum
+	*lunarMineAch4
+		name:Mass Colonization
+		desc:Have <b>150</b> Lunar Mines.<q>”Looking to escape the unemployment on Earth, come to one of our luxrious lunar colonies, now with less rocks!”</q>
+		req:150 lunarMine
+		icon:icons[6,9]  
+		on earn:yield 1 achievementNum
+	*lunarMineAch5
+		name:Lunar Expansion
+		desc:Have <b>200</b> Lunar Mines.<q>”Technically we are not destroying the surface of the moon, but rather we are adding new craters!”</q>
+		req:200 lunarMine
+		icon:icons[7,9]  
+		on earn:yield 1 achievementNum
+	*lunarMineAch6
+		name:We Need More Moons
+		desc:Have <b>250</b> Lunar Mines.<q>”That's no moon... wait... no, yeah it is.”</q>
+		req:250 lunarMine
+		icon:icons[8,9]  
+		on earn:yield 1 achievementNum
+	*lunarMineAch7
+		name:Blue Moon, You Saw Demas Standing Alone
+		desc:Have <b>300</b> Lunar Mines.<q>”Without a Coin in her pocket, without a coin all alone.”</q>
+		req:300 lunarMine
+		icon:icons[9,9]  
+		on earn:yield 1 achievementNum
+	*lunarMineAch8
+		name:Core Resource Extraction
+		desc:Have <b>350</b> Lunar Mines.<q>”SPAAAAAAAAAAAAAAAAAACE!”</q>
+		req:350 lunarMine
+		icon:icons[10,9]  
+		on earn:yield 1 achievementNum
+	*lunarMineAch9
+		name:Gray Goo
+		desc:Have <b>400</b> Lunar Mines.<q>”You'd be surprised how good these nanomachines are at mining! Anything! Even the lunar base!”</q>
+		req:400 lunarMine
+		icon:icons[11,9]  
+		on earn:yield 1 achievementNum
+	*lunarMineAch10
+		name:Total Star System Depletion
+		desc:Have <b>450</b> Lunar Mines.<q>”OH MY GOD WE RAN OUT OF MOONS!”</q>
+		req:450 coinCorp
+		icon:icons[12,9]  
+		on earn:yield 1 achievementNum
+//dyson sphere
+	*dysonSphereAch1
+		name:Type II Civilization
+		desc:Have <b>1</b> Dyson Sphere.<q>”At first Demas thought Dyson was the brand of vacuum, and it made this idea sound very, very stupid.”</q>
+		req:1 dysonSphere
+		icon:icons[3,10] 
+		on earn:yield 1 achievementNum
+	*dysonSphereAch2
+		name:Nuke the Sun
+		desc:Have <b>50</b> Dyson Spheres.<q>”Getting the sphere around the sun was the easy part. Getting out from the inside proved much, much harder.
+		req:50 dysonSphere
+		Icon:icons[4,10]
+		on earn:yield 1 achievementNum
+	*dysonSphereAch3
+		name:Supernova Escallation
+		desc:Have <b>100</b> Dyson Spheres.<q>”We assure you the explosion inside the sphere are well within expected parameters.
+		req:100 dysonSphere
+		icon:icons[5,10]  
+		on earn:yield 1 achievementNum
+	*dysonSphereAch4
+		name:Gamma Ray Bursts
+		desc:Have <b>150</b> Dyson Spheres.<q>”They said you could never sell fresh air and sunlight. We proved one of those things wrong.
+		req:150 dysonSphere
+		icon:icons[6,10]  
+		on earn:yield 1 achievementNum
+	*dysonSphereAch5
+		name:Neutron Stars
+		desc:Have <b>200</b> Dyson Spheres.<q>”Earth might be freezing now, but coins are hot as ever!
+		req:200 dysonSphere
+		icon:icons[7,10]  
+		on earn:yield 1 achievementNum
+	*dysonSphereAch6
+		name:Binary Star Systems
+		desc:Have <b>250</b> Dyson Spheres.<q>”Can you believe people used to care about ‘sunrises’ and ‘sunsets’. What freaks!”</q>
+		req:250 dysonSphere
+		icon:icons[8,10]  
+		on earn:yield 1 achievementNum
+	*dysonSphereAch7
+		name:Automated Solar Arrays
+		desc:Have <b>300</b> Dyson Spheres.<q>”Putting the "hot" in 'photovoltaic'!”</q>
+		req:300 dysonSphere
+		icon:icons[9,10]  
+		on earn:yield 1 achievementNum
+	*dysonSphereAch8
+		name:Way Too Much Energy
+		desc:Have <b>350</b> Dyson Spheres.<q>”Gordan slot the sphere around the Class G star...”</q>
+		req:350 dysonSphere
+		icon:icons[10,10]  
+		on earn:yield 1 achievementNum
+	*dysonSphereAch9
+		name:IT’S NOT SHUTTING DOWN
+		desc:Have <b>400</b> Dyson Spheres.<q>”HELP! NOOOO! STOP! EYURK!”</q>
+		req:400 dysonSphere
+		icon:icons[11,10]  
+		on earn:yield 1 achievementNum
+	*dysonSphereAch10
+		name:Coins... but at what cost?
+		desc:Have <b>450</b> Dyson Spheres.<q>”Now how about that coin I owed you!”</q>
+		req:450 coinCorp
+		icon:icons[12,10]  
+		on earn:yield 1 achievementNum
+	//coin vortex
+	*coinVortexAch1
+		name:The Singularity
+		desc:Have <b>1</b> Coin Vortex.<q>”The beginning and the end. The Alpha and the Omega. The coin and the goat.”</q>
+		req:1 coinVortex
+		icon:icons[3,11] 
+		on earn:yield 1 achievementNum
+	*coinVortexAch2
+		name:Resonance Cascade
+		desc:Have <b>50</b> Coin Vortices.<q>”Demas doesn't need to hear this, she's a highly trained professional.”</q>
+		req:50 coinVortex
+		Icon:icons[4,11]
+		on earn:yield 1 achievementNum
+	*coinVortexAch3
+		name:Event Horizon
+		desc:Have <b>100</b> Coin Vortices.<q>”The coins falling in move slower and slower.....”</q>
+		req:100 coinVortex
+		icon:icons[5,11]  
+		on earn:yield 1 achievementNum
+	*coinVortexAch4
+		name:Super-Duper-Massive Black Holes
+		desc:Have <b>150</b> Coin Vortices.<q>”Where do they even find these things!”</q>
+		req:150 coinVortex
+		icon:icons[6,11]  
+		on earn:yield 1 achievementNum
+	*coinVortexAch5
+		name:Where do they come from?
+		desc:Have <b>200</b> Coin Vortices.<q>”Even Demas doesn't know!”</q>
+		req:200 coinVortex
+		icon:icons[7,11]  
+		on earn:yield 1 achievementNum
+	*coinVortexAch6
+		name:White Holes
+		desc:Have <b>250</b> Coin Vortices.<q>”Oh so that's how we get them back!”</q>
+		req:250 coinVortex
+		icon:icons[8,11]  
+		on earn:yield 1 achievementNum
+	*coinVortexAch7
+		name:The Double Coin Experiment
+		desc:Have <b>300</b> Coin Vortices.<q>”Demas taking your coins is the ultimate spooky action at a distance!”</q>
+		req:300 coinVortex
+		icon:icons[9,11]  
+		on earn:yield 1 achievementNum
+	*coinVortexAch8
+		name:Dirt Devil
+		desc:Have <b>350</b> Coin Vortices.<q>”<b>EDITORS NOTE: DAMN IT, I THOUGHT WE SAID NO TO THE VACUUM JOKES WITH THE ‘DYSON SPHERE’</b>”</q>
+		req:350 coinVortex
+		icon:icons[10,11]  
+		on earn:yield 1 achievementNum
+	*coinVortexAch9
+		name:ClickHole
+		desc:Have <b>400</b> Coin Vortices.<q>”This isn't just ordinary spam.”</q>
+		req:400 coinVortex
+		icon:icons[11,11]  
+		on earn:yield 1 achievementNum
+	*coinVortexAch10
+		name:Hawcoin Radiation
+		desc:Have <b>450</b> Coin Vortices.<q>”S=πR^2”</q>
+		req:450 coinVortex
+		icon:icons[12,11]  
+		on earn:yield 1 achievementNum
+//galaxy
+	*galaxyAch1
+		name:NBC 253
+		desc:Harness the power of NBC 253 <b>1x</b>.<q>”NBC 253 is a real galaxy. Go look it up.”</q>
+		req:1 galaxy
+		icon:icons[3,12] 
+		on earn:yield 1 achievementNum
+	*galaxyAch2
+		name:Spore ain't got nothing on this!
+		desc:Harness the power of NBC 253 <b>50x</b>.<q>”You looked it up, huh? Pretty smart of us if I do say so myself!”</q>
+		req:50 galaxy
+		Icon:icons[4,12]
+		on earn:yield 1 achievementNum
+	*galaxyAch3
+		name:Milky Way is just a Candybar
+		desc:Harness the power of NBC 253 <b>100x</b>.<q>”We spent a LOT of time writing all this flavor text. You better appreciate it.”</q>
+		req:100 galaxy
+		icon:icons[5,12]  
+		on earn:yield 1 achievementNum
+	*galaxyAch4
+		name:Cosmic Microwave Dinner
+		desc:Harness the power of NBC 253 <b>150x</b>.<q>”I am serious. Demas will find you. She is VERY defensive about her creative writing, she took a class and everything.”</q>
+		req:150 galaxy
+		icon:icons[6,12]  
+		on earn:yield 1 achievementNum
+	*galaxyAch5
+		name:Coindromeda
+		desc:Harness the power of NBC 253 <b>200x</b>.<q>”Oh, I am being told we have to write something here about you getting achievements, yeah I think we can do that.”</q>
+		req:200 galaxy
+		icon:icons[7,12]  
+		on earn:yield 1 achievementNum
+	*galaxyAch6
+		name:4.5 Fundemental Forces
+		desc:Harness the power of NBC 253 <b>250x</b>.<q>”yay you got 250 of *insert building here!*!!”</q>
+		req:250 galaxy
+		icon:icons[8,12]  
+		on earn:yield 1 achievementNum
+	*galaxyAch7
+		name:Spiral Coin Galaxy
+		desc:Harness the power of NBC 253 <b>300x</b>.<q>”DO YOU THINK THIS THING SUPPORTS EMOJIS???”</q>
+		req:300 galaxy
+		icon:icons[9,12]  
+		on earn:yield 1 achievementNum
+	*galaxyAch8
+		name:Nefarious Nubulae
+		desc:Harness the power of NBC 253 <b>350x</b>.<q>”☐”</q>
+		req:350 galaxy
+		icon:icons[10,12]  
+		on earn:yield 1 achievementNum
+	*galaxyAch9
+		name:Large Magellanic Coin
+		desc:Harness the power of NBC 253 <b>400x</b>.<q>”DANGIT”</q>
+		req:400 galaxy
+		icon:icons[11,12]  
+		on earn:yield 1 achievementNum
+	*galaxyAch10
+		name:Your Coin Count is moving so fast it is Blue Shifted!
+		desc:Harness the power of NBC 253 <b>450x</b>.<q>”Space Fact #867453: The word galaxy is derived from the Greek word galaxias which literally means ‘milky’!”</q>
+		req:450 coinCorp
+		icon:icons[12,12]  
+		on earn:yield 1 achievementNum
+		
+//tesseract
+	*tesseractAch1
+		name:The Real Infinity Stones
+		desc:Have <b>1</b> Solid Gold Tesseract.<q>”Demas didn't even intend to use these things to make coins, they were originally just a storage device!”</q>
+		req:1 tesseract
+		icon:icons[3,13] 
+		on earn:yield 1 achievementNum
+	*tesseractAch2
+		name:Parallel Coiniverses
+		desc:Have <b>50</b> Solid Gold Tesseracts.<q>”Scientists are deeply concerned that they may be taking these coins from a Parallel Demas.”</q>
+		req:50 tesseract
+		Icon:icons[4,13]
+		on earn:yield 1 achievementNum
+	*tesseractAch3
+		name:A Coin Within a Coin
+		desc:Have <b>100</b> Solid Gold Tesseracts.<q>”Though they are of equal complexity, these Tesseracts are not to be confused with a Rubix cube!”</q>
+		req:100 tesseract
+		icon:icons[5,13]  
+		on earn:yield 1 achievementNum
+	*tesseractAch4
+		name:It’s Not Time Travel, it’s String Theory
+		desc:Have <b>150</b> Solid Gold Tesseracts.<q>”Can you believe that we have only had two paradoxes in the month we have had these things!”</q>
+		req:150 tesseract
+		icon:icons[6,13]  
+		on earn:yield 1 achievementNum
+	*tesseractAch5
+		name:World 1-2
+		desc:Have <b>200</b> Solid Gold Tesseracts.<q>”In this dimension there is a bonus room down a pipe full of coins!”</q>
+		req:200 tesseract
+		icon:icons[7,13]  
+		on earn:yield 1 achievementNum
+	*tesseractAch6
+		name:We Need to Go Deeper
+		desc:Have <b>250</b> Solid Gold Tesseracts.<q>”Does anyone have a Diamond Pickaxe to pick this thing up with?”</q>
+		req:250 tesseract
+		icon:icons[8,13]  
+		on earn:yield 1 achievementNum
+	*tesseractAch7
+		name:Average Relativity
+		desc:Have <b>300</b> Solid Gold Tesseracts.<q>”The bigger ones are called the Hyper-Hypercubes!”</q>
+		req:300 tesseract
+		icon:icons[9,13]  
+		on earn:yield 1 achievementNum
+	*tesseractAch8
+		name:Kloin Bottles
+		desc:Have <b>350</b> Solid Gold Tesseracts.<q>”It just goes round and round!”</q>
+		req:350 tesseract
+		icon:icons[10,13]  
+		on earn:yield 1 achievementNum
+	*tesseractAch9
+		name:Every Coin at the End of Time
+		desc:Have <b>400</b> Solid Gold Tesseracts.<q>”They were just sitting there!”</q>
+		req:400 tesseract
+		icon:icons[11,13]  
+		on earn:yield 1 achievementNum
+	*tesseractAch10
+		name:Out of Dimensions!
+		desc:Have <b>450</b> Solid Gold Tesseracts.<q>”Well looks like we should head back to our own dimension now, all these other ones suck.”</q>
+		req:450 coinCorp
+		icon:icons[12,13]  
+		on earn:yield 1 achievementNum
+//gCUT
+	*gCUTAch1
+		name:It's just like Lego™
+		desc:Harness the power of Grand Coin Unification Theory <b>1x</b>.<q>”You'd be surprised what you can do when you make gravity STRONGER the further you are away!”</q>
+		req:1 gCUT
+		icon:icons[3,14] 
+		on earn:yield 1 achievementNum
+	*gCUTAch2
+		name:It All Makes Sense Now
+		desc:Harness the power of Grand Coin Unification Theory <b>50x</b>.<q>”Demas likes to edit the config file for our universe when she gets bored.”</q>
+		req:50 gCUT
+		Icon:icons[4,14]
+		on earn:yield 1 achievementNum
+	*gCUTAch3
+		name:Reality Bending Coins
+		desc:Harness the power of Grand Coin Unification Theory <b>100x</b>.<q>”This doesn't take place on a timeline so much as it does a time circle.”</q>
+		req:100 gCUT
+		icon:icons[5,14]  
+		on earn:yield 1 achievementNum
+	*gCUTAch4
+		name:Subatomic Particoins
+		desc:Harness the power of Grand Coin Unification Theory <b>150x</b>.<q>”Demas' complete control of the universe is just one of her quarks! Get it!”</q>
+		req:150 gCUT
+		icon:icons[6,14]  
+		on earn:yield 1 achievementNum
+	*gCUTAch5
+		name:Dem's Bozon
+		desc:Harness the power of Grand Coin Unification Theory <b>200x</b>.<q>”If the theory of Higgs Boson is fake, is it just a Faux-ton? <//>I CAME UP WITH THAT JOKE MYSELF PLEASE DON'T STEAL IT”</q>
+		req:200 gCUT
+		icon:icons[7,14]  
+		on earn:yield 1 achievementNum
+	*gCUTAch6
+		name:Cointum Entanglement
+		desc:Harness the power of Grand Coin Unification Theory <b>250x</b>.<q>”This achievement is actually entangled with you buying 250 buildings, we didn't even script it to be awarded!”</q>
+		req:250 gCUT
+		icon:icons[8,14]  
+		on earn:yield 1 achievementNum
+	*gCUTAch7
+		name:Wave Function Coinlapse
+		desc:Harness the power of Grand Coin Unification Theory <b>300x</b>.<q>”You do not want to see a coin that can interfere like a wave, trust me.”</q>
+		req:300 gCUT
+		icon:icons[9,14]  
+		on earn:yield 1 achievementNum
+	*gCUTAch8
+		name:Uncertainty Principle
+		desc:Harness the power of Grand Coin Unification Theory <b>350x</b>.<q>”Now where did I leave all those coins?”</q>
+		req:350 gCUT
+		icon:icons[10,14]  
+		on earn:yield 1 achievementNum
+	*gCUTAch9
+		name:Schrödinger's Coin Flip
+		desc:Harness the power of Grand Coin Unification Theory <b>400x</b>.<q>”Demas doesn't even like cats.”</q>
+		req:400 gCUT
+		icon:icons[11,14]  
+		on earn:yield 1 achievementNum
+	*gCUTAch10
+		name:G.O.A.T.
+		desc:Harness the power of Grand Coin Unification Theory <b>450x</b>.<q>”DEMAS IS THE GOAT GOD OF ALL THINGS! Now, why did she need all these coins...”</q>
+		req:450 coinCorp
+		icon:icons[12,14]  
+		on earn:yield 1 achievementNum
