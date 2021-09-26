@@ -872,7 +872,7 @@ Upgrades
 		req:25 couchCushions
 	*couchUpgrade5
 		name:Trundle
-		desc:Multiplies the gain from Couch Upgrade 4 by <b>5</b>.
+		desc:Multiplies the gain from Reclining Footrest by <b>5</b>.
 		icon:icons[7,0]
 		cost:1e7 coins
 		on earn:yield (thousandFingCount*5-thousandFingCount) thousandFingCount
@@ -880,7 +880,7 @@ Upgrades
 		req:couchUpgrade4
 	*couchUpgrade6
 		name:Hidden Magnets
-		desc:Multiplies the gain from Couch Upgrade 4 by <b>10</b>.
+		desc:Multiplies the gain from Reclining Footrest by <b>10</b>.
 		icon:icons[8,0]
 		cost:1e9 coins
 		on earn:yield (thousandFingCount*10-thousandFingCount) thousandFingCount
@@ -888,7 +888,7 @@ Upgrades
 		req:couchUpgrade4
 	*couchUpgrade7
 		name:Couch Coin Goblin
-		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.<q>”He bites!”</q>
+		desc:Multiplies the gain from Reclining Footrest by <b>20</b>.<q>”He bites!”</q>
 		icon:icons[9,0]
 		cost:1e10 coins
 		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
@@ -896,7 +896,7 @@ Upgrades
 		req:couchUpgrade4
 	*couchUpgrade8
 		name:Mechanical Pickpocket
-		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.
+		desc:Multiplies the gain from Reclining Footrest by <b>20</b>.
 		icon:icons[10,0]
 		cost:1e13 coins
 		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
@@ -904,7 +904,7 @@ Upgrades
 		req:couchUpgrade4
 	*couchUpgrade9
 		name:Parking Meter
-		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.<q>”You do not want to be impounded sitting in this thing!”</q>
+		desc:Multiplies the gain from Reclining Footrest by <b>20</b>.<q>”You do not want to be impounded sitting in this thing!”</q>
 		icon:icons[11,0]
 		cost:1e16 coins
 		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
@@ -912,7 +912,7 @@ Upgrades
 		req:couchUpgrade4
 	*couchUpgrade10
 		name:Shaking Couches!
-		desc:Multiplies the gain from Couch Upgrade 4 by <b>20</b>.<q>”The coins fly right out!”</q>
+		desc:Multiplies the gain from Reclining Footrest by <b>20</b>.<q>”The coins fly right out!”</q>
 		icon:icons[12,0]
 		cost:1e19 coins
 		on earn:yield (thousandFingCount*20-thousandFingCount) thousandFingCount
@@ -2214,8 +2214,8 @@ Achievements
 		icon:icons[0,16] 
 		on earn:yield 1 achievementNum
 *everythingAch13
-		name:Unlock Everything
-		desc:You've bought <b>100%</b> of everything!<q>”You've made Demas unbelievably happy! You should screenshot this and go send it in <b>#general</b> chat!”</q>
+		name:You Win!
+		desc:You've bought <b>100%</b> of everything! Now try getting all achievements.<q>”You've made Demas unbelievably happy! You should screenshot this and go send it in <b>#general</b> chat!”</q>
 		req:100 everything
 		icon:icons[0,17] 
 		on earn:yield 1 achievementNum
