@@ -198,14 +198,14 @@ Resources
 
 
 	*thousandFingCount
-		name:Thousand Finger Count
+		name:Reclining Footrest Count
 		class:noBackground
 		Passive:if (have couchUpgrade4) thousandFing is (this*nonCouch)
 		hidden
 
 
 	*thousandFing
-		name:Thousand Finger
+		name:Reclining Footrest
 		class:noBackground
 		hidden
 
