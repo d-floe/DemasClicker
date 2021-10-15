@@ -224,8 +224,8 @@ Resources
 	*clickUpgrade
 		Name:Click Upgrade %
 		class:noBackground
-		Passive:increase coin yield of coinButton by ((this*(coin:ps))/100)
-		Passive:increase coinsFromClicks yield of coinButton by ((this*(coin:ps))/100)
+		Passive:increase coin yield of coinButton by ((this*(coins:ps))/100)
+		Passive:increase coinsFromClicks yield of coinButton by ((this*(coins:ps))/100)
 		hidden
 
 
