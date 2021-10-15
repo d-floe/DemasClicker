@@ -39,8 +39,8 @@ Buttons
 		name:Make some coins
 		desc:Click Demas to get more coins!
 		on click:anim icon wobble
-		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/100))*clickMultiplier*nickMultiplier) coin
-		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/100))*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
+		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/1000))*clickMultiplier*nickMultiplier) coin
+		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/1000))*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
 
 		icon:https://i.imgur.com/muhbH3g.png
 		no text
@@ -689,70 +689,70 @@ Upgrades
  	//clicking upgrades
 	*clickUpgrade1
 		name:Fantasclick!
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”You got a lot more coins when you realized you should avoid the horns!”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”You got a lot more coins when you realized you should avoid the horns!”</q>
 		Icon:icons[3,17]
 		req:1e3 coinsFromClicks
 		cost:5e4 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade2
 		name:Click magnet
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Demas actually is 3% coins by volume.”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”Demas actually is 3% coins by volume.”</q>
 		Icon:icons[4,17]
 		req:1e5 coinsFromClicks
 		cost:5e6 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade3
 		name:Click Fury
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”The wise goat simply waits for the coins to come to her.”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”The wise goat simply waits for the coins to come to her.”</q>
 		Icon:icons[5,17]
 		req:1e7 coinsFromClicks
 		cost:5e8 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade4
 		name:Another click in the wall
-		desc:Clicking gains +1%</b> of your Coin Production.<q>”Demas, leave them coins alone!</>Hey! Demas! Leave them coins alone!”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”Demas, leave them coins alone!</>Hey! Demas! Leave them coins alone!”</q>
 		Icon:icons[6,17]
 		req:1e9 coinsFromClicks
 		cost:5e10 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade5
 		name:Click or treat
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Demas' favorite candy is Kit Kats!”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”Demas' favorite candy is Kit Kats!”</q>
 		Icon:icons[7,17]
 		req:1e11 coinsFromClicks
 		cost:5e12 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade6
 		name:Diamond Click
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”If Demas loses her coins is this a Fallen Kingdom?”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”If Demas loses her coins is this a Fallen Kingdom?”</q>
 		Icon:icons[8,17]
 		req:1e13 coinsFromClicks
 		cost:5e14 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade7
 		name:Down with the clickness
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Looking at my own reflection,</>When suddenly it changes,</>Violently it changes (oh no),</>There is no turning back now,</>You've woken up the demon in her!”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”Looking at my own reflection,</>When suddenly it changes,</>Violently it changes (oh no),</>There is no turning back now,</>You've woken up the demon in her!”</q>
 		Icon:icons[9,17]
 		req:1e15 coinsFromClicks
 		cost:5e16 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade8
 		name:Clickzkreig
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”Eventually you click so fast that no one can keep up with you!”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”Eventually you click so fast that no one can keep up with you!”</q>
 		Icon:icons[10,17]
 		req:1e17 coinsFromClicks
 		cost:5e18 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade9
 		name:Yellow click road
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”You do NOT want to know who the witch is.”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”You do NOT want to know who the witch is.”</q>
 		Icon:icons[11,17]
 		req:1e19 coinsFromClicks
 		cost:5e20 coins
 		on earn:yield 1 clickUpgrade
 	*clickUpgrade10
 		name:The click of destiny
-		desc:Clicking gains <b>+1%</b> of your Coin Production.<q>”When the dust settles there will be 30 billion coins, and one goat.”</q>
+		desc:Clicking gains <b>+0.1%</b> of your Coin Production.<q>”When the dust settles there will be 30 billion coins, and one goat.”</q>
 		Icon:icons[12,17]
 		req:1e21 coinsFromClicks
 		cost:5e22 coins
