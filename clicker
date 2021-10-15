@@ -39,8 +39,8 @@ Buttons
 		name:Make some coins
 		desc:Click Demas to get more coins!
 		on click:anim icon wobble
-		on click:yield (1*((thousandFing*0.01)+1)*clickMultiplier*nickMultiplier) coin
-		on click:yield (1*((thousandFing*0.01)+1)*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
+		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/100))*clickMultiplier*nickMultiplier) coin
+		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/100))*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
 
 		icon:https://i.imgur.com/muhbH3g.png
 		no text
@@ -224,8 +224,6 @@ Resources
 	*clickUpgrade
 		Name:Click Upgrade %
 		class:noBackground
-		Passive:increase coin yield of coinButton by ((this*(coins:ps))/100)
-		Passive:increase coinsFromClicks yield of coinButton by ((this*(coins:ps))/100)
 		hidden
 
 
