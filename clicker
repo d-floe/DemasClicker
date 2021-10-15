@@ -224,8 +224,8 @@ Resources
 	*clickUpgrade
 		Name:Click Upgrade %
 		class:noBackground
-		Passive:multiply coin yield of coinButton by ((this+100)/100)
-		Passive:multiply coinsFromClicks yield of coinButton by ((this+100)/100)
+		Passive:increase coin yield of coinButton by ((this*(coin:ps))/100)
+		Passive:increase coinsFromClicks yield of coinButton by ((this*(coin:ps))/100)
 		hidden
 
 
@@ -463,14 +463,14 @@ Upgrades
 		req:2.5e12 coins:earned
 	*Katelyn
 		name:Katelyn
-		desc:Coin production multiplier <b>+1%</b>
+		desc:Coin production multiplier <b>+1%</b><q>”It'll be worth it, trust me.”</q>
 		icon:icons[1,2]
 		cost:1e7 coins
 		on earn:yield 1 prodMultiplier
 		req:5e5 coins:earned
 	*gKatelyn
 		name:Gold Katelyn
-		desc:Coin production multiplier <b>+2%</b>
+		desc:Coin production multiplier <b>+2%</b><q>”Clicking made viable again by yours truly.”</q>
 		icon:icons[2,2]
 		cost:5e13 coins
 		on earn:yield 2 prodMultiplier
