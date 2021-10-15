@@ -3,8 +3,8 @@ Let's make a game!
 	by:ShaMed
 	desc:Help Demas achieve her dreams of owning everything! <//>Click on Demas to earn coins, and spend them to get coins faster!.<//>From couch cushions to casinos: get those coins!
 	created:9/26/2021
-	updated:9/26/2021
-	version:1
+	updated:10/15/2021
+	version:1.1
 
 Settings
 	background:https://i.imgur.com/jdZ3GMl.png 
@@ -39,8 +39,8 @@ Buttons
 		name:Make some coins
 		desc:Click Demas to get more coins!
 		on click:anim icon wobble
-		on click:yield (1*((thousandFing*0.01)+1)*clickMultiplier*nickMultiplier) coin
-		on click:yield (1*((thousandFing*0.01)+1)*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
+		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/100))*clickMultiplier*nickMultiplier) coin
+		on click:yield (1*((thousandFing*0.01)+1+((clickUpgrade*coins:ps)/100))*clickMultiplier*nickMultiplier*coinMultiplier) coinsFromClicks
 
 		icon:https://i.imgur.com/muhbH3g.png
 		no text
@@ -227,8 +227,6 @@ Resources
 	*clickUpgrade
 		Name:Click Upgrade %
 		class:noBackground
-		Passive:multiply coin yield of coinButton by ((this+100)/100)
-		Passive:multiply coinsFromClicks yield of coinButton by ((this+100)/100)
 		hidden
 
 
@@ -466,14 +464,14 @@ Upgrades
 		req:2.5e12 coins:earned
 	*Katelyn
 		name:Katelyn
-		desc:Coin production multiplier <b>+1%</b>
+		desc:Coin production multiplier <b>+1%</b><q>”It'll be worth it, trust me.”</q>
 		icon:icons[1,2]
 		cost:1e7 coins
 		on earn:yield 1 prodMultiplier
 		req:5e5 coins:earned
 	*gKatelyn
 		name:Gold Katelyn
-		desc:Coin production multiplier <b>+2%</b>
+		desc:Coin production multiplier <b>+2%</b><q>”Clicking buffed by yours truly.”</q>
 		icon:icons[2,2]
 		cost:5e13 coins
 		on earn:yield 2 prodMultiplier
